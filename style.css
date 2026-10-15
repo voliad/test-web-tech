@@ -961,20 +961,6 @@ label:focus-visible {
    Shared colours are set in :root at the beginning of this file.
    ========================= */
 
-.jobs-page .jobs-skip-link {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    z-index: 1200;
-    padding: 12px 18px;
-    color: white;
-    background: var(--purple-dark);
-    border-radius: 8px;
-    transform: translateY(-180%);
-}
-
-.jobs-page .jobs-skip-link:focus { transform: translateY(0); }
-
 .jobs-page .jobs-visually-hidden {
     position: absolute;
     width: 1px;
@@ -1254,18 +1240,6 @@ label:focus-visible {
    ================================================================ */
 
 /* ABOUT 01 — Keyboard accessibility and skip link */
-.about-page .about-skip-link {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    z-index: 1200;
-    padding: 12px 18px;
-    border-radius: 8px;
-    background: var(--purple-dark);
-    color: #ffffff;
-    transform: translateY(-180%);
-}
-.about-page .about-skip-link:focus { transform: translateY(0); }
 .about-page a:focus-visible,
 .about-page .about-table-wrap:focus-visible {
     outline: 3px solid #29247f;
@@ -1477,18 +1451,6 @@ label:focus-visible {
    ================================================================ */
 
 /* APPLY 01 — Skip link, keyboard focus and current-page indicator */
-.apply-page .apply-skip-link {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    z-index: 1200;
-    padding: 12px 18px;
-    border-radius: 8px;
-    background: var(--purple-dark);
-    color: white;
-    transform: translateY(-180%);
-}
-.apply-page .apply-skip-link:focus { transform: translateY(0); }
 .apply-page a:focus-visible,
 .apply-page button:focus-visible,
 .apply-page input:focus-visible,
@@ -1887,4 +1849,61 @@ label:focus-visible {
     .home-page .hero-actions { gap: 12px; margin-top: 26px; }
     .home-page .impact-section { padding: 36px 7% 44px; }
     .home-page .impact-section::before { width: 86%; }
+}
+/* Home closing sections: aligned cards with a calm gap between purposes. */
+.home-page .about-strip,
+.home-page .cta-section {
+    width: calc(100% - 12%);
+    max-width: 1120px;
+    padding: 36px 40px;
+    border-radius: 24px;
+}
+.home-page .about-strip {
+    margin: 40px auto 24px;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 16px 40px;
+    align-items: start;
+    border: 1px solid var(--line);
+}
+.home-page .about-strip > div { grid-row: 1 / span 2; }
+.home-page .about-strip h2 { max-width: 440px; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.2; }
+.home-page .about-strip > p { line-height: 1.75; }
+.home-page .about-strip .text-link { grid-column: 2; justify-self: start; white-space: normal; }
+.home-page .cta-section { margin: 0 auto 56px; }
+.home-page .cta-section h2 { margin: 0 0 16px; font-size: clamp(28px, 3vw, 36px); line-height: 1.2; }
+.home-page .cta-section p:not(.section-kicker) { max-width: 800px; font-size: 16px; line-height: 1.75; }
+@media (max-width: 700px) {
+    .home-page .about-strip,
+    .home-page .cta-section { width: 88%; padding: 28px 24px; border-radius: 20px; }
+    .home-page .about-strip { grid-template-columns: minmax(0, 1fr); margin-top: 28px; gap: 16px; }
+    .home-page .about-strip > div { grid-row: auto; }
+    .home-page .about-strip .text-link { grid-column: 1; }
+    .home-page .cta-section { margin-bottom: 40px; }
+    .home-page .cta-section .button { max-width: 100%; white-space: normal; text-align: center; }
+}
+/* Shared keyboard shortcut: first focus stop on every page. */
+.skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1200;
+    display: inline-block;
+    max-width: calc(100vw - 24px);
+    padding: 12px 18px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: var(--purple-dark);
+    color: #ffffff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    transform: translateY(-200%);
+}
+body .skip-link:focus,
+body .skip-link:focus-visible {
+    transform: translateY(0);
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
 }
