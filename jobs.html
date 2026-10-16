@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3933ad">
     <meta name="description" content="Explore front-end development and UX/UI design careers at Lumina Learn, an inclusive educational technology company.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lumina Learn">
+    <meta property="og:title" content="Lumina Learn | Job Opportunities">
+    <meta property="og:description" content="Explore front-end development and UX/UI design careers at Lumina Learn, an inclusive educational technology company.">
     <title>Lumina Learn | Job Opportunities</title>
     <link rel="icon" href="images/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -22,49 +27,48 @@
             <span class="brand-mark">L</span>
             <span class="brand-name">LUMINA<span>LEARN</span></span>
         </a>
-        <!-- Shared navigation: direct page links with hover/keyboard submenus. -->
-        <nav class="main-nav" aria-label="Main navigation">
-            <div class="nav-dropdown">
-                <a class="nav-link" href="index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="Home sections">
-                    <a href="index.html#our-impact">Our Impact</a>
-                    <a href="index.html#career">Career</a>
-                    <a href="index.html#why-join-us">Why Join Us?</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <a class="nav-link active" href="jobs.html" aria-current="page">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="Jobs sections">
-                    <a href="jobs.html#frontend-developer">Web Developer</a>
-                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="About Us sections">
-                    <a href="about.html#our-project">Our Project</a>
-                    <a href="about.html#group-info">Get to Know</a>
-                    <a href="about.html#team-members">Meet Our Team</a>
-                    <a href="about.html#site-footer">Contact Us</a>
-                </div>
-            </div>
+        <!-- Shared navigation: direct page links with hover/keyboard submenus, following the supplied team design. -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="nav-dropdown">
+                <a class="nav-link" href="index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="Home sections">
+                    <a href="index.html#our-impact">Our Impact</a>
+                    <a href="index.html#career">Career</a>
+                    <a href="index.html#why-join-us">Why Join Us?</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a class="nav-link active" href="jobs.html" aria-current="page">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="Jobs sections">
+                    <a href="jobs.html#frontend-developer">Web Developer</a>
+                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="About Us sections">
+                    <a href="about.html#our-project">Our Project</a>
+                    <a href="about.html#group-info">Get to Know</a>
+                    <a href="about.html#team-members">Meet Our Team</a>
+                    <a href="about.html#site-footer">Contact Us</a>
+                </div>
+            </div>
         </nav>
         <div class="header-actions">
             <!-- apply.html will be created by the member responsible for the application page. -->
             <a class="apply-button" href="apply.html">Apply</a>
-            <details class="mobile-menu">
+        </div>
+        <details class="mobile-menu">
                 <summary class="mobile-menu-toggle" aria-label="Navigation menu">
                     <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label" aria-hidden="true"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
                 </summary>
                 <nav class="mobile-menu-panel" aria-label="Mobile navigation"><details class="mobile-nav-group"><summary>Home</summary><a href="index.html#home">Home overview</a><a href="index.html#our-impact">Our mission</a><a href="index.html#career">Career paths</a><a href="index.html#why-join-us">Why join us?</a></details><details class="mobile-nav-group"><summary>Jobs</summary><a href="jobs.html" aria-current="page">Jobs overview</a><a href="jobs.html#frontend-developer">Front-End Web Developer</a><a href="jobs.html#ux-ui-designer">UX/UI Designer</a></details><details class="mobile-nav-group"><summary>About Us</summary><a href="about.html">About Us overview</a><a href="about.html#our-project">Our project</a><a href="about.html#group-info">Get to know us</a><a href="about.html#team-members">Meet our team</a><a href="about.html#site-footer">Contact us</a></details><a href="apply.html">Apply</a></nav>
-            </details>
-        </div>
+        </details>
     </header>
 
     <main id="jobs-main" tabindex="-1">
         <section class="jobs-hero" aria-labelledby="jobs-title">
             <div class="jobs-hero-copy">
-                <p class="section-kicker">CAREERS AT LUMINA LEARN</p>
                 <h1 id="jobs-title">Build a brighter<br><span>future of learning.</span></h1>
                 <p>Bring your skills to a team making digital education more accessible, inclusive and meaningful. Help us build a learning platform that works for everyone.</p>
                 <a class="button button-primary" href="#open-roles">Explore open roles <span aria-hidden="true">↓</span></a>
@@ -86,7 +90,6 @@
         <section class="jobs-content section-anchor" id="open-roles" aria-labelledby="open-roles-title">
             <div class="jobs-heading">
                 <div>
-                    <p class="section-kicker">FIND YOUR PLACE</p>
                     <h2 id="open-roles-title">Our open opportunities</h2>
                 </div>
                 <!-- Minimal inline CSS example required by the assignment. -->
@@ -96,7 +99,6 @@
             <div class="jobs-layout">
                 <!-- Assignment: floated right, 25% wide on desktop, margin/padding/border. -->
                 <aside class="jobs-aside" aria-labelledby="jobs-aside-title">
-                    <p class="section-kicker">GROW WITH US</p>
                     <h2 id="jobs-aside-title">Why Lumina Learn?</h2>
                     <ul class="jobs-benefits">
                         <li><strong>Purposeful work</strong><span>Help remove barriers to digital education.</span></li>
@@ -112,7 +114,7 @@
                 </aside>
 
                 <!-- JOBS: independent HTML disclosures; both roles can stay open. -->
-                <div class="jobs-list jobs-overview" aria-label="Compare our two open roles">
+                <div class="jobs-list jobs-overview" role="group" aria-label="Compare our two open roles">
                     <article class="jobs-overview-card section-anchor" id="frontend-developer" aria-labelledby="summary-FE101">
                     <p class="section-kicker">FE101</p>
                     <h3 id="summary-FE101">Front-End Web Developer</h3>
@@ -233,7 +235,6 @@
                 </div>
             </div>
                     <section class="jobs-application-steps section-anchor" aria-labelledby="application-steps-title">
-                        <p class="section-kicker">YOUR APPLICATION, STEP BY STEP</p>
                         <h2 id="application-steps-title">How to apply</h2>
                         <ol class="jobs-apply-steps" role="list">
                             <li><span class="jobs-step-number" aria-hidden="true">01</span><div><h3>Choose a role</h3><p>Read the details and note its reference: FE101 or UX102.</p></div></li>
@@ -249,7 +250,6 @@
 
         <section class="jobs-inclusion" aria-labelledby="inclusion-title">
             <div>
-                <p class="section-kicker">LEARNING FOR EVERYONE</p>
                 <h2 id="inclusion-title">Your perspective belongs here.</h2>
                 <p>We welcome applications from Aboriginal and Torres Strait Islander peoples, people with disability and people from diverse cultural backgrounds. We offer reasonable adjustments during recruitment and value the different experiences each person brings.</p>
             </div>
@@ -268,6 +268,12 @@
             </a>
             <p>Building a Learning Platform for Everyone</p>
             <p>Making digital education accessible, inclusive and meaningful.</p>
+            <!-- Social links currently use platform homepages; replace with team profile URLs when available. -->
+            <div class="footer-social">
+                <a class="footer-social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="images/social-facebook.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="images/social-instagram.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="images/social-linkedin.svg" alt="" width="22" height="22"></a>
+            </div>
         </div>
         <div class="footer-links">
             <h2>Quick Links</h2>

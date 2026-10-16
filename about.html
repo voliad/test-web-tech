@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3933ad">
     <meta name="description" content="Meet the four-person student team behind the Lumina Learn EdTech recruitment website.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lumina Learn">
+    <meta property="og:title" content="Lumina Learn | About Our Team">
+    <meta property="og:description" content="Meet the four-person student team behind the Lumina Learn EdTech recruitment website.">
     <title>Lumina Learn | About Our Team</title>
     <link rel="icon" href="images/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -22,49 +27,47 @@
             <span class="brand-mark">L</span>
             <span class="brand-name">LUMINA<span>LEARN</span></span>
         </a>
-        <!-- Shared navigation: direct page links with hover/keyboard submenus. -->
-        <nav class="main-nav" aria-label="Main navigation">
-            <div class="nav-dropdown">
-                <a class="nav-link" href="index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="Home sections">
-                    <a href="index.html#our-impact">Our Impact</a>
-                    <a href="index.html#career">Career</a>
-                    <a href="index.html#why-join-us">Why Join Us?</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="Jobs sections">
-                    <a href="jobs.html#frontend-developer">Web Developer</a>
-                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <a class="nav-link active" href="about.html" aria-current="page">About Us</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="About Us sections">
-                    <a href="about.html#our-project">Our Project</a>
-                    <a href="about.html#group-info">Get to Know</a>
-                    <a href="about.html#team-members">Meet Our Team</a>
-                    <a href="about.html#site-footer">Contact Us</a>
-                </div>
-            </div>
+        <!-- Shared navigation: direct page links with hover/keyboard submenus, following the supplied team design. -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="nav-dropdown">
+                <a class="nav-link" href="index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="Home sections">
+                    <a href="index.html#our-impact">Our Impact</a>
+                    <a href="index.html#career">Career</a>
+                    <a href="index.html#why-join-us">Why Join Us?</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="Jobs sections">
+                    <a href="jobs.html#frontend-developer">Web Developer</a>
+                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a class="nav-link active" href="about.html" aria-current="page">About Us</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="About Us sections">
+                    <a href="about.html#our-project">Our Project</a>
+                    <a href="about.html#group-info">Get to Know</a>
+                    <a href="about.html#team-members">Meet Our Team</a>
+                    <a href="about.html#site-footer">Contact Us</a>
+                </div>
+            </div>
         </nav>
         <div class="header-actions">
             <a class="apply-button" href="apply.html">Apply</a>
-            <details class="mobile-menu">
+        </div>
+        <details class="mobile-menu">
                 <summary class="mobile-menu-toggle" aria-label="Navigation menu">
                     <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label" aria-hidden="true"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
                 </summary>
                 <nav class="mobile-menu-panel" aria-label="Mobile navigation"><details class="mobile-nav-group"><summary>Home</summary><a href="index.html#home">Home overview</a><a href="index.html#our-impact">Our mission</a><a href="index.html#career">Career paths</a><a href="index.html#why-join-us">Why join us?</a></details><details class="mobile-nav-group"><summary>Jobs</summary><a href="jobs.html">Jobs overview</a><a href="jobs.html#frontend-developer">Front-End Web Developer</a><a href="jobs.html#ux-ui-designer">UX/UI Designer</a></details><details class="mobile-nav-group"><summary>About Us</summary><a href="about.html" aria-current="page">About Us overview</a><a href="about.html#our-project">Our project</a><a href="about.html#group-info">Get to know us</a><a href="about.html#team-members">Meet our team</a><a href="about.html#site-footer">Contact us</a></details><a href="apply.html">Apply</a></nav>
-            </details>
-        </div>
+        </details>
     </header>
 
     <main id="about-main" tabindex="-1">
         <section class="about-hero" aria-labelledby="about-title">
             <div>
-                <!-- One inline CSS example required by the assignment. -->
-                <p class="section-kicker" style="font-weight: 800;">G04 · EDUCATIONAL TECHNOLOGY</p>
                 <h1 id="about-title">Different minds.<br><span>One shared purpose.</span></h1>
                 <p>Meet the student team behind Lumina Learn. We bring our ideas, design skills and code together to create a recruitment website inspired by accessible, inclusive digital education.</p>
                 <a class="button button-primary" href="#team-members">Meet our team</a>
@@ -81,7 +84,6 @@
         <!-- ABOUT 01: Project direction — edit these descriptions to match the team's work. -->
         <section id="our-project" class="about-section about-project-direction section-anchor" aria-labelledby="direction-title">
             <div class="section-heading">
-                <p class="section-kicker">OUR PROJECT</p>
                 <h2 id="direction-title">Learning with real people.</h2>
                 <p>Lumina Learn is our fictional EdTech company. Its learning platform concept helps educators organise courses, resources and assignments, while helping learners understand their progress.</p>
             </div>
@@ -109,7 +111,6 @@
         <section id="group-info" class="about-section about-section-tinted section-anchor" aria-labelledby="group-info-title">
             <div class="about-group-layout">
                 <div>
-                    <p class="section-kicker">GET TO KNOW US</p>
                     <h2 id="group-info-title">Get to<br>know us.</h2>
                     <p>Four members, a shared design direction and a focus on making learning more accessible.</p>
                 </div>
@@ -117,7 +118,8 @@
                     <li><strong>Project group</strong>
                         <ul>
                             <li>Group name: <em class="about-team-name"><span lang="zh">麦当劳</span> EdTech Squad</em></li>
-                            <li>Industry: G04 — Educational Technology</li>
+                            <!-- Inline CSS example: emphasise the project industry. -->
+                            <li style="font-weight: 600;">Industry: G04 — Educational Technology</li>
                             <li>Unit: COS10026</li>
                         </ul>
                     </li>
@@ -137,7 +139,6 @@
              Quotes and fun facts have been confirmed by the team. -->
         <section class="about-section section-anchor" id="team-members" aria-labelledby="members-title">
             <div class="section-heading">
-                <p class="section-kicker">THE PEOPLE BEHIND THE PAGES</p>
                 <h2 id="members-title">Meet our team.</h2>
                 <p>Different responsibilities. One consistent website.</p>
             </div>
@@ -199,7 +200,6 @@
              Save the real photo at that path and keep its file size below 300 KB. -->
         <section class="about-section about-section-tinted" aria-labelledby="group-photo-title">
             <div class="section-heading">
-                <p class="section-kicker">OUR TEAM, TOGETHER</p>
                 <h2 id="group-photo-title">Better, together.</h2>
             </div>
             <figure class="about-group-photo">
@@ -216,7 +216,6 @@
              Caption, column headings, merged footer cell and hover styles are included. -->
         <section class="about-section" aria-labelledby="facts-title">
             <div class="section-heading">
-                <p class="section-kicker">A LITTLE MORE ABOUT US</p>
                 <h2 id="facts-title">Beyond the code.</h2>
             </div>
             <div class="table-wrap about-table-wrap" role="region" aria-labelledby="facts-title" tabindex="0">
@@ -241,7 +240,6 @@
         </section>
 
         <section class="cta-section" aria-labelledby="about-cta-title">
-            <p class="section-kicker">DISCOVER LUMINA LEARN</p>
             <h2 id="about-cta-title">Explore the opportunities we designed.</h2>
             <p>See how our shared EdTech direction comes to life in the company's recruitment opportunities.</p>
             <a class="button button-dark" href="jobs.html">Explore Jobs</a>
@@ -256,6 +254,12 @@
             </a>
             <p>Building a Learning Platform for Everyone</p>
             <p>Making digital education accessible, inclusive and meaningful.</p>
+            <!-- Social links currently use platform homepages; replace with team profile URLs when available. -->
+            <div class="footer-social">
+                <a class="footer-social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="images/social-facebook.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="images/social-instagram.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="images/social-linkedin.svg" alt="" width="22" height="22"></a>
+            </div>
         </div>
         <div class="footer-links">
             <h2>Quick Links</h2>

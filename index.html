@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3933ad">
     <meta name="description" content="Join Lumina Learn and help make digital education accessible to everyone.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lumina Learn">
+    <meta property="og:title" content="Lumina Learn | Careers">
+    <meta property="og:description" content="Join Lumina Learn and help make digital education accessible to everyone.">
     <title>Lumina Learn | Careers</title>
     <link rel="icon" href="images/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preload" as="image" href="images/hero-classroom.webp" fetchpriority="high">
     <link rel="stylesheet" href="styles.css">
     <!-- Part 1 embedded CSS: one small, page-specific example.
          Shared layout and component styles remain in the external stylesheet. -->
     <style>
-        .home-role-intro .section-kicker { letter-spacing: 2px; }
+        .home-role-intro h2 { letter-spacing: -1px; }
     </style>
 </head>
 <body class="home-page">
@@ -23,43 +29,43 @@
             <span class="brand-name">LUMINA<span>LEARN</span></span>
         </a>
 
-        <!-- Shared navigation: direct page links with hover/keyboard submenus. -->
-        <nav class="main-nav" aria-label="Main navigation">
-            <div class="nav-dropdown">
-                <a class="nav-link active" href="index.html#home" aria-current="page">Home</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="Home sections">
-                    <a href="index.html#our-impact">Our Impact</a>
-                    <a href="index.html#career">Career</a>
-                    <a href="index.html#why-join-us">Why Join Us?</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="Jobs sections">
-                    <a href="jobs.html#frontend-developer">Web Developer</a>
-                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="About Us sections">
-                    <a href="about.html#our-project">Our Project</a>
-                    <a href="about.html#group-info">Get to Know</a>
-                    <a href="about.html#team-members">Meet Our Team</a>
-                    <a href="about.html#site-footer">Contact Us</a>
-                </div>
-            </div>
+        <!-- Shared navigation: direct page links with hover/keyboard submenus, following the supplied team design. -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="nav-dropdown">
+                <a class="nav-link active" href="index.html#home" aria-current="page">Home</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="Home sections">
+                    <a href="index.html#our-impact">Our Impact</a>
+                    <a href="index.html#career">Career</a>
+                    <a href="index.html#why-join-us">Why Join Us?</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="Jobs sections">
+                    <a href="jobs.html#frontend-developer">Web Developer</a>
+                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="About Us sections">
+                    <a href="about.html#our-project">Our Project</a>
+                    <a href="about.html#group-info">Get to Know</a>
+                    <a href="about.html#team-members">Meet Our Team</a>
+                    <a href="about.html#site-footer">Contact Us</a>
+                </div>
+            </div>
         </nav>
 
         <div class="header-actions">
             <a class="apply-button" href="apply.html">Apply</a>
-            <details class="mobile-menu">
+        </div>
+        <details class="mobile-menu">
                 <summary class="mobile-menu-toggle" aria-label="Navigation menu">
                     <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label" aria-hidden="true"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
                 </summary>
                 <nav class="mobile-menu-panel" aria-label="Mobile navigation"><details class="mobile-nav-group"><summary>Home</summary><a href="index.html#home" aria-current="page">Home overview</a><a href="index.html#our-impact">Our mission</a><a href="index.html#career">Career paths</a><a href="index.html#why-join-us">Why join us?</a></details><details class="mobile-nav-group"><summary>Jobs</summary><a href="jobs.html">Jobs overview</a><a href="jobs.html#frontend-developer">Front-End Web Developer</a><a href="jobs.html#ux-ui-designer">UX/UI Designer</a></details><details class="mobile-nav-group"><summary>About Us</summary><a href="about.html">About Us overview</a><a href="about.html#our-project">Our project</a><a href="about.html#group-info">Get to know us</a><a href="about.html#team-members">Meet our team</a><a href="about.html#site-footer">Contact us</a></details><a href="apply.html">Apply</a></nav>
-            </details>
-        </div>
+        </details>
     </header>
 
     <main id="home-main" tabindex="-1">
@@ -83,7 +89,7 @@
 
         <!-- Impact: image slider left, text right -->
         <section class="impact-section section-anchor" id="our-impact" aria-labelledby="impact-title">
-            <div class="image-slider" aria-label="Learning at Lumina Learn">
+            <div class="image-slider" role="group" aria-label="Learning at Lumina Learn">
                 <!-- CSS-only slider: choose an image using the dots -->
                 <input type="radio" name="learning-slide" id="learning-slide-1" aria-label="Show image 1 of 3" checked>
                 <input type="radio" name="learning-slide" id="learning-slide-2" aria-label="Show image 2 of 3">
@@ -92,33 +98,32 @@
                 <div class="slider-window">
                     <div class="slider-track">
                         <!-- Illustrations supplied in the team folder; WebP versions preserve the full composition. -->
-                        <img src="images/learning1.webp" alt="Two children using an online learning platform together on a laptop." width="1536" height="1024" decoding="async">
-                        <img src="images/learning2.webp" alt="A child learning online, with illustrated features for courses, personalised learning and progress tracking." width="1536" height="1024" decoding="async">
-                        <img src="images/learning3.webp" alt="A child celebrating a completed maths exercise, with illustrated learning progress charts." width="1536" height="1024" decoding="async">
+                        <img src="images/learning1.webp" srcset="images/learning1-480.webp 480w, images/learning1-768.webp 768w, images/learning1-1200.webp 1200w, images/learning1.webp 1536w" sizes="(max-width: 700px) 90vw, (max-width: 950px) 47vw, 50vw" alt="Two children using an online learning platform together on a laptop." width="1536" height="1024" decoding="async">
+                        <img src="images/learning2.webp" srcset="images/learning2-480.webp 480w, images/learning2-768.webp 768w, images/learning2-1200.webp 1200w, images/learning2.webp 1536w" sizes="(max-width: 700px) 90vw, (max-width: 950px) 47vw, 50vw" loading="lazy" alt="A child learning online, with illustrated features for courses, personalised learning and progress tracking." width="1536" height="1024" decoding="async">
+                        <img src="images/learning3.webp" srcset="images/learning3-480.webp 480w, images/learning3-768.webp 768w, images/learning3-1200.webp 1200w, images/learning3.webp 1536w" sizes="(max-width: 700px) 90vw, (max-width: 950px) 47vw, 50vw" loading="lazy" alt="A child celebrating a completed maths exercise, with illustrated learning progress charts." width="1536" height="1024" decoding="async">
                     </div>
                     <div class="slider-arrow arrow-one">
-                        <label for="learning-slide-3" aria-label="Previous image">‹</label>
-                        <label for="learning-slide-2" aria-label="Next image">›</label>
+                        <label for="learning-slide-3" title="Previous image">‹</label>
+                        <label for="learning-slide-2" title="Next image">›</label>
                     </div>
                     <div class="slider-arrow arrow-two">
-                        <label for="learning-slide-1" aria-label="Previous image">‹</label>
-                        <label for="learning-slide-3" aria-label="Next image">›</label>
+                        <label for="learning-slide-1" title="Previous image">‹</label>
+                        <label for="learning-slide-3" title="Next image">›</label>
                     </div>
                     <div class="slider-arrow arrow-three">
-                        <label for="learning-slide-2" aria-label="Previous image">‹</label>
-                        <label for="learning-slide-1" aria-label="Next image">›</label>
+                        <label for="learning-slide-2" title="Previous image">‹</label>
+                        <label for="learning-slide-1" title="Next image">›</label>
                     </div>
                 </div>
 
-                <div class="slider-dots" aria-label="Choose slide">
-                    <label for="learning-slide-1" aria-label="Show image 1"></label>
-                    <label for="learning-slide-2" aria-label="Show image 2"></label>
-                    <label for="learning-slide-3" aria-label="Show image 3"></label>
+                <div class="slider-dots" role="group" aria-label="Choose slide">
+                    <label for="learning-slide-1" title="Show image 1"></label>
+                    <label for="learning-slide-2" title="Show image 2"></label>
+                    <label for="learning-slide-3" title="Show image 3"></label>
                 </div>
             </div>
 
             <div class="impact-copy">
-                <p class="section-kicker">OUR IMPACT</p>
                 <h2 id="impact-title">Making Learning Accessible to Everyone</h2>
                 <p>
                     Education opens doors to new opportunities, but not everyone
@@ -140,7 +145,6 @@
         <!-- Part 1 search interface: GET sends keywords to Jobs; filtering requires a later implementation. -->
         <section id="find-role" class="home-role-browser" aria-labelledby="job-search-title">
             <div class="home-role-intro">
-                <p class="section-kicker">YOUR NEXT CHAPTER</p>
                 <h2 id="job-search-title">Find your next role.</h2>
                 <p>Bring your skills to a team making learning more accessible.</p>
             </div>
@@ -162,7 +166,6 @@
         <!-- Career table with cell merging -->
         <section class="career-section section-anchor" id="career">
             <div class="section-heading">
-                <p class="section-kicker">FIND YOUR PLACE</p>
                 <h2>Explore Your Career Path</h2>
                 <p>
                     Different skills. One shared purpose. Discover how your
@@ -205,34 +208,34 @@
                     </tbody>
                 </table>
             </div>
-            <p class="table-note">Explore the <a href="#call-to-action">application information</a> or contact our team to learn more.</p>
+            <!-- Part 1 inline CSS: emphasise the distinction between career areas and vacancies. -->
+            <p class="table-note" style="font-weight: 600;">These are our career areas. <a href="jobs.html#open-roles">Visit Jobs to see current openings.</a></p>
         </section>
 
         <!-- Why join us -->
         <section class="why-section section-anchor" id="why-join-us">
             <div class="section-heading">
-                <p class="section-kicker">LIFE AT LUMINA LEARN</p>
                 <h2>WHY JOIN US?</h2>
             </div>
 
             <div class="benefit-grid">
                 <article class="benefit-card">
-                    <span class="benefit-number">01</span>
+                    <span class="benefit-number" aria-hidden="true">01</span>
                     <h3>Inclusive by Design</h3>
                     <p>Help create digital experiences that welcome learners of all abilities and backgrounds.</p>
                 </article>
                 <article class="benefit-card">
-                    <span class="benefit-number">02</span>
+                    <span class="benefit-number" aria-hidden="true">02</span>
                     <h3>Keep Growing</h3>
                     <p>Explore new ideas, develop your skills and learn through meaningful challenges.</p>
                 </article>
                 <article class="benefit-card">
-                    <span class="benefit-number">03</span>
+                    <span class="benefit-number" aria-hidden="true">03</span>
                     <h3>Create Real Impact</h3>
                     <p>Turn innovative ideas into practical solutions that improve digital education.</p>
                 </article>
                 <article class="benefit-card">
-                    <span class="benefit-number">04</span>
+                    <span class="benefit-number" aria-hidden="true">04</span>
                     <h3>Grow Together</h3>
                     <p>Collaborate with people who value different perspectives and shared success.</p>
                 </article>
@@ -242,7 +245,6 @@
         <!-- About section on the same homepage -->
         <section class="about-strip section-anchor" id="about-us">
             <div>
-                <p class="section-kicker">ABOUT LUMINA LEARN</p>
                 <h2>Technology with a human purpose.</h2>
             </div>
             <p>
@@ -255,7 +257,6 @@
 
         <!-- Call to action -->
         <section class="cta-section section-anchor" id="call-to-action">
-            <p class="section-kicker">YOUR NEXT CHAPTER</p>
             <h2>Your Next Chapter Starts Here!</h2>
             <p>
                 Bring your curiosity, creativity and passion for education to
@@ -274,6 +275,12 @@
             </a>
             <p>Building a Learning Platform for Everyone</p>
             <p>Making digital education accessible, inclusive and meaningful.</p>
+            <!-- Social links currently use platform homepages; replace with team profile URLs when available. -->
+            <div class="footer-social">
+                <a class="footer-social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="images/social-facebook.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="images/social-instagram.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="images/social-linkedin.svg" alt="" width="22" height="22"></a>
+            </div>
         </div>
         <div class="footer-links">
             <h2>Quick Links</h2>
@@ -292,7 +299,7 @@
     </footer>
 
     <!-- Optional floating Zalo contact button: replace URL and icon file -->
-    <a class="zalo-float" href="https://zalo.me/" target="_blank" rel="noopener noreferrer" aria-label="Contact Lumina Learn on Zalo">
+    <a class="zalo-float" href="https://zalo.me/" target="_blank" rel="noopener noreferrer" aria-label="Visit Zalo (platform homepage)">
         <img src="images/zalo-icon.webp" alt="">
     </a>
 </body>

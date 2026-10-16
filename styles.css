@@ -1,3 +1,5 @@
+/* Visual baseline restored from the user-supplied UI-UX-refined folder.
+   rem values preserve its original default sizes; form/asset fixes remain in HTML. */
 /* MỤC LỤC CSS — LUMINA LEARN / COS10026 PART 1
    Tìm nhanh bằng Ctrl+F các mã trong ngoặc vuông:
    [CHUNG]  Màu sắc, font nền, header, menu, nút và footer — cả nhóm phối hợp.
@@ -18,7 +20,6 @@
    Source order within each section is intentional; keep state and
    responsive overrides after the rules they refine. */
 
-
 /* ======================================================================
    [CHUNG] PHẦN DÙNG CHUNG — CẢ NHÓM PHỐI HỢP
    Gồm biến màu, font cơ bản, header/menu desktop và mobile, nút, footer.
@@ -34,6 +35,9 @@
     --muted: #55566b;
     --white: #ffffff;
     --line: #d9ddf6;
+    --surface-soft: #f8f8ff;
+    --yellow-soft: #fff1bf;
+    --field-border: #8986b5;
 }
 
 * {
@@ -41,9 +45,10 @@
 }
 
 html {
+    font-size: 100%;
     scroll-behavior: smooth;
     /* One viewport offset for anchors and focus scrolling; avoid per-target duplication. */
-    scroll-padding-top: 92px;
+    scroll-padding-top: max(92px, 6rem);
 }
 
 body {
@@ -52,6 +57,7 @@ body {
     background: var(--lavender);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 a {
@@ -63,12 +69,14 @@ img {
 }
 
 .site-header {
+    background: var(--white);
     position: sticky;
     top: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 28px;
     padding: 16px 5%;
     border-bottom: 1px solid var(--line);
@@ -76,6 +84,8 @@ img {
 }
 
 .brand {
+    min-width: 0;
+    max-width: 100%;
     display: inline-flex;
     align-items: center;
     gap: 9px;
@@ -84,6 +94,9 @@ img {
 }
 
 .brand-mark {
+    min-width: 1.5em;
+    min-height: 1.5em;
+    line-height: 1;
     display: grid;
     place-items: center;
     width: 34px;
@@ -92,14 +105,15 @@ img {
     background: var(--purple);
     border-radius: 10px 10px 10px 2px;
     font-weight: 800;
-    font-size: 21px;
+    font-size: 1.3125rem;
 }
 
 .brand-name {
+    min-width: 0;
     color: var(--purple);
     font-weight: 800;
     letter-spacing: -0.6px;
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 
 .brand-name span {
@@ -118,7 +132,7 @@ img {
     color: var(--purple);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     border-bottom: 2px solid transparent;
     transition: color 0.2s ease, border-color 0.2s ease;
@@ -131,41 +145,41 @@ img {
     border-bottom-color: var(--yellow);
 }
 
-/* CHUNG: menu theo ban cua Phuong; chu chuyen trang, hover/focus mo muc con. */
-.nav-dropdown { position: relative; display: flex; align-items: center; gap: 3px; }
-.caret { display: inline-block; margin-left: 3px; color: var(--purple); transition: transform 0.2s ease; }
-.nav-dropdown:hover .caret,
-.nav-dropdown:focus-within .caret { transform: rotate(180deg); }
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    min-width: 190px;
-    padding: 8px;
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    box-shadow: 0 14px 32px rgba(31, 29, 94, 0.15);
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(-50%, 10px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-}
-.nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
-.dropdown-menu a {
-    display: block;
-    min-height: 44px;
-    padding: 10px 12px;
-    border-radius: 10px;
-    color: var(--purple);
-    text-decoration: none;
-    font-size: 13px;
-    transition: background-color 0.2s ease, padding-left 0.2s ease;
-}
-.dropdown-menu a:hover,
-.dropdown-menu a:focus-visible { padding-left: 17px; background: #f0efff; color: var(--purple-dark); }
-
+/* CHUNG: menu theo ban cua Phuong; chu chuyen trang, hover/focus mo muc con. */
+.nav-dropdown { position: relative; display: flex; align-items: center; gap: 3px; }
+.caret { display: inline-block; margin-left: 3px; color: var(--purple); transition: transform 0.2s ease; }
+.nav-dropdown:hover .caret,
+.nav-dropdown:focus-within .caret { transform: rotate(180deg); }
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    min-width: 190px;
+    padding: 8px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 14px 32px rgba(31, 29, 94, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 10px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.dropdown-menu a {
+    display: block;
+    min-height: 44px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: var(--purple);
+    text-decoration: none;
+    font-size: 0.8125rem;
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible { padding-left: 17px; background: #f0efff; color: var(--purple-dark); }
+
 .header-actions {
     display: flex;
     align-items: center;
@@ -194,7 +208,7 @@ img {
     color: var(--purple);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 800;
 }
 
@@ -209,7 +223,7 @@ img {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 800;
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
@@ -247,7 +261,7 @@ img {
 .section-heading h2 {
     margin: 0 0 22px;
     color: var(--purple);
-    font-size: clamp(28px, 3.2vw, 38px);
+    font-size: clamp(1.75rem, 3.2vw, 2.375rem);
     line-height: 1.15;
     margin-bottom: 12px;
 }
@@ -299,12 +313,38 @@ img {
 
 .footer-brand p {
     margin: 7px 0;
-    font-size: 13px;
+    font-size: 0.8125rem;
+}
+
+/* CHUNG: Facebook, Instagram and LinkedIn icons in all four footers. */
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+.footer-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+}
+.footer-social-icon:hover {
+    background: var(--purple-dark);
+    border-color: var(--yellow);
+}
+.footer-social-icon img {
+    display: block;
+    width: 22px;
+    height: 22px;
 }
 
 .site-footer h2 {
     margin: 0 0 12px;
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 
 .footer-links {
@@ -324,12 +364,12 @@ img {
 }
 
 .footer-links a {
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .footer-resources p {
     margin: 7px 0;
-    font-size: 13px;
+    font-size: 0.8125rem;
     overflow-wrap: anywhere;
 }
 
@@ -338,7 +378,7 @@ img {
     margin: 15px 0 0;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.25);
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 /* CHUNG: focus tim tren nen sang; bao gom form va vung bang co tabindex.
@@ -372,7 +412,7 @@ summary:focus-visible,
     }
 
     .brand-name {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .apply-button {
@@ -384,7 +424,7 @@ summary:focus-visible,
 @media (max-width: 700px) {
 
 .nav-link {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     .header-actions {
@@ -394,7 +434,7 @@ summary:focus-visible,
 
     .apply-button {
         padding: 7px 13px;
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     .site-footer {
@@ -426,10 +466,15 @@ summary:focus-visible,
 
 .mobile-menu {
     display: none;
-    position: relative;
+    position: static;
 }
 
 .mobile-menu-toggle {
+    flex-direction: column;
+    gap: 4px;
+    min-width: max(48px, 2.75rem);
+    min-height: max(48px, 3rem);
+    color: var(--purple-dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -453,12 +498,19 @@ summary:focus-visible,
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    position: relative;
+    width: 22px;
+    height: 14px;
 }
 
 .mobile-menu-bars > span {
     width: 22px;
     height: 2px;
     background: var(--purple);
+
+    position: absolute;
+    left: 0;
 }
 
 .mobile-menu[open] .mobile-menu-toggle {
@@ -473,7 +525,8 @@ summary:focus-visible,
     z-index: 1100;
     width: min(290px, calc(100vw - 32px));
     padding: 10px;
-    max-height: calc(100dvh - 110px);
+    max-height: calc(100vh - 110px);
+    max-height: calc(100dvh - max(110px, 7rem));
     overflow-y: auto;
     border: 1px solid var(--line);
     border-radius: 16px;
@@ -502,7 +555,7 @@ summary:focus-visible,
 
 .mobile-nav-group a {
     margin-left: 12px;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 400;
 }
 
@@ -530,13 +583,28 @@ summary:focus-visible,
 @media (max-width: 1024px), (hover: none) {
     .site-header .main-nav { display: none; }
     .site-header .mobile-menu { display: block; }
-}
+    .site-header { min-height: max(80.8px, 5.05rem); }
+    .site-header .header-actions { padding-right: 64px; }
+    .site-header .mobile-menu-toggle { position: absolute; top: 16px; right: 5%; }
+    .site-header .mobile-menu:not([open]) { width: 0; margin-left: -28px; }
+    /* The open menu is a full-width row. Same-page links scroll it away
+       with the header instead of leaving an overlay over the destination. */
+    .site-header:has(.mobile-menu[open]) { position: relative; }
+    .site-header .mobile-menu[open] { flex-basis: 100%; width: 100%; }
+    .site-header .mobile-menu[open] .mobile-menu-panel {
+        position: static;
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+    }
 
+}
 
 @media (max-width: 700px) {
 
     .site-header {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 8px;
         padding: 12px 4%;
     }
@@ -544,7 +612,7 @@ summary:focus-visible,
     .site-header .brand-mark {
         width: 28px;
         height: 28px;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .site-header .brand {
@@ -552,31 +620,26 @@ summary:focus-visible,
     }
 
     .site-header .brand-name {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     .site-header .header-actions {
         gap: 8px;
         margin-left: auto;
     }
+    .site-header { min-height: max(72.8px, 4.55rem); }
+    .site-header .mobile-menu-toggle { top: 12px; right: 4%; }
+    .site-header .mobile-menu:not([open]) { margin-left: -8px; }
 
     .site-header .apply-button {
         padding: 8px 12px;
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
 }
 
-.mobile-menu-toggle {
-    flex-direction: column;
-    gap: 4px;
-    width: 48px;
-    height: 48px;
-    color: var(--purple-dark);
-}
-
 .mobile-menu-label {
-    font-size: 10px;
+    font-size: 0.625rem;
     line-height: 1;
     font-weight: 700;
 }
@@ -588,17 +651,6 @@ summary:focus-visible,
 
 .mobile-menu[open] .menu-label-close {
     display: inline;
-}
-
-.mobile-menu-bars {
-    position: relative;
-    width: 22px;
-    height: 14px;
-}
-
-.mobile-menu-bars > span {
-    position: absolute;
-    left: 0;
 }
 
 .mobile-menu-bars > span:nth-child(1) {
@@ -627,11 +679,6 @@ summary:focus-visible,
     transform: rotate(-45deg);
 }
 
-.site-header {
-    background: #ffffff;
-}
-
-
 /* ======================================================================
    [HOME] TRANG CHỦ — index.html — LÊ THU PHƯƠNG
    Gồm hero tuyển dụng, hình trang trí, slider Our Impact, search,
@@ -647,7 +694,7 @@ summary:focus-visible,
     gap: 35px;
     padding: 80px 8%;
     overflow: hidden;
-    background: var(--lavender) url("images/hero-classroom.webp") center / cover no-repeat;
+    background: linear-gradient(90deg, rgba(34, 27, 25, 0.78), rgba(34, 27, 25, 0.70) 58%, rgba(34, 27, 25, 0) 84%), var(--lavender) url("images/hero-classroom.webp") center / cover no-repeat;
 }
 
 .hero-copy {
@@ -656,30 +703,20 @@ summary:focus-visible,
     max-width: 690px;
 }
 
-/* HOME: nen toi chi nam sau noi dung, giu anh ben phai sang. */
-.hero-copy::before {
-    content: "";
-    position: absolute;
-    inset: -28px -24px;
-    z-index: -1;
-    border-radius: 20px;
-    background: rgba(34, 27, 25, 0.62);
-}
-
-
+/* HOME: gradient on the image keeps text readable without a hard-edged panel. */
 .eyebrow {
     margin: 0 0 12px;
     color: var(--white);
     text-transform: none;
     letter-spacing: 0;
-    font-size: clamp(17px, 2vw, 23px);
+    font-size: clamp(1.0625rem, 2vw, 1.4375rem);
     font-weight: 400;
 }
 
 .hero h1 {
     margin: 10px 0 14px;
     color: var(--yellow);
-    font-size: clamp(42px, 6vw, 68px);
+    font-size: clamp(2.625rem, 6vw, 4.25rem);
     line-height: 1.05;
     letter-spacing: -2px;
 }
@@ -691,7 +728,7 @@ summary:focus-visible,
 .hero-description {
     max-width: 570px;
     margin: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--white);
 }
 
@@ -782,7 +819,7 @@ summary:focus-visible,
     color: white;
     background: rgba(30, 30, 50, 0.25);
     border-radius: 25px;
-    font-size: 38px;
+    font-size: 2.375rem;
     line-height: 1;
     cursor: pointer;
     pointer-events: auto;
@@ -831,13 +868,13 @@ summary:focus-visible,
 .impact-copy h2 {
     margin: 0 0 22px;
     color: var(--purple);
-    font-size: clamp(28px, 3.2vw, 38px);
+    font-size: clamp(1.75rem, 3.2vw, 2.375rem);
     line-height: 1.15;
 }
 
 .impact-copy p:not(.section-kicker) {
     margin: 0 0 19px;
-    font-size: 17px;
+    font-size: 1.0625rem;
     line-height: 1.55;
 }
 
@@ -869,7 +906,7 @@ summary:focus-visible,
 .career-table thead th {
     color: white;
     background: var(--purple);
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .career-table .table-title {
@@ -877,15 +914,15 @@ summary:focus-visible,
     border: 1px solid var(--line);
     padding: 20px;
     color: var(--purple);
-    background: #fff1bf;
+    background: var(--yellow-soft);
     text-align: center;
-    font-size: 19px;
+    font-size: 1.1875rem;
 }
 
 .career-table td {
     padding: 17px 20px;
     border: 1px solid var(--line);
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .career-table tr:hover td {
@@ -893,8 +930,8 @@ summary:focus-visible,
 }
 
 .career-table .department-cell {
-    background: #ffffff;
-    font-size: 14px;
+    background: var(--white);
+    font-size: 0.875rem;
     text-align: left;
     color: var(--purple);
     font-weight: 800;
@@ -904,7 +941,7 @@ summary:focus-visible,
     max-width: 1000px;
     margin: 18px auto 0;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .table-note a {
@@ -918,7 +955,7 @@ summary:focus-visible,
 }
 
 .why-section .section-heading h2 {
-    font-size: clamp(34px, 4vw, 46px);
+    font-size: clamp(2.125rem, 4vw, 2.875rem);
 }
 
 .benefit-grid {
@@ -936,7 +973,7 @@ summary:focus-visible,
     overflow: hidden;
     border: 1px solid rgba(57, 51, 173, 0.04);
     border-radius: 28px;
-    background: #f8f8ff;
+    background: var(--surface-soft);
     box-shadow: 0 5px 12px rgba(40, 37, 100, 0.10);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -947,8 +984,8 @@ summary:focus-visible,
 }
 
 .benefit-number {
-    color: #a6a3e2;
-    font-size: 12px;
+    color: var(--purple);
+    font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 1px;
 }
@@ -956,13 +993,13 @@ summary:focus-visible,
 .benefit-card h3 {
     margin: 9px 0 10px;
     color: var(--purple);
-    font-size: 21px;
+    font-size: 1.3125rem;
 }
 
 .benefit-card p {
     margin: 0;
     color: #3e3e58;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .about-strip {
@@ -978,7 +1015,7 @@ summary:focus-visible,
     color: var(--purple);
     line-height: 1.15;
     margin: 0;
-    font-size: clamp(25px, 3vw, 34px);
+    font-size: clamp(1.5625rem, 3vw, 2.125rem);
 }
 
 .about-strip > p {
@@ -993,23 +1030,19 @@ summary:focus-visible,
     background: var(--yellow);
 }
 
-.cta-section .section-kicker {
-    color: var(--purple-dark);
-}
-
 .cta-section h2 {
     margin: 0 0 22px;
     color: var(--purple);
     line-height: 1.15;
     margin-bottom: 12px;
-    font-size: clamp(30px, 4vw, 40px);
+    font-size: clamp(1.875rem, 4vw, 2.5rem);
 }
 
 .cta-section p:not(.section-kicker) {
     max-width: 900px;
     margin: 0 0 24px;
     color: #28234f;
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 
 .zalo-float {
@@ -1060,6 +1093,7 @@ summary:focus-visible,
     .hero {
         grid-template-columns: 1fr;
         padding: 55px 7%;
+        background-image: linear-gradient(rgba(34, 27, 25, 0.72), rgba(34, 27, 25, 0.72)), url("images/hero-classroom.webp");
     }
 
     .impact-section {
@@ -1114,23 +1148,21 @@ summary:focus-visible,
     max-width: 1120px;
     margin: 32px auto;
     padding: 28px 32px;
-    border: 1px solid #d9ddf6;
+    border: 1px solid var(--line);
     border-radius: 20px;
-    background: #ffffff;
+    background: var(--white);
     box-shadow: 0 8px 30px #29247f08;
 }
 .home-role-intro { grid-column: 1 / -1; }
-.home-role-intro .section-kicker { color: #3933ad; margin: 0 0 8px; font-weight: 800; }
 .home-role-intro h2 {
     margin: 0 0 8px;
-    color: #29247f;
-    font-size: clamp(28px, 2.6vw, 34px);
+    color: var(--purple-dark);
+    font-size: clamp(1.75rem, 2.6vw, 2.125rem);
     line-height: 1.15;
-    letter-spacing: -1px;
 }
-.home-role-intro > p:last-child { margin: 0; color: #55566b; font-size: 16px; }
+.home-role-intro > p:last-child { margin: 0; color: var(--muted); font-size: 1rem; }
 .home-role-links { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-.home-role-links > span { flex-basis: 100%; color: #55566b; font-size: 13px; }
+.home-role-links > span { flex-basis: 100%; color: var(--muted); font-size: 0.8125rem; }
 .home-role-links a {
     display: inline-flex;
     align-items: center;
@@ -1138,14 +1170,14 @@ summary:focus-visible,
     gap: 12px;
     min-height: 44px;
     padding: 10px 16px;
-    border: 1px solid #d9ddf6;
+    border: 1px solid var(--line);
     border-radius: 999px;
-    color: #29247f;
-    font-size: 14px;
+    color: var(--purple-dark);
+    font-size: 0.875rem;
     font-weight: 700;
     text-decoration: none;
 }
-.home-role-links a:hover { background: #eef1ff; border-color: #3933ad; }
+.home-role-links a:hover { background: var(--lavender); border-color: var(--purple); }
 @media (max-width: 1180px) {
     .home-role-browser { margin: 32px 5%; }
 }
@@ -1154,16 +1186,16 @@ summary:focus-visible,
     .home-role-links { align-items: stretch; flex-direction: column; }
     .home-role-links a { max-width: 100%; }
 }
-.home-search-form label { display: block; margin-bottom: 8px; color: #29247f; font-size: 14px; font-weight: 700; }
+.home-search-form label { display: block; margin-bottom: 8px; color: var(--purple-dark); font-size: 0.875rem; font-weight: 700; }
 .home-search-controls { display: flex; gap: 12px; }
 .home-search-controls input {
     flex: 1; min-width: 0; min-height: 50px; padding: 12px 16px;
-    border: 1px solid #8986b5; border-radius: 12px; background: #f8f9ff;
-    color: #17172b; font: inherit;
+    border: 1px solid var(--field-border); border-radius: 12px; background: #f8f9ff;
+    color: var(--ink); font: inherit;
 }
 .home-search-controls input::placeholder { color: #666579; }
 .home-search-controls button { border: 0; cursor: pointer; font: inherit; font-weight: 700; white-space: nowrap; }
-#job-search-note { margin: 8px 0 0; color: #55566b; font-size: 13px; line-height: 1.5; }
+#job-search-note { margin: 8px 0 0; color: var(--muted); font-size: 0.8125rem; line-height: 1.5; }
 @media (max-width: 700px) {
     .home-search-controls { flex-direction: column; }
     .home-search-controls button { min-height: 50px; }
@@ -1171,9 +1203,9 @@ summary:focus-visible,
 #learning-slide-1:focus-visible ~ .slider-dots label[for="learning-slide-1"],
 #learning-slide-2:focus-visible ~ .slider-dots label[for="learning-slide-2"],
 #learning-slide-3:focus-visible ~ .slider-dots label[for="learning-slide-3"] {
-    outline: 3px solid #29247f;
+    outline: 3px solid var(--purple-dark);
     outline-offset: 4px;
-    box-shadow: 0 0 0 3px #ffffff;
+    box-shadow: 0 0 0 3px var(--white);
 }
 
 .home-page .hero {
@@ -1248,7 +1280,7 @@ summary:focus-visible,
 
 .home-page .about-strip h2 {
     max-width: 440px;
-    font-size: clamp(26px, 2.6vw, 34px);
+    font-size: clamp(1.625rem, 2.6vw, 2.125rem);
     line-height: 1.2;
 }
 
@@ -1272,13 +1304,13 @@ summary:focus-visible,
 
 .home-page .cta-section h2 {
     margin: 0 0 16px;
-    font-size: clamp(28px, 3vw, 36px);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
     line-height: 1.2;
 }
 
 .home-page .cta-section p:not(.section-kicker) {
     max-width: 800px;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.75;
 }
 
@@ -1316,7 +1348,6 @@ summary:focus-visible,
 
 }
 
-
 /* ======================================================================
    [JOBS] TRANG VIỆC LÀM — jobs.html — NGUYỄN MINH HIẾU
    Gồm hero, danh sách hai việc, lương, yêu cầu và sidebar.
@@ -1334,7 +1365,6 @@ summary:focus-visible,
     white-space: nowrap;
 }
 
-
 .jobs-page .jobs-hero {
     display: grid;
     grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
@@ -1347,7 +1377,7 @@ summary:focus-visible,
 .jobs-page .jobs-hero h1 {
     margin: 0 0 24px;
     color: var(--purple);
-    font-size: clamp(36px, 4.5vw, 62px);
+    font-size: clamp(2.25rem, 4.5vw, 3.875rem);
     line-height: 1.08;
     letter-spacing: -2px;
 }
@@ -1364,7 +1394,7 @@ summary:focus-visible,
     max-width: 610px;
     margin: 0 0 28px;
     color: var(--muted);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .jobs-page .jobs-hero .button {
@@ -1418,14 +1448,14 @@ summary:focus-visible,
     color: white;
     background: var(--purple);
     font-weight: 800;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .jobs-page .jobs-art-card strong {
     display: block;
     margin-bottom: 20px;
     color: var(--purple);
-    font-size: 23px;
+    font-size: 1.4375rem;
     line-height: 1.2;
 }
 
@@ -1447,14 +1477,14 @@ summary:focus-visible,
     padding: 6px 10px;
     border-radius: 20px;
     color: var(--purple-dark);
-    background: #fff1bf;
-    font-size: 11px;
+    background: var(--yellow-soft);
+    font-size: 0.6875rem;
     font-weight: 700;
 }
 
 .jobs-page .jobs-content {
     padding: 55px 6% 65px;
-    background: #f8f8ff;
+    background: var(--surface-soft);
 }
 
 .jobs-page .jobs-heading {
@@ -1469,7 +1499,7 @@ summary:focus-visible,
 .jobs-page .jobs-heading h2 {
     margin: 0;
     color: var(--purple);
-    font-size: clamp(27px, 3vw, 36px);
+    font-size: clamp(1.6875rem, 3vw, 2.25rem);
     line-height: 1.2;
 }
 
@@ -1480,7 +1510,7 @@ summary:focus-visible,
     border-radius: 22px;
     color: var(--purple);
     background: white;
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .jobs-page .jobs-layout {
@@ -1503,7 +1533,7 @@ summary:focus-visible,
 .jobs-page .jobs-aside h2 {
     margin: 0 0 20px;
     color: var(--purple);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.2;
 }
 
@@ -1525,7 +1555,7 @@ summary:focus-visible,
 
 .jobs-page .jobs-benefits span {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .jobs-page .jobs-aside-note {
@@ -1537,17 +1567,17 @@ summary:focus-visible,
 .jobs-page .jobs-aside-note h3 {
     margin: 0 0 12px;
     color: var(--purple);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .jobs-page .jobs-aside-note p {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .jobs-page .jobs-aside-note ol {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 0.875rem;
     padding-left: 20px;
 }
 
@@ -1567,7 +1597,7 @@ summary:focus-visible,
 .jobs-page .jobs-application-steps h2 {
     margin: 0 0 22px;
     color: var(--purple-dark);
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 1.2;
 }
 .jobs-page .jobs-apply-steps {
@@ -1595,19 +1625,19 @@ summary:focus-visible,
     border-radius: 50%;
     background: #fff0bd;
     color: var(--purple-dark);
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 800;
 }
 .jobs-page .jobs-apply-steps h3 {
     margin: 6px 0 8px;
     color: var(--purple-dark);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.35;
 }
 .jobs-page .jobs-apply-steps p {
     margin: 0;
     color: var(--muted);
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.6;
 }
 .jobs-page .jobs-steps-footer {
@@ -1623,11 +1653,11 @@ summary:focus-visible,
 .jobs-page .jobs-steps-note {
     margin: 0;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 .jobs-page .jobs-steps-footer .text-link {
     white-space: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 @media (max-width: 800px) {
     .jobs-page .jobs-apply-steps { grid-template-columns: 1fr; }
@@ -1636,7 +1666,7 @@ summary:focus-visible,
 
 .jobs-page .jobs-aside-note a {
     color: var(--purple);
-    font-size: 13px;
+    font-size: 0.8125rem;
     overflow-wrap: anywhere;
 }
 
@@ -1669,7 +1699,7 @@ summary:focus-visible,
 .jobs-page .jobs-overview-card h3 {
     margin: 0 0 20px;
     color: var(--purple-dark);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
 }
 
@@ -1683,14 +1713,14 @@ summary:focus-visible,
 .jobs-page .jobs-overview-card dt {
     margin-bottom: 4px;
     color: var(--muted);
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 700;
 }
 
 .jobs-page .jobs-overview-card dd {
     margin: 0;
     color: var(--ink);
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 
 .jobs-page .jobs-overview-salary {
@@ -1706,7 +1736,7 @@ summary:focus-visible,
     display: block;
     margin-top: 3px;
     color: var(--muted);
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
 }
 
@@ -1742,7 +1772,7 @@ summary:focus-visible,
 .jobs-page .job-hide-label { display: none; }
 .jobs-page .job-disclosure[open] > summary .job-show-label { display: none; }
 .jobs-page .job-disclosure[open] > summary .job-hide-label { display: inline; }
-.jobs-page .job-disclosure-icon::before { content: "+"; font-size: 24px; line-height: 1; }
+.jobs-page .job-disclosure-icon::before { content: "+"; font-size: 1.5rem; line-height: 1; }
 .jobs-page .job-disclosure[open] > summary .job-disclosure-icon::before { content: "−"; }
 .jobs-page .job-expanded-content {
     margin-top: 24px;
@@ -1756,7 +1786,7 @@ summary:focus-visible,
 .jobs-page .job-detail-header > .job-reference {
     margin: 0 0 15px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .jobs-page .job-reference strong {
@@ -1781,7 +1811,7 @@ summary:focus-visible,
 .jobs-page .job-meta dt {
     margin-bottom: 4px;
     color: var(--purple);
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1789,7 +1819,7 @@ summary:focus-visible,
 
 .jobs-page .job-meta dd {
     margin: 0;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .jobs-page .job-detail {
@@ -1799,7 +1829,7 @@ summary:focus-visible,
 .jobs-page .job-detail h4 {
     margin: 0 0 12px;
     color: var(--purple-dark);
-    font-size: 19px;
+    font-size: 1.1875rem;
 }
 
 .jobs-page .job-detail ul,
@@ -1832,11 +1862,11 @@ summary:focus-visible,
 .jobs-page .job-detail-footer p {
     margin: 0;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .jobs-page .job-detail-footer .button {
-    font-size: 12px;
+    font-size: 0.75rem;
     letter-spacing: 0.5px;
 }
 
@@ -1845,20 +1875,20 @@ summary:focus-visible,
     grid-template-columns: 1.2fr 1fr;
     gap: 50px;
     padding: 55px 8%;
-    background: #fff1bf;
+    background: var(--yellow-soft);
 }
 
 .jobs-page .jobs-inclusion h2 {
     margin: 0 0 16px;
     color: var(--purple);
-    font-size: 29px;
+    font-size: 1.8125rem;
     line-height: 1.2;
 }
 
 .jobs-page .jobs-inclusion h3 {
     margin: 0 0 16px;
     color: var(--purple);
-    font-size: 21px;
+    font-size: 1.3125rem;
 }
 
 .jobs-page .jobs-inclusion p:not(.section-kicker) {
@@ -1917,7 +1947,7 @@ summary:focus-visible,
     }
 
     .jobs-page .jobs-hero-copy > p:not(.section-kicker) {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .jobs-page .jobs-hero-art {
@@ -1965,7 +1995,6 @@ summary:focus-visible,
 
 }
 
-
 /* ======================================================================
    [ABOUT] TRANG NHÓM — about.html — BÙI ĐÀO VIỆT ANH
    Gồm hero, hướng dự án, thông tin lớp/nhóm, thẻ thành viên,
@@ -1973,12 +2002,13 @@ summary:focus-visible,
    Selector bắt đầu bằng .about-page để không làm đổi ba trang khác.
    ====================================================================== */
 
-
 .about-page .about-hero {
     display: grid;
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.7fr);
     align-items: center;
 }
+
+.about-page .about-hero > * { min-width: 0; }
 
 .about-page .about-hero h1 {
     margin: 0 0 24px;
@@ -1998,60 +2028,35 @@ summary:focus-visible,
 }
 
 .about-page .about-hero .about-hero-note {
-    background: #ffbf24;
-}
-
-.about-page .about-note-number {
-    display: block;
-    color: #29247f;
-    line-height: 1;
-    letter-spacing: -4px;
+    background: var(--yellow);
 }
 
 .about-page .about-hero-note h2 {
     margin: 20px 0 12px;
-    color: #29247f;
+    color: var(--purple-dark);
 }
 
 .about-page .about-hero .about-hero-note p {
     margin: 0 0 18px;
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 
 .about-page .about-hero .about-hero-note .about-note-team {
     margin: 0;
     padding-top: 15px;
     border-top: 1px solid #b38a2d;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 700;
 }
 
 .about-page .about-section-tinted {
-    background: #eef1ff;
+    background: var(--lavender);
 }
 
 .about-page .about-values {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin: 0 auto;
-}
-
-.about-page .about-values article {
-    padding: 28px;
-}
-
-.about-page .about-value-number {
-    color: #3933ad;
-}
-
-.about-page .about-values h3 {
-    margin: 12px 0;
-    color: #3933ad;
-}
-
-.about-page .about-values p {
-    margin: 0;
-    color: #55566b;
 }
 
 .about-page .about-group-layout {
@@ -2065,7 +2070,7 @@ summary:focus-visible,
 }
 
 .about-page .about-group-layout p {
-    color: #55566b;
+    color: var(--muted);
 }
 
 .about-page .about-info-list {
@@ -2081,7 +2086,7 @@ summary:focus-visible,
 }
 
 .about-page .about-info-list strong {
-    color: #3933ad;
+    color: var(--purple);
 }
 
 .about-page .about-info-list ul {
@@ -2099,7 +2104,7 @@ summary:focus-visible,
 }
 
 .about-page .about-member {
-    border-top: 4px solid #3933ad;
+    border-top: 4px solid var(--purple);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -2108,31 +2113,24 @@ summary:focus-visible,
     font-weight: 800;
 }
 
-.about-page .about-member dt span {
-    display: block;
-    color: #55566b;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
 .about-page .about-member dd {
     color: #3e3e58;
 }
 
 .about-page .about-member .about-student-id {
     display: inline-block;
-    border: 1px solid #d9ddf6;
+    border: 1px solid var(--line);
     border-radius: 8px;
-    color: #29247f;
-    background: #eef1ff;
+    color: var(--purple-dark);
+    background: var(--lavender);
     font-weight: 700;
 }
 
 .about-page code {
     padding: 2px 5px;
     border-radius: 4px;
-    background: #eef1ff;
-    color: #3933ad;
+    background: var(--lavender);
+    color: var(--purple);
     font-size: 0.9em;
     overflow-wrap: anywhere;
 }
@@ -2142,7 +2140,7 @@ summary:focus-visible,
     position: relative;
     margin: 8px 0 0;
     padding: 22px 22px 20px 52px;
-    border-left: 4px solid #ffbf24;
+    border-left: 4px solid var(--yellow);
     border-radius: 0 14px 14px 0;
     background: #f3f2ff;
 }
@@ -2150,16 +2148,16 @@ summary:focus-visible,
     position: absolute;
     top: 7px;
     left: 12px;
-    color: #3933ad;
+    color: var(--purple);
     font-family: Georgia, serif;
-    font-size: 52px;
+    font-size: 3.25rem;
     line-height: 1;
 }
 .about-page .about-quote blockquote {
     margin: 0;
     padding: 0;
-    color: #29247f;
-    font-size: 17px;
+    color: var(--purple-dark);
+    font-size: 1.0625rem;
     font-weight: 700;
     line-height: 1.65;
 }
@@ -2168,14 +2166,14 @@ summary:focus-visible,
     margin-top: 12px;
     padding-top: 10px;
     border-top: 1px solid #dcdaf2;
-    color: #55566b;
-    font-size: 12px;
+    color: var(--muted);
+    font-size: 0.75rem;
     line-height: 1.7;
 }
 
 .about-page .about-group-photo {
     margin: 0 auto;
-    background: #ffffff;
+    background: var(--white);
 }
 
 .about-page .about-group-photo img {
@@ -2196,26 +2194,26 @@ summary:focus-visible,
 
 .about-page .about-photo-label {
     margin-bottom: 12px;
-    color: #3933ad;
-    font-size: 12px;
+    color: var(--purple);
+    font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 2px;
 }
 
 .about-page .about-photo-placeholder strong {
-    font-size: clamp(22px, 3vw, 32px);
+    font-size: clamp(1.375rem, 3vw, 2rem);
 }
 
 .about-page .about-photo-placeholder p {
     margin-bottom: 0;
-    color: #55566b;
+    color: var(--muted);
 }
 
 .about-page .about-group-photo figcaption {
     margin-top: 14px;
-    color: #55566b;
+    color: var(--muted);
     text-align: center;
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .about-page .about-table-wrap {
@@ -2225,57 +2223,47 @@ summary:focus-visible,
 .about-page .about-facts {
     width: 100%;
     border-collapse: collapse;
-    background: #ffffff;
+    background: var(--white);
     text-align: left;
-}
-
-.about-page .about-facts caption {
-    color: #29247f;
-    font-size: 18px;
-    font-weight: 700;
 }
 
 .about-page .about-facts th,
 .about-page .about-facts td {
     padding: 17px 20px;
-    border: 1px solid #d9ddf6;
+    border: 1px solid var(--line);
 }
 
 .about-page .about-facts thead th {
-    color: #ffffff;
-    background: #3933ad;
-    font-size: 14px;
+    color: var(--white);
+    background: var(--purple);
+    font-size: 0.875rem;
 }
 
 .about-page .about-facts tbody th {
-    color: #3933ad;
-    font-size: 15px;
+    color: var(--purple);
+    font-size: 0.9375rem;
 }
 
 .about-page .about-facts tbody tr:hover th,
 .about-page .about-facts tbody tr:hover td {
-    background: #eef1ff;
+    background: var(--lavender);
 }
 
 .about-page .about-facts tfoot td {
-    color: #55566b;
-    background: #f8f8ff;
+    color: var(--muted);
+    background: var(--surface-soft);
     text-align: center;
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .about-page .about-country h2 {
     margin: 0 0 16px;
 }
 
-.about-page .about-country p {
-    color: #3e3e58;
-}
-
 .about-page .about-project-credit {
     grid-column: 1 / -1;
     margin: 0;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 @media (max-width: 950px) {
@@ -2303,7 +2291,7 @@ summary:focus-visible,
     }
 
     .about-page .about-hero > div:not(.about-hero-note) > p:not(.section-kicker) {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .about-page .about-hero-note {
@@ -2327,7 +2315,7 @@ summary:focus-visible,
     .about-page .about-facts th,
     .about-page .about-facts td {
         padding: 12px;
-        font-size: 13px;
+        font-size: 0.8125rem;
     }
 
     .about-page .about-country {
@@ -2341,11 +2329,11 @@ summary:focus-visible,
 }
 
 .about-page {
-    background: #eef1ff;
+    background: var(--lavender);
 }
 
 .about-page .site-header {
-    background: #ffffff;
+    background: var(--white);
 }
 
 .about-page .about-hero {
@@ -2361,7 +2349,7 @@ summary:focus-visible,
 }
 
 .about-page .about-hero h1 {
-    font-size: clamp(48px, 5.2vw, 76px);
+    font-size: clamp(3rem, 5.2vw, 4.75rem);
     line-height: 1.03;
 }
 
@@ -2372,13 +2360,8 @@ summary:focus-visible,
 
 .about-page .about-hero > div:not(.about-hero-note) > p:not(.section-kicker) {
     max-width: 590px;
-    font-size: 17px;
+    font-size: 1.0625rem;
     line-height: 1.8;
-}
-
-.about-page .section-kicker {
-    font-size: 11px;
-    letter-spacing: 2.5px;
 }
 
 .about-page .button {
@@ -2389,21 +2372,26 @@ summary:focus-visible,
     align-self: center;
     padding: 32px;
     border-radius: 26px;
-    border: 2px solid #29247f;
+    border: 2px solid var(--purple-dark);
     transform: rotate(4deg);
-    box-shadow: 12px 12px 0 #29247f;
+    box-shadow: 12px 12px 0 var(--purple-dark);
 }
 
 .about-page .about-note-number {
+    display: block;
+    color: var(--purple-dark);
+    line-height: 1;
+    letter-spacing: -4px;
+
     font-family: Impact, "Arial Narrow", Arial, sans-serif;
     font-weight: 400;
-    font-size: 88px;
+    font-size: 5.5rem;
 }
 
 .about-page .about-hero-note h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
-    font-size: 38px;
+    font-size: 2.375rem;
 }
 
 .about-page .about-hero .about-hero-note p {
@@ -2413,7 +2401,7 @@ summary:focus-visible,
 .about-page .about-section {
     max-width: none;
     padding: 64px 6%;
-    background: #eef1ff;
+    background: var(--lavender);
 }
 
 .about-page .section-heading {
@@ -2426,13 +2414,13 @@ summary:focus-visible,
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     letter-spacing: -.8px;
-    color: #29247f;
-    font-size: clamp(38px, 4vw, 54px);
+    color: var(--purple-dark);
+    font-size: clamp(2.375rem, 4vw, 3.375rem);
     line-height: 1.12;
 }
 
 .about-page .section-heading p:not(.section-kicker) {
-    color: #55566b;
+    color: var(--muted);
 }
 
 .about-page .about-values {
@@ -2441,24 +2429,34 @@ summary:focus-visible,
 }
 
 .about-page .about-values article {
+    padding: 28px;
+
     border: 0;
-    background: #ffffff;
+    background: var(--white);
     border-radius: 18px;
     box-shadow: 0 4px 0 #e0e4fa;
 }
 
 .about-page .about-value-number {
-    font-size: 30px;
+    color: var(--purple);
+
+    font-size: 1.875rem;
     font-family: Impact, "Arial Narrow", Arial, sans-serif;
     font-weight: 400;
 }
 
 .about-page .about-values h3 {
-    font-size: 19px;
+    margin: 12px 0;
+    color: var(--purple);
+
+    font-size: 1.1875rem;
 }
 
 .about-page .about-values p {
-    font-size: 14px;
+    margin: 0;
+    color: var(--muted);
+
+    font-size: 0.875rem;
     line-height: 1.75;
 }
 
@@ -2472,8 +2470,8 @@ summary:focus-visible,
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     letter-spacing: -.8px;
-    color: #29247f;
-    font-size: 64px;
+    color: var(--purple-dark);
+    font-size: 4rem;
     line-height: .98;
     text-transform: uppercase;
 }
@@ -2498,7 +2496,7 @@ summary:focus-visible,
     column-gap: 42px;
     padding: 32px 40px 32px 26px;
     margin-left: 24px;
-    background: #ffffff;
+    background: var(--white);
     border: 0;
     border-radius: 20px;
     box-shadow: none;
@@ -2507,26 +2505,31 @@ summary:focus-visible,
 .about-page .about-member dt {
     grid-column: 2;
     margin: 0 0 10px;
-    font-size: 25px;
-    color: #29247f;
+    font-size: 1.5625rem;
+    color: var(--purple-dark);
 }
 
 .about-page .about-member dt span {
+    display: block;
+    color: var(--muted);
+    font-weight: 700;
+    text-transform: uppercase;
+
     letter-spacing: 1px;
     margin-top: 7px;
-    font-size: 11px;
+    font-size: 0.6875rem;
 }
 
 .about-page .about-member dd {
     grid-column: 2;
     margin: 0 0 14px;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.65;
 }
 
 .about-page .about-member .about-student-id {
     justify-self: start;
-    font-size: 12px;
+    font-size: 0.75rem;
     padding: 4px 10px;
 }
 
@@ -2543,7 +2546,7 @@ summary:focus-visible,
     margin: 0;
     transform: rotate(-8deg);
     padding: 9px 9px 0;
-    background: #ffffff;
+    background: var(--white);
     box-shadow: -14px 14px 0 #dce3ff, 0 10px 24px #29247f1a;
 }
 
@@ -2579,16 +2582,16 @@ summary:focus-visible,
 }
 
 .about-page .portrait-art span {
-    color: #29247f;
+    color: var(--purple-dark);
     font-family: Impact, "Arial Narrow", Arial, sans-serif;
-    font-size: 63px;
+    font-size: 3.9375rem;
     z-index: 1;
     letter-spacing: -1px;
 }
 
 .about-page .member-photo figcaption {
-    color: #29247f;
-    font-size: 10px;
+    color: var(--purple-dark);
+    font-size: 0.625rem;
     font-weight: 700;
     padding: 10px 3px;
     text-transform: uppercase;
@@ -2649,7 +2652,7 @@ summary:focus-visible,
 }
 
 .about-page .about-photo-placeholder strong {
-    color: #29247f;
+    color: var(--purple-dark);
 }
 
 .about-page .about-facts {
@@ -2658,6 +2661,10 @@ summary:focus-visible,
 }
 
 .about-page .about-facts caption {
+    color: var(--purple-dark);
+    font-size: 1.125rem;
+    font-weight: 700;
+
     background: #ffdf88;
     padding: 20px;
 }
@@ -2671,8 +2678,8 @@ summary:focus-visible,
 }
 
 .about-page .about-country h2 {
-    color: #29247f;
-    font-size: 24px;
+    color: var(--purple-dark);
+    font-size: 1.5rem;
 }
 
 .about-page .about-country h2::before {
@@ -2682,12 +2689,14 @@ summary:focus-visible,
     height: 3px;
     margin-bottom: 18px;
     border-radius: 2px;
-    background: #3933ad;
+    background: var(--purple);
 }
 
 .about-page .about-country p {
+    color: #3e3e58;
+
     max-width: 960px;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.8;
 }
 
@@ -2696,24 +2705,24 @@ summary:focus-visible,
     margin: 0 auto 64px;
     padding: 36px 40px;
     border-radius: 24px;
-    background: #ffbf24;
+    background: var(--yellow);
 }
 
 .about-page .cta-section h2 {
     max-width: 850px;
-    color: #29247f;
-    font-size: clamp(28px, 3vw, 34px);
+    color: var(--purple-dark);
+    font-size: clamp(1.75rem, 3vw, 2.125rem);
     line-height: 1.2;
 }
 
 .about-page .cta-section p:not(.section-kicker) {
     max-width: 800px;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.7;
 }
 
 .about-page .site-footer {
-    background: #29247f;
+    background: var(--purple-dark);
 }
 
 @media (max-width: 800px) {
@@ -2766,7 +2775,7 @@ summary:focus-visible,
     }
 
     .about-page .portrait-art span {
-        font-size: 48px;
+        font-size: 3rem;
     }
 
     .about-page .about-member .about-portrait,
@@ -2793,7 +2802,7 @@ summary:focus-visible,
     }
 
     .about-page .about-country h2 {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 
     .about-page .cta-section {
@@ -2804,7 +2813,7 @@ summary:focus-visible,
     }
 
     .about-page .cta-section p:not(.section-kicker) {
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 
     .about-page .about-section {
@@ -2812,7 +2821,7 @@ summary:focus-visible,
     }
 
     .about-page .about-group-layout h2 {
-        font-size: 50px;
+        font-size: 3.125rem;
     }
 
     .about-page .about-member,
@@ -2839,7 +2848,7 @@ summary:focus-visible,
     }
 
     .about-page .about-member dt {
-        font-size: 23px;
+        font-size: 1.4375rem;
     }
 
     .about-page .about-member .about-student-id {
@@ -2847,13 +2856,13 @@ summary:focus-visible,
     }
 
     .about-page .about-hero h1 {
-        font-size: 48px;
+        font-size: 3rem;
         letter-spacing: -1px;
     }
 
     .about-page .about-info-list {
         padding: 24px 20px 24px 38px;
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .about-page .about-photo-placeholder {
@@ -2862,7 +2871,7 @@ summary:focus-visible,
     }
 
     .about-page .about-hero-note h2 {
-        font-size: 28px;
+        font-size: 1.75rem;
         line-height: 1.2;
     }
 
@@ -2904,14 +2913,12 @@ summary:focus-visible,
 
 }
 
-
 /* ======================================================================
    [APPLY] TRANG ỨNG TUYỂN — apply.html — TRẦN GIA CÁT ANH
    Gồm hướng dẫn chọn mã việc, sidebar, form, fieldset, ô nhập,
    checkbox/radio, nút Submit và thông báo lỗi.
    Selector bắt đầu bằng .apply-page. Giữ quy tắc :user-invalid và focus.
    ====================================================================== */
-
 
 .apply-page .apply-button.active {
     color: var(--purple-dark);
@@ -2932,7 +2939,7 @@ summary:focus-visible,
 .apply-page .apply-faq h2 {
     margin: 0 0 10px;
     color: var(--purple-dark);
-    font-size: clamp(26px, 3vw, 34px);
+    font-size: clamp(1.625rem, 3vw, 2.125rem);
     line-height: 1.2;
 }
 
@@ -2993,7 +3000,7 @@ summary:focus-visible,
 .apply-page .apply-hero h1 {
     margin: 0 0 22px;
     color: var(--purple);
-    font-size: clamp(36px, 4.5vw, 60px);
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
     line-height: 1.08;
     letter-spacing: -2px;
 }
@@ -3010,12 +3017,14 @@ summary:focus-visible,
     max-width: 650px;
     margin: 0;
     color: var(--muted);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .apply-page .apply-layout {
     display: grid;
     grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.7fr);
+    grid-template-areas: "references form" "support form";
+    grid-template-rows: auto 1fr;
     align-items: start;
     gap: 32px;
     max-width: 1440px;
@@ -3023,7 +3032,13 @@ summary:focus-visible,
     padding: 0 8% 65px;
 }
 
-.apply-page .apply-guide {
+.apply-page .apply-guide { grid-area: references; }
+.apply-page .apply-form-panel { grid-area: form; }
+.apply-page .apply-support { grid-area: support; }
+.apply-page .apply-support .apply-guide-note:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+
+.apply-page .apply-guide,
+.apply-page .apply-support {
     padding: 26px;
     border: 1px solid var(--line);
     border-top: 5px solid var(--yellow);
@@ -3034,13 +3049,13 @@ summary:focus-visible,
 .apply-page .apply-guide h2 {
     margin: 0 0 15px;
     color: var(--purple);
-    font-size: 25px;
+    font-size: 1.5625rem;
     line-height: 1.2;
 }
 
 .apply-page .apply-guide p:not(.section-kicker) {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .apply-page .apply-role {
@@ -3062,7 +3077,7 @@ summary:focus-visible,
 .apply-page .apply-role span {
     display: block;
     color: var(--muted);
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .apply-page .apply-role .apply-reference {
@@ -3074,7 +3089,7 @@ summary:focus-visible,
     display: block;
     margin: 7px 0;
     color: var(--purple-dark);
-    font-size: 17px;
+    font-size: 1.0625rem;
     line-height: 1.3;
 }
 
@@ -3087,13 +3102,13 @@ summary:focus-visible,
 .apply-page .apply-guide-note h3 {
     margin: 0 0 12px;
     color: var(--purple);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .apply-page .apply-guide-note ol {
     padding-left: 20px;
     color: var(--muted);
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .apply-page .apply-guide-note li {
@@ -3102,7 +3117,7 @@ summary:focus-visible,
 
 .apply-page .apply-guide-note a {
     color: var(--purple);
-    font-size: 13px;
+    font-size: 0.8125rem;
     overflow-wrap: anywhere;
 }
 
@@ -3118,14 +3133,14 @@ summary:focus-visible,
 .apply-page .apply-form-heading h2 {
     margin: 0 0 12px;
     color: var(--purple);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.2;
 }
 
 .apply-page .apply-form-heading > p:last-child {
     margin-bottom: 30px;
     color: var(--muted);
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .apply-page .apply-fieldset {
@@ -3139,7 +3154,7 @@ summary:focus-visible,
 .apply-page .apply-fieldset > legend {
     padding: 0 8px;
     color: var(--purple-dark);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
 }
 
@@ -3151,8 +3166,8 @@ summary:focus-visible,
     margin-right: 6px;
     border-radius: 50%;
     color: var(--purple-dark);
-    background: #fff1bf;
-    font-size: 12px;
+    background: var(--yellow-soft);
+    font-size: 0.75rem;
 }
 
 .apply-page .apply-form-grid {
@@ -3173,7 +3188,7 @@ summary:focus-visible,
     display: block;
     margin-bottom: 8px;
     color: var(--ink);
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
 }
 
@@ -3183,12 +3198,12 @@ summary:focus-visible,
     width: 100%;
     min-height: 48px;
     padding: 12px;
-    border: 1px solid #8986b5;
+    border: 1px solid var(--field-border);
     border-radius: 9px;
     color: var(--ink);
-    background: #ffffff;
+    background: var(--white);
     font: inherit;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .apply-page .apply-field textarea {
@@ -3196,12 +3211,12 @@ summary:focus-visible,
     width: 100%;
     min-height: 48px;
     padding: 12px;
-    border: 1px solid #8986b5;
+    border: 1px solid var(--field-border);
     border-radius: 9px;
     color: var(--ink);
-    background: #ffffff;
+    background: var(--white);
     font: inherit;
-    font-size: 16px;
+    font-size: 1rem;
     resize: vertical;
 }
 
@@ -3220,7 +3235,7 @@ summary:focus-visible,
 .apply-page .apply-hint {
     margin: 8px 0 0;
     color: var(--muted);
-    font-size: 12px;
+    font-size: 0.875rem;
     line-height: 1.5;
 }
 
@@ -3240,7 +3255,7 @@ summary:focus-visible,
     margin-bottom: 10px;
     padding: 0;
     color: var(--ink);
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
 }
 
@@ -3258,8 +3273,8 @@ summary:focus-visible,
     padding: 10px 12px;
     border: 1px solid var(--line);
     border-radius: 9px;
-    background: #f8f8ff;
-    font-size: 14px;
+    background: var(--surface-soft);
+    font-size: 0.875rem;
     cursor: pointer;
 }
 
@@ -3330,7 +3345,7 @@ summary:focus-visible,
     border-radius: 0 10px 10px 0;
     color: var(--purple-dark);
     background: #fff8de;
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .apply-page .apply-submit-area button {
@@ -3368,15 +3383,15 @@ summary:focus-visible,
 
     .apply-page .apply-layout {
         grid-template-columns: 1fr;
+        grid-template-areas: "references" "form" "support";
+        grid-template-rows: auto;
     }
-
-    .apply-page .apply-guide {
-        order: 0;
-    }
-
-    .apply-page .apply-form-panel {
-        order: 1;
-    }
+    .apply-page .apply-guide { padding: 18px; }
+    .apply-page .apply-guide > p,
+    .apply-page .apply-role > span:last-child { display: none; }
+    .apply-page .apply-guide h2 { font-size: 1.25rem; margin-bottom: 8px; }
+    .apply-page .apply-role { margin-top: 8px; padding: 10px 12px; }
+    .apply-page .apply-role strong { margin: 3px 0 0; font-size: 0.9375rem; }
 
 }
 
@@ -3391,7 +3406,7 @@ summary:focus-visible,
     }
 
     .apply-page .apply-hero > p:last-child {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .apply-page .apply-layout {
@@ -3420,7 +3435,7 @@ summary:focus-visible,
     display: none;
     margin: 8px 0 0;
     color: #9f1239;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     line-height: 1.5;
 }
@@ -3445,7 +3460,6 @@ summary:focus-visible,
     background-color: #fff1f2;
 }
 
-
 /* ======================================================================
    [SKIP] SKIP LINK DÙNG CHUNG — CẢ NHÓM
    Ẩn bình thường, hiện khi nhận focus bàn phím; dùng trên cả bốn trang.
@@ -3463,9 +3477,9 @@ summary:focus-visible,
     border: 2px solid transparent;
     border-radius: 8px;
     background: var(--purple-dark);
-    color: #ffffff;
+    color: var(--white);
     font: inherit;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     line-height: 1.5;
     text-decoration: none;

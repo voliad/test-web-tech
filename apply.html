@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3933ad">
     <meta name="description" content="Apply for a Front-End Web Developer or UX/UI Designer role at Lumina Learn.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lumina Learn">
+    <meta property="og:title" content="Lumina Learn | Apply for a Role">
+    <meta property="og:description" content="Apply for a Front-End Web Developer or UX/UI Designer role at Lumina Learn.">
     <title>Lumina Learn | Apply for a Role</title>
     <link rel="icon" href="images/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -20,56 +25,54 @@
             <span class="brand-mark">L</span>
             <span class="brand-name">LUMINA<span>LEARN</span></span>
         </a>
-        <!-- Shared navigation: direct page links with hover/keyboard submenus. -->
-        <nav class="main-nav" aria-label="Main navigation">
-            <div class="nav-dropdown">
-                <a class="nav-link" href="index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="Home sections">
-                    <a href="index.html#our-impact">Our Impact</a>
-                    <a href="index.html#career">Career</a>
-                    <a href="index.html#why-join-us">Why Join Us?</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="Jobs sections">
-                    <a href="jobs.html#frontend-developer">Web Developer</a>
-                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" aria-label="About Us sections">
-                    <a href="about.html#our-project">Our Project</a>
-                    <a href="about.html#group-info">Get to Know</a>
-                    <a href="about.html#team-members">Meet Our Team</a>
-                    <a href="about.html#site-footer">Contact Us</a>
-                </div>
-            </div>
+        <!-- Shared navigation: direct page links with hover/keyboard submenus, following the supplied team design. -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="nav-dropdown">
+                <a class="nav-link" href="index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="Home sections">
+                    <a href="index.html#our-impact">Our Impact</a>
+                    <a href="index.html#career">Career</a>
+                    <a href="index.html#why-join-us">Why Join Us?</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="Jobs sections">
+                    <a href="jobs.html#frontend-developer">Web Developer</a>
+                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" role="group" aria-label="About Us sections">
+                    <a href="about.html#our-project">Our Project</a>
+                    <a href="about.html#group-info">Get to Know</a>
+                    <a href="about.html#team-members">Meet Our Team</a>
+                    <a href="about.html#site-footer">Contact Us</a>
+                </div>
+            </div>
         </nav>
         <div class="header-actions">
             <a class="apply-button active" href="apply.html" aria-current="page">Apply</a>
-            <details class="mobile-menu">
+        </div>
+        <details class="mobile-menu">
                 <summary class="mobile-menu-toggle" aria-label="Navigation menu">
                     <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label" aria-hidden="true"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
                 </summary>
                 <nav class="mobile-menu-panel" aria-label="Mobile navigation"><details class="mobile-nav-group"><summary>Home</summary><a href="index.html#home">Home overview</a><a href="index.html#our-impact">Our mission</a><a href="index.html#career">Career paths</a><a href="index.html#why-join-us">Why join us?</a></details><details class="mobile-nav-group"><summary>Jobs</summary><a href="jobs.html">Jobs overview</a><a href="jobs.html#frontend-developer">Front-End Web Developer</a><a href="jobs.html#ux-ui-designer">UX/UI Designer</a></details><details class="mobile-nav-group"><summary>About Us</summary><a href="about.html">About Us overview</a><a href="about.html#our-project">Our project</a><a href="about.html#group-info">Get to know us</a><a href="about.html#team-members">Meet our team</a><a href="about.html#site-footer">Contact us</a></details><a href="apply.html" aria-current="page">Apply</a></nav>
-            </details>
-        </div>
+        </details>
     </header>
 
     <main id="apply-main" tabindex="-1">
         <section class="apply-hero" aria-labelledby="apply-title">
-            <p class="section-kicker">YOUR NEXT CHAPTER</p>
             <h1 id="apply-title">Bring your skills.<br><span>Make learning better.</span></h1>
             <p>Apply to join Lumina Learn and help create accessible, inclusive digital learning experiences.</p>
         </section>
 
         <div class="apply-layout">
             <aside class="apply-guide" aria-labelledby="apply-guide-title">
-                <p class="section-kicker">BEFORE YOU START</p>
                 <h2 id="apply-guide-title">Find your reference</h2>
-                <p>Choose the role you want to apply for and enter its five-character reference in the form.</p>
+                <p>Choose FE101 or UX102 in the form below.</p>
                 <!-- EDIT: keep these references consistent with jobs.html. -->
                 <a class="apply-role" href="jobs.html#frontend-developer">
                     <span class="apply-reference">FE101</span>
@@ -81,25 +84,10 @@
                     <strong>UX/UI Designer</strong>
                     <span>Design &amp; UX · Full-time</span>
                 </a>
-                <section class="apply-guide-note" aria-labelledby="apply-checklist-title">
-                    <h3 id="apply-checklist-title">Application checklist</h3>
-                    <ol>
-                        <li>Read the job requirements.</li>
-                        <li>Complete your personal and contact details.</li>
-                        <li>Confirm your core skills and describe any additional skills.</li>
-                        <li>Review your details before submitting.</li>
-                    </ol>
-                </section>
-                <section class="apply-guide-note" aria-labelledby="apply-help-title">
-                    <h3 id="apply-help-title">Need an adjustment?</h3>
-                    <p>We welcome applications from Aboriginal and Torres Strait Islander peoples, people with disability and people from diverse backgrounds. Contact us to discuss an accessible application format.</p>
-                    <a href="mailto:info@luminalearn.com">info@luminalearn.com</a>
-                </section>
             </aside>
 
-            <section class="apply-form-panel" aria-labelledby="form-title">
+            <section class="apply-form-panel">
                 <div class="apply-form-heading">
-                    <p class="section-kicker">LET’S GET TO KNOW YOU</p>
                     <h2 id="form-title">Job application</h2>
                     <!-- Minimal inline CSS example required by the assignment. -->
                     <p id="form-instructions" style="font-weight: 700;">All fields are required except Other skills and CV / Resume.</p>
@@ -111,19 +99,19 @@
                 <!-- Accessibility: aria-describedby references permanent guidance only.
                      Hidden error text must not become a permanent field description.
                      Native HTML validation and CSS error states remain active. -->
-                <form class="apply-form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" aria-describedby="form-instructions form-test-note">
-                    <!-- APPLY FORM 01: Job reference — exactly five letters/digits. -->
+                <form class="apply-form" aria-labelledby="form-title" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" aria-describedby="form-instructions form-test-note">
+                    <!-- APPLY FORM 01: Job reference — one of the two advertised roles. -->
                     <fieldset class="apply-fieldset">
                         <legend><span class="apply-step">01</span> Your chosen role</legend>
                         <div class="apply-field">
                             <label for="job-reference">Job reference number</label>
-                            <input type="text" id="job-reference" name="job_reference" class="apply-reference" list="job-reference-options" minlength="5" maxlength="5" pattern="[A-Za-z0-9]{5}" placeholder="Type or choose a job reference" title="Enter exactly five letters or digits, such as FE101 or UX102." aria-describedby="reference-help" required>
+                            <input type="text" id="job-reference" name="job_reference" class="apply-reference" list="job-reference-options" minlength="5" maxlength="5" pattern="FE101|UX102" placeholder="Type or choose a job reference" title="Choose FE101 for Front-End Web Developer or UX102 for UX/UI Designer." aria-describedby="reference-help" required>
                             <datalist id="job-reference-options">
                                 <option value="FE101" label="Front-End Web Developer"></option>
                                 <option value="UX102" label="UX/UI Designer"></option>
                             </datalist>
-                            <p class="apply-error" id="job-reference-error">Error: enter a five-character job reference, such as FE101 or UX102.</p>
-                            <p class="apply-hint" id="reference-help">Choose a suggestion or type the five-character reference. FE101 — Front-End Web Developer · UX102 — UX/UI Designer. To apply for both roles, submit a separate application for each job reference.</p>
+                            <p class="apply-error" id="job-reference-error">Error: enter FE101 or UX102 using uppercase letters.</p>
+                            <p class="apply-hint" id="reference-help">FE101 — Front-End Web Developer · UX102 — UX/UI Designer. Choose a suggestion or type its uppercase code.</p>
                         </div>
                     </fieldset>
 
@@ -250,11 +238,11 @@
                         </div>
                     </fieldset>
 
-                    <!-- APPLY FORM 05: optional CV interface preview.
+                    <!-- APPLY FORM 06: optional CV interface preview.
                          Intentionally no name attribute: the selected file is not submitted
                          to the university test endpoint. Add real upload handling in Part 2. -->
                     <fieldset class="apply-fieldset">
-                        <legend><span class="apply-step">05</span> CV / Resume <span class="apply-optional">(optional)</span></legend>
+                        <legend><span class="apply-step">06</span> CV / Resume <span class="apply-optional">(optional)</span></legend>
                         <div class="apply-field apply-cv-upload">
                             <label for="cv-preview">Choose your CV</label>
                             <input type="file" id="cv-preview" accept=".pdf,.doc,.docx" aria-describedby="cv-formats cv-preview-note">
@@ -270,10 +258,25 @@
                     </div>
                 </form>
             </section>
+            <aside class="apply-support" aria-labelledby="apply-checklist-title">
+                <section class="apply-guide-note" aria-labelledby="apply-checklist-title">
+                    <h3 id="apply-checklist-title">Application checklist</h3>
+                    <ol>
+                        <li>Read the job requirements.</li>
+                        <li>Complete your personal and contact details.</li>
+                        <li>Confirm your core skills and describe any additional skills.</li>
+                        <li>Review your details before submitting.</li>
+                    </ol>
+                </section>
+                <section class="apply-guide-note" aria-labelledby="apply-help-title">
+                    <h3 id="apply-help-title">Need an adjustment?</h3>
+                    <p>We welcome applications from Aboriginal and Torres Strait Islander peoples, people with disability and people from diverse backgrounds. Contact us to discuss an accessible application format.</p>
+                    <a href="mailto:info@luminalearn.com">info@luminalearn.com</a>
+                </section>
+            </aside>
         </div>
         <!-- APPLY: native disclosure controls work with mouse, touch and keyboard. -->
         <section class="apply-faq section-anchor" id="application-faq" aria-labelledby="application-faq-title">
-            <p class="section-kicker">BEFORE YOU APPLY</p>
             <h2 id="application-faq-title">A few helpful answers.</h2>
             <p class="apply-faq-intro">Quick guidance for completing this student project application form.</p>
             <details>
@@ -303,6 +306,12 @@
             </a>
             <p>Building a Learning Platform for Everyone</p>
             <p>Making digital education accessible, inclusive and meaningful.</p>
+            <!-- Social links currently use platform homepages; replace with team profile URLs when available. -->
+            <div class="footer-social">
+                <a class="footer-social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="images/social-facebook.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="images/social-instagram.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="images/social-linkedin.svg" alt="" width="22" height="22"></a>
+            </div>
         </div>
         <div class="footer-links">
             <h2>Quick Links</h2>
