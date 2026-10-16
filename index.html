@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Join Lumina Learn and help make digital education accessible to everyone.">
     <title>Lumina Learn | Careers</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
     <!-- Part 1 embedded CSS: one small, page-specific example.
          Shared layout and component styles remain in the external stylesheet. -->
     <style>
-        .home-search-intro .section-kicker { letter-spacing: 2px; }
+        .home-role-intro .section-kicker { letter-spacing: 2px; }
     </style>
 </head>
 <body class="home-page">
@@ -21,21 +23,32 @@
             <span class="brand-name">LUMINA<span>LEARN</span></span>
         </a>
 
+        <!-- Shared navigation: direct page links with hover/keyboard submenus. -->
         <nav class="main-nav" aria-label="Main navigation">
-            <a class="nav-link active" href="#home" aria-current="page">Home</a>
-
             <div class="nav-dropdown">
-                <a class="nav-link dropdown-toggle" href="#our-impact">Our Impact <span class="caret">⌄</span></a>
-                <div class="dropdown-menu">
-                    <a href="#our-impact">Our mission</a>
-                    <a href="#career">Career paths</a>
-                    <a href="#why-join-us">Why join us?</a>
-                    <a href="#call-to-action">Join our team</a>
+                <a class="nav-link active" href="index.html#home" aria-current="page">Home</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" aria-label="Home sections">
+                    <a href="index.html#our-impact">Our Impact</a>
+                    <a href="index.html#career">Career</a>
+                    <a href="index.html#why-join-us">Why Join Us?</a>
                 </div>
             </div>
-
-            <a class="nav-link" href="jobs.html">Jobs</a>
-            <a class="nav-link" href="about.html">About Us</a>
+            <div class="nav-dropdown">
+                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" aria-label="Jobs sections">
+                    <a href="jobs.html#frontend-developer">Web Developer</a>
+                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
+                <div class="dropdown-menu" aria-label="About Us sections">
+                    <a href="about.html#our-project">Our Project</a>
+                    <a href="about.html#group-info">Get to Know</a>
+                    <a href="about.html#team-members">Meet Our Team</a>
+                    <a href="about.html#site-footer">Contact Us</a>
+                </div>
+            </div>
         </nav>
 
         <div class="header-actions">
@@ -44,7 +57,7 @@
                 <summary class="mobile-menu-toggle" aria-label="Navigation menu">
                     <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label" aria-hidden="true"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
                 </summary>
-                <nav class="mobile-menu-panel" aria-label="Mobile navigation"><a href="index.html#home" aria-current="page">Home</a><a href="index.html#our-impact">Our mission</a><a href="index.html#career">Career paths</a><a href="index.html#why-join-us">Why join us?</a><a href="jobs.html">Jobs</a><a href="about.html">About Us</a><a href="apply.html">Apply</a></nav>
+                <nav class="mobile-menu-panel" aria-label="Mobile navigation"><details class="mobile-nav-group"><summary>Home</summary><a href="index.html#home" aria-current="page">Home overview</a><a href="index.html#our-impact">Our mission</a><a href="index.html#career">Career paths</a><a href="index.html#why-join-us">Why join us?</a></details><details class="mobile-nav-group"><summary>Jobs</summary><a href="jobs.html">Jobs overview</a><a href="jobs.html#frontend-developer">Front-End Web Developer</a><a href="jobs.html#ux-ui-designer">UX/UI Designer</a></details><details class="mobile-nav-group"><summary>About Us</summary><a href="about.html">About Us overview</a><a href="about.html#our-project">Our project</a><a href="about.html#group-info">Get to know us</a><a href="about.html#team-members">Meet our team</a><a href="about.html#site-footer">Contact us</a></details><a href="apply.html">Apply</a></nav>
             </details>
         </div>
     </header>
@@ -62,35 +75,26 @@
                 </p>
                 <div class="hero-actions">
                     <a class="button button-primary" href="jobs.html">Explore Jobs</a>
-                    <a class="button button-secondary" href="about.html">Meet our team</a>
-                </div>
-                <a class="home-next-section" href="#our-impact">Discover our impact <span aria-hidden="true">↓</span></a>
-            </div>
-            <div class="hero-decoration" aria-hidden="true">
-                <span class="sun-shape"></span>
-                <span class="orbit orbit-one"></span>
-                <span class="orbit orbit-two"></span>
-                <div class="hero-note">
-                    <span class="note-dot"></span>
-                    Learning for everyone
+                    <a class="button button-secondary" href="about.html">About Us</a>
                 </div>
             </div>
+
         </section>
 
         <!-- Impact: image slider left, text right -->
         <section class="impact-section section-anchor" id="our-impact" aria-labelledby="impact-title">
             <div class="image-slider" aria-label="Learning at Lumina Learn">
                 <!-- CSS-only slider: choose an image using the dots -->
-                <input type="radio" name="learning-slide" id="learning-slide-1" checked>
-                <input type="radio" name="learning-slide" id="learning-slide-2">
-                <input type="radio" name="learning-slide" id="learning-slide-3">
+                <input type="radio" name="learning-slide" id="learning-slide-1" aria-label="Show image 1 of 3" checked>
+                <input type="radio" name="learning-slide" id="learning-slide-2" aria-label="Show image 2 of 3">
+                <input type="radio" name="learning-slide" id="learning-slide-3" aria-label="Show image 3 of 3">
 
                 <div class="slider-window">
                     <div class="slider-track">
-                        <!-- Replace these files with your own images in the images folder -->
-                        <img src="images/learning1.jpg" alt="Students learning together around a laptop">
-                        <img src="images/learning2.jpg" alt="Students collaborating on a project">
-                        <img src="images/learning3.jpg" alt="An online learning session">
+                        <!-- Illustrations supplied in the team folder; WebP versions preserve the full composition. -->
+                        <img src="images/learning1.webp" alt="Two children using an online learning platform together on a laptop." width="1536" height="1024" decoding="async">
+                        <img src="images/learning2.webp" alt="A child learning online, with illustrated features for courses, personalised learning and progress tracking." width="1536" height="1024" decoding="async">
+                        <img src="images/learning3.webp" alt="A child celebrating a completed maths exercise, with illustrated learning progress charts." width="1536" height="1024" decoding="async">
                     </div>
                     <div class="slider-arrow arrow-one">
                         <label for="learning-slide-3" aria-label="Previous image">‹</label>
@@ -133,26 +137,22 @@
             </div>
         </section>
 
-        <!-- Search interface preview: static HTML opens the full Jobs page.
-             The keyword is submitted as a query parameter; no filtering is implemented. -->
-        <section class="home-job-search" aria-labelledby="job-search-title">
-            <div class="home-search-intro">
-                <p class="section-kicker" style="font-weight: 800;">YOUR NEXT CHAPTER</p>
+        <!-- Part 1 search interface: GET sends keywords to Jobs; filtering requires a later implementation. -->
+        <section id="find-role" class="home-role-browser" aria-labelledby="job-search-title">
+            <div class="home-role-intro">
+                <p class="section-kicker">YOUR NEXT CHAPTER</p>
                 <h2 id="job-search-title">Find your next role.</h2>
                 <p>Bring your skills to a team making learning more accessible.</p>
             </div>
-            <form class="home-search-form" role="search" action="jobs.html" method="get" aria-describedby="job-search-note">
+            <form class="home-search-form" role="search" action="jobs.html#open-roles" method="get" aria-describedby="job-search-note">
                 <label for="job-keyword">Job title or keyword</label>
                 <div class="home-search-controls">
-                    <div class="home-search-input-wrap">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg>
-                        <input type="search" id="job-keyword" name="keywords" placeholder="e.g. design, front-end, education" maxlength="80">
-                    </div>
+                    <input type="search" id="job-keyword" name="keywords" placeholder="e.g. front-end, design" maxlength="80">
                     <button class="button button-dark" type="submit">Search jobs <span aria-hidden="true">→</span></button>
                 </div>
-                <p id="job-search-note" class="home-search-note">Keyword search preview. This button currently shows all available jobs.</p>
+                <p id="job-search-note">This form opens all current vacancies. Keyword filtering is not available yet.</p>
             </form>
-            <div class="home-search-suggestions">
+            <div class="home-role-links">
                 <span>Explore our roles</span>
                 <a href="jobs.html#frontend-developer">Front-End Web Developer <span aria-hidden="true">↗</span></a>
                 <a href="jobs.html#ux-ui-designer">UX/UI Designer <span aria-hidden="true">↗</span></a>
@@ -172,32 +172,37 @@
 
             <div class="table-wrap">
                 <table class="career-table">
-                    <tr>
-                        <th colspan="3" class="table-title">Career Opportunities at Lumina Learn</th>
-                    </tr>
-                    <tr>
-                        <th scope="col">Department</th>
-                        <th scope="col">Career Focus</th>
-                        <th scope="col">Skills &amp; Interests</th>
-                    </tr>
-                    <tr>
-                        <td rowspan="2" class="department-cell">Design &amp; UX</td>
-                        <td>Accessible interfaces</td>
-                        <td>UI/UX design, prototyping</td>
-                    </tr>
-                    <tr>
-                        <td>User research</td>
-                        <td>Research, analysis</td>
-                    </tr>
-                    <tr>
-                        <td class="department-cell">Engineering</td>
-                        <td colspan="2">Responsive learning platforms — HTML, CSS and programming</td>
-                    </tr>
-                    <tr>
-                        <td class="department-cell">Education &amp; Content</td>
-                        <td>Digital learning resources</td>
-                        <td>Writing, content design</td>
-                    </tr>
+                    <caption class="table-title">Career Opportunities at Lumina Learn</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Department</th>
+                            <th scope="col">Career Focus</th>
+                            <th scope="col">Skills &amp; Interests</th>
+                        </tr>
+                    </thead>
+                    <!-- Design & UX is the header for this two-row group. -->
+                    <tbody>
+                        <tr>
+                            <th scope="rowgroup" rowspan="2" class="department-cell">Design &amp; UX</th>
+                            <td>Accessible interfaces</td>
+                            <td>UI/UX design, prototyping</td>
+                        </tr>
+                        <tr>
+                            <td>User research</td>
+                            <td>Research, analysis</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="department-cell">Engineering</th>
+                            <td colspan="2">Responsive learning platforms — HTML, CSS and programming</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="department-cell">Education &amp; Content</th>
+                            <td>Digital learning resources</td>
+                            <td>Writing, content design</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <p class="table-note">Explore the <a href="#call-to-action">application information</a> or contact our team to learn more.</p>
@@ -288,7 +293,7 @@
 
     <!-- Optional floating Zalo contact button: replace URL and icon file -->
     <a class="zalo-float" href="https://zalo.me/" target="_blank" rel="noopener noreferrer" aria-label="Contact Lumina Learn on Zalo">
-        <img src="images/zalo-icon.png" alt="">
+        <img src="images/zalo-icon.webp" alt="">
     </a>
 </body>
 </html>
