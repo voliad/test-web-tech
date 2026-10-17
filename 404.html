@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#3933ad">
+    <meta name="description" content="This page could not be found. Return to Lumina Learn or explore our open roles.">
+    <title>Page not found | Lumina Learn</title>
+    <link rel="icon" href="/test-web-tech/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/test-web-tech/images/favicon.svg">
+    <link rel="stylesheet" href="/test-web-tech/styles.css">
+    <!-- 404-specific embedded CSS; shared navigation, buttons and footer use styles.css. -->
+    <style>
+        .not-found-page { min-height: 100vh; display: flex; flex-direction: column; }
+        .not-found-main {
+            flex: 1;
+            display: grid;
+            place-items: center;
+            padding: 72px 6% 88px;
+        }
+        .not-found-content { width: 100%; max-width: 720px; text-align: center; }
+        .not-found-code {
+            display: inline-block;
+            margin: 0 0 24px;
+            padding: 4px 32px;
+            border-radius: 24px;
+            background: var(--yellow);
+            color: var(--purple-dark);
+            font-size: clamp(4rem, 12vw, 7rem);
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -3px;
+        }
+        .not-found-content h1 {
+            margin: 0 0 18px;
+            color: var(--purple-dark);
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+        }
+        .not-found-description {
+            max-width: 520px;
+            margin: 0 auto 30px;
+            color: var(--muted);
+            font-size: 1.0625rem;
+            line-height: 1.7;
+        }
+        .not-found-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+        .not-found-actions .button { min-height: 48px; }
+        @media (max-width: 560px) {
+            .not-found-main { padding: 48px 6% 56px; }
+            .not-found-actions { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body class="not-found-page">
+    <a class="skip-link" href="#not-found-main">Skip to main content</a>
+    <header class="site-header">
+        <a class="brand" href="/test-web-tech/index.html#home" aria-label="Lumina Learn home">
+            <span class="brand-mark">L</span>
+            <span class="brand-name">LUMINA<span>LEARN</span></span>
+        </a>
+
+        <!-- Shared navigation: direct page links with hover/keyboard submenus, following the supplied team design. -->
+        <nav class="main-nav" aria-label="Main navigation">
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="/test-web-tech/index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="Home sections">
+
+                    <a href="/test-web-tech/index.html#our-impact">Our Impact</a>
+
+                    <a href="/test-web-tech/index.html#career">Career</a>
+
+                    <a href="/test-web-tech/index.html#why-join-us">Why Join Us?</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="/test-web-tech/jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="Jobs sections">
+
+                    <a href="/test-web-tech/jobs.html#frontend-developer">Web Developer</a>
+
+                    <a href="/test-web-tech/jobs.html#ux-ui-designer">UX/UI Designer</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="/test-web-tech/about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="About Us sections">
+
+                    <a href="/test-web-tech/about.html#our-project">Our Project</a>
+
+                    <a href="/test-web-tech/about.html#group-info">Get to Know</a>
+
+                    <a href="/test-web-tech/about.html#team-members">Meet Our Team</a>
+
+                    <a href="/test-web-tech/about.html#site-footer">Contact Us</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="header-actions">
+            <a class="apply-button" href="/test-web-tech/apply.html">Apply</a>
+        </div>
+        <details class="mobile-menu">
+                <summary class="mobile-menu-toggle">
+                    <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
+                </summary>
+                <nav class="mobile-menu-panel" aria-label="Mobile navigation"><details class="mobile-nav-group"><summary>Home</summary><a href="/test-web-tech/index.html#home">Home overview</a><a href="/test-web-tech/index.html#our-impact">Our mission</a><a href="/test-web-tech/index.html#career">Career paths</a><a href="/test-web-tech/index.html#why-join-us">Why join us?</a></details><details class="mobile-nav-group"><summary>Jobs</summary><a href="/test-web-tech/jobs.html">Jobs overview</a><a href="/test-web-tech/jobs.html#frontend-developer">Front-End Web Developer</a><a href="/test-web-tech/jobs.html#ux-ui-designer">UX/UI Designer</a></details><details class="mobile-nav-group"><summary>About Us</summary><a href="/test-web-tech/about.html">About Us overview</a><a href="/test-web-tech/about.html#our-project">Our project</a><a href="/test-web-tech/about.html#group-info">Get to know us</a><a href="/test-web-tech/about.html#team-members">Meet our team</a><a href="/test-web-tech/about.html#site-footer">Contact us</a></details><a href="/test-web-tech/apply.html">Apply</a></nav>
+        </details>
+    </header>
+
+    <main class="not-found-main" id="not-found-main" tabindex="-1">
+        <div class="not-found-content">
+            <p class="not-found-code" aria-hidden="true">404</p>
+            <h1 style="font-weight: 800;">Page not found.</h1>
+            <p class="not-found-description">Sorry, we couldn’t find this page. The link may have changed, or the address may be incorrect.</p>
+            <div class="not-found-actions">
+                <a class="button button-primary" href="/test-web-tech/index.html">Back to Home</a>
+                <a class="button button-secondary" href="/test-web-tech/jobs.html">Explore Jobs</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+        <div class="footer-brand">
+            <a class="brand brand-light" href="/test-web-tech/index.html#home">
+                <span class="brand-mark">L</span>
+                <span class="brand-name">LUMINA<span>LEARN</span></span>
+            </a>
+            <p>Building a Learning Platform for Everyone</p>
+            <p>Making digital education accessible, inclusive and meaningful.</p>
+            <!-- Social links currently use platform homepages; replace with team profile URLs when available. -->
+            <div class="footer-social">
+                <a class="footer-social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="/test-web-tech/images/social-facebook.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="/test-web-tech/images/social-instagram.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="/test-web-tech/images/social-linkedin.svg" alt="" width="22" height="22"></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h2>Quick Links</h2>
+            <a href="/test-web-tech/index.html#home">Home</a>
+            <a href="/test-web-tech/jobs.html">Jobs</a>
+            <a href="/test-web-tech/apply.html">Apply</a>
+            <a href="/test-web-tech/about.html">About</a>
+        </div>
+        <div class="footer-resources">
+            <h2>Project Resources</h2>
+            <p>Jira Project: <a href="https://hyo2108.atlassian.net/jira/software/projects/SCRUM/boards/1" target="_blank" rel="noopener noreferrer">COS10026 Jira board</a></p>
+            <p>GitHub Repository: <a href="https://github.com/NguyenHieu-P/PROJECT-WEB-COS10026" target="_blank" rel="noopener noreferrer">PROJECT-WEB-COS10026</a></p>
+            <p>Live website: <a href="https://voliad.github.io/test-web-tech/" target="_blank" rel="noopener noreferrer">View Lumina Learn</a></p>
+            <p>Email: <a href="mailto:info@luminalearn.com">info@luminalearn.com</a></p>
+        </div>
+        <p class="copyright">© 2026 Lumina Learn. All rights reserved.</p>
+    </footer>
+</body>
+</html>
