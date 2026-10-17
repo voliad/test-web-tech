@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3933ad">
+    <meta name="description" content="Explore front-end development and UX/UI design careers at Lumina Learn, an inclusive educational technology company.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lumina Learn">
+    <meta property="og:title" content="Lumina Learn | Job Opportunities">
+    <meta property="og:description" content="Explore front-end development and UX/UI design careers at Lumina Learn, an inclusive educational technology company.">
+    <title>Lumina Learn | Job Opportunities</title>
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <!-- One small embedded CSS example, as required by the assignment. -->
+    <style>
+        .jobs-page .job-reference { font-family: "Courier New", monospace; }
+    </style>
+</head>
+<body class="jobs-page">
+    <a class="skip-link" href="#jobs-main">Skip to main content</a>
+
+    <!-- Shared brand and navigation from index.html; Home anchors include the filename. -->
+    <header class="site-header">
+        <a class="brand" href="index.html#home" aria-label="Lumina Learn home">
+            <span class="brand-mark">L</span>
+            <span class="brand-name">LUMINA<span>LEARN</span></span>
+        </a>
+        <!-- Shared navigation: direct page links with hover/keyboard submenus, following the supplied team design. -->
+        <nav class="main-nav" aria-label="Main navigation">
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="Home sections">
+
+                    <a href="index.html#our-impact">Our Impact</a>
+
+                    <a href="index.html#career">Career</a>
+
+                    <a href="index.html#why-join-us">Why Join Us?</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link active" href="jobs.html" aria-current="page">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="Jobs sections">
+
+                    <a href="jobs.html#frontend-developer">Web Developer</a>
+
+                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="About Us sections">
+
+                    <a href="about.html#our-project">Our Project</a>
+
+                    <a href="about.html#group-info">Get to Know</a>
+
+                    <a href="about.html#team-members">Meet Our Team</a>
+
+                    <a href="about.html#site-footer">Contact Us</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+        <div class="header-actions">
+            <!-- apply.html will be created by the member responsible for the application page. -->
+            <a class="apply-button" href="apply.html">Apply</a>
+        </div>
+        <details class="mobile-menu">
+                <summary class="mobile-menu-toggle">
+                    <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
+                </summary>
+                <nav class="mobile-menu-panel" aria-label="Mobile navigation"><details class="mobile-nav-group"><summary>Home</summary><a href="index.html#home">Home overview</a><a href="index.html#our-impact">Our mission</a><a href="index.html#career">Career paths</a><a href="index.html#why-join-us">Why join us?</a></details><details class="mobile-nav-group"><summary>Jobs</summary><a href="jobs.html" aria-current="page">Jobs overview</a><a href="jobs.html#frontend-developer">Front-End Web Developer</a><a href="jobs.html#ux-ui-designer">UX/UI Designer</a></details><details class="mobile-nav-group"><summary>About Us</summary><a href="about.html">About Us overview</a><a href="about.html#our-project">Our project</a><a href="about.html#group-info">Get to know us</a><a href="about.html#team-members">Meet our team</a><a href="about.html#site-footer">Contact us</a></details><a href="apply.html">Apply</a></nav>
+        </details>
+    </header>
+
+    <main id="jobs-main" tabindex="-1">
+        <section class="jobs-hero" aria-labelledby="jobs-title">
+            <div class="jobs-hero-copy">
+                <h1 id="jobs-title">Build a brighter<br><span>future of learning.</span></h1>
+                <p>Bring your skills to a team making digital education more accessible, inclusive and meaningful. Help us build a learning platform that works for everyone.</p>
+                <a class="button button-primary" href="#open-roles">Explore open roles <span aria-hidden="true">↓</span></a>
+            </div>
+            <!-- CSS decoration needs no image files and is hidden from assistive technology. -->
+            <div class="jobs-hero-art" aria-hidden="true">
+                <span class="jobs-art-ring"></span>
+                <span class="jobs-art-sun"></span>
+                <div class="jobs-art-card">
+                    <span class="jobs-art-symbol">L</span>
+                    <strong>Different skills.<br>One shared purpose.</strong>
+                    <span class="jobs-art-line"></span>
+                    <span class="jobs-art-line jobs-art-line-short"></span>
+                    <span class="jobs-art-tag">Learning for everyone</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="jobs-content section-anchor" id="open-roles" aria-labelledby="open-roles-title">
+            <div class="jobs-heading">
+                <div>
+                    <h2 id="open-roles-title">Our open opportunities</h2>
+                </div>
+                <!-- Minimal inline CSS example required by the assignment. -->
+                <p class="jobs-count" style="font-weight: 700;">2 open roles</p>
+            </div>
+
+            <div class="jobs-layout">
+                <!-- Assignment: floated right, 25% wide on desktop, margin/padding/border. -->
+                <aside class="jobs-aside" aria-labelledby="jobs-aside-title">
+                    <h2 id="jobs-aside-title">Why Lumina Learn?</h2>
+                    <ul class="jobs-benefits">
+                        <li><strong>Purposeful work</strong><span>Help remove barriers to digital education.</span></li>
+                        <li><strong>Flexible collaboration</strong><span>Balance focused work with team days in Melbourne.</span></li>
+                        <li><strong>Room to grow</strong><span>Learn through mentoring, feedback and professional development.</span></li>
+                        <li><strong>Different perspectives</strong><span>Work with people who value inclusive design and shared success.</span></li>
+                    </ul>
+                    <section class="jobs-aside-note" aria-labelledby="adjustments-title">
+                        <h3 id="adjustments-title">Need an adjustment?</h3>
+                        <p>Contact our team to discuss an accessible application format or interview adjustment.</p>
+                        <a href="mailto:info@luminalearn.com">info@luminalearn.com</a>
+                    </section>
+                </aside>
+
+                <!-- JOBS: independent HTML disclosures; both roles can stay open. -->
+                <div class="jobs-list jobs-overview" role="group" aria-label="Compare our two open roles">
+                    <article class="jobs-overview-card section-anchor" id="frontend-developer" aria-labelledby="summary-FE101">
+                    <p class="section-kicker">FE101</p>
+                    <h3 id="summary-FE101">Front-End Web Developer</h3>
+                    <dl>
+                        <div><dt>Location</dt><dd>Melbourne, Australia</dd></div>
+                        <div><dt>Work arrangement</dt><dd>Hybrid · Full-time</dd></div>
+                        <div class="jobs-overview-salary"><dt>Salary</dt><dd>AUD $80,000–$100,000 / year<span>Plus superannuation</span></dd></div>
+                    </dl>
+                
+                    <details class="job-disclosure">
+                        <summary><span class="job-show-label">View role details</span><span class="job-hide-label">Hide role details</span><span class="job-disclosure-icon" aria-hidden="true"></span></summary>
+                        <div class="job-expanded-content">
+                        <header class="job-detail-header">
+                            <p class="section-kicker">ENGINEERING</p>
+                            <p class="job-reference">Reference: <strong>FE101</strong></p>
+                            <p>Build responsive, accessible interfaces for our learning management platform. Help students and educators manage courses, learning resources, assignments and progress through clear, reliable web experiences.</p>
+                        </header>
+                        <dl class="job-meta">
+                            <div><dt>Salary range</dt><dd>AUD $80,000–$100,000 per year, plus superannuation</dd></div>
+                            <div><dt>Reports to</dt><dd>Lead Front-End Developer</dd></div>
+                            <div><dt>Location</dt><dd>Melbourne, Australia · Hybrid</dd></div>
+                            <div><dt>Employment</dt><dd>Full-time</dd></div>
+                        </dl>
+                        <section class="job-detail" aria-labelledby="frontend-responsibilities">
+                            <h4 id="frontend-responsibilities">Key responsibilities</h4>
+                            <ol>
+                                <li>Develop and maintain responsive course, assignment and learner dashboard interfaces.</li>
+                                <li>Translate approved designs into semantic HTML, reusable CSS and well-structured front-end code.</li>
+                                <li>Improve keyboard navigation, screen reader support and the accessibility of forms.</li>
+                                <li>Test interfaces across browsers and screen sizes, and resolve usability issues.</li>
+                                <li>Collaborate with designers, educators and back-end developers through code reviews and Git workflows.</li>
+                            </ol>
+                        </section>
+                        <section class="job-detail" aria-labelledby="frontend-essential">
+                            <h4 id="frontend-essential">Essential requirements</h4>
+                            <ul>
+                                <li>Degree or diploma in IT, software development or a related field, or equivalent practical experience.</li>
+                                <li>Working knowledge of HTML5, CSS3, JavaScript and responsive web design.</li>
+                                <li>Understanding of accessible web development, including labels, headings and keyboard interactions.</li>
+                                <li>Experience using Git and a portfolio or project demonstrating front-end development skills.</li>
+                                <li>Clear communication, problem-solving skills and an interest in inclusive education.</li>
+                            </ul>
+                        </section>
+                        <section class="job-detail" aria-labelledby="frontend-preferable">
+                            <h4 id="frontend-preferable">Preferable requirements</h4>
+                            <ul>
+                                <li>Experience with a component-based framework such as React or Vue.</li>
+                                <li>Familiarity with learning management systems and educational web applications.</li>
+                                <li>Experience with accessibility testing and front-end performance optimisation.</li>
+                            </ul>
+                        </section>
+                        <footer class="job-detail-footer">
+                            <!-- No JS: applicants copy the reference into apply.html. -->
+                            <a class="button button-primary" href="apply.html">Apply for this role<span class="jobs-visually-hidden">: Front-End Web Developer</span></a>
+                            <p>Use reference <strong class="job-reference">FE101</strong> in your application.</p>
+                        </footer>
+                    </div>
+                    </details>
+                </article>
+                    <article class="jobs-overview-card section-anchor" id="ux-ui-designer" aria-labelledby="summary-UX102">
+                    <p class="section-kicker">UX102</p>
+                    <h3 id="summary-UX102">UX/UI Designer</h3>
+                    <dl>
+                        <div><dt>Location</dt><dd>Melbourne, Australia</dd></div>
+                        <div><dt>Work arrangement</dt><dd>Hybrid · Full-time</dd></div>
+                        <div class="jobs-overview-salary"><dt>Salary</dt><dd>AUD $75,000–$95,000 / year<span>Plus superannuation</span></dd></div>
+                    </dl>
+                
+                    <details class="job-disclosure">
+                        <summary><span class="job-show-label">View role details</span><span class="job-hide-label">Hide role details</span><span class="job-disclosure-icon" aria-hidden="true"></span></summary>
+                        <div class="job-expanded-content">
+                        <header class="job-detail-header">
+                            <p class="section-kicker">DESIGN &amp; UX</p>
+                            <p class="job-reference">Reference: <strong>UX102</strong></p>
+                            <p>Design intuitive learning experiences for students and educators. Turn user research into accessible interfaces that make finding resources, submitting assignments and understanding progress easier for diverse learners.</p>
+                        </header>
+                        <dl class="job-meta">
+                            <div><dt>Salary range</dt><dd>AUD $75,000–$95,000 per year, plus superannuation</dd></div>
+                            <div><dt>Reports to</dt><dd>Product Design Lead</dd></div>
+                            <div><dt>Location</dt><dd>Melbourne, Australia · Hybrid</dd></div>
+                            <div><dt>Employment</dt><dd>Full-time</dd></div>
+                        </dl>
+                        <section class="job-detail" aria-labelledby="designer-responsibilities">
+                            <h4 id="designer-responsibilities">Key responsibilities</h4>
+                            <ol>
+                                <li>Research learner and educator needs through interviews and usability testing.</li>
+                                <li>Create user flows, wireframes and interactive prototypes for key learning tasks.</li>
+                                <li>Design clear navigation, readable layouts and accessible interaction states.</li>
+                                <li>Maintain a consistent design system and document components for developers.</li>
+                                <li>Refine designs using feedback from users, educators and the product team.</li>
+                            </ol>
+                        </section>
+                        <section class="job-detail" aria-labelledby="designer-essential">
+                            <h4 id="designer-essential">Essential requirements</h4>
+                            <ul>
+                                <li>Qualification in interaction design, digital design or a related field, or equivalent practical experience.</li>
+                                <li>A portfolio explaining your design process, decisions and response to user feedback.</li>
+                                <li>Ability to produce wireframes, prototypes and interface designs using Figma or a similar tool.</li>
+                                <li>Understanding of user-centred design, responsive layouts and accessible visual design.</li>
+                                <li>Strong collaboration skills and the ability to communicate design ideas clearly.</li>
+                            </ul>
+                        </section>
+                        <section class="job-detail" aria-labelledby="designer-preferable">
+                            <h4 id="designer-preferable">Preferable requirements</h4>
+                            <ul>
+                                <li>Experience designing educational products or learning management systems.</li>
+                                <li>Familiarity with HTML and CSS to support collaboration with developers.</li>
+                                <li>Experience conducting research with people with diverse access needs.</li>
+                            </ul>
+                        </section>
+                        <footer class="job-detail-footer">
+                            <a class="button button-primary" href="apply.html">Apply for this role<span class="jobs-visually-hidden">: UX/UI Designer</span></a>
+                            <p>Use reference <strong class="job-reference">UX102</strong> in your application.</p>
+                        </footer>
+                    </div>
+                    </details>
+                </article>
+                </div>
+            </div>
+                    <section class="jobs-application-steps section-anchor" aria-labelledby="application-steps-title">
+                        <h2 id="application-steps-title">How to apply</h2>
+                        <ol class="jobs-apply-steps" role="list">
+                            <li><span class="jobs-step-number" aria-hidden="true">01</span><div><h3>Choose a role</h3><p>Read the details and note its reference: FE101 or UX102.</p></div></li>
+                            <li><span class="jobs-step-number" aria-hidden="true">02</span><div><h3>Complete the form</h3><p>Enter the job reference, your details and skills. The CV field is optional.</p></div></li>
+                            <li><span class="jobs-step-number" aria-hidden="true">03</span><div><h3>Review and submit</h3><p>Check your entries and correct any highlighted errors before submitting.</p></div></li>
+                        </ol>
+                        <div class="jobs-steps-footer">
+                        <p class="jobs-steps-note">Student project: submission opens the university form test results.</p>
+                        <a class="text-link" href="apply.html">Open application form <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </section>
+        </section>
+
+        <section class="jobs-inclusion" aria-labelledby="inclusion-title">
+            <div>
+                <h2 id="inclusion-title">Your perspective belongs here.</h2>
+                <p>We welcome applications from Aboriginal and Torres Strait Islander peoples, people with disability and people from diverse cultural backgrounds. We offer reasonable adjustments during recruitment and value the different experiences each person brings.</p>
+            </div>
+            <div>
+                <h3>Acknowledgement of Country</h3>
+                <p>We acknowledge the Traditional Custodians of the lands on which we work and learn. We pay our respects to Elders past and present and recognise the continuing connection of Aboriginal and Torres Strait Islander peoples to land, waters and community.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+        <div class="footer-brand">
+            <a class="brand brand-light" href="index.html#home">
+                <span class="brand-mark">L</span>
+                <span class="brand-name">LUMINA<span>LEARN</span></span>
+            </a>
+            <p>Building a Learning Platform for Everyone</p>
+            <p>Making digital education accessible, inclusive and meaningful.</p>
+            <!-- Social links currently use platform homepages; replace with team profile URLs when available. -->
+            <div class="footer-social">
+                <a class="footer-social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="images/social-facebook.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="images/social-instagram.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="images/social-linkedin.svg" alt="" width="22" height="22"></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h2>Quick Links</h2>
+            <a href="index.html#home">Home</a>
+            <a href="jobs.html" aria-current="page">Jobs</a>
+            <a href="apply.html">Apply</a>
+            <a href="about.html">About</a>
+        </div>
+        <div class="footer-resources">
+            <h2>Project Resources</h2>
+            <!-- Links to the group's actual repository and Jira board. -->
+            <p>Jira Project: <a href="https://hyo2108.atlassian.net/jira/software/projects/SCRUM/boards/1" target="_blank" rel="noopener noreferrer">COS10026 Jira board</a></p>
+            <p>GitHub Repository: <a href="https://github.com/NguyenHieu-P/PROJECT-WEB-COS10026" target="_blank" rel="noopener noreferrer">PROJECT-WEB-COS10026</a></p>
+            <p>Live website: <a href="https://voliad.github.io/test-web-tech/" target="_blank" rel="noopener noreferrer">View Lumina Learn</a></p>
+            <p>Email: <a href="mailto:info@luminalearn.com">info@luminalearn.com</a></p>
+        </div>
+        <p class="copyright">© 2026 Lumina Learn. All rights reserved.</p>
+    </footer>
+</body>
+</html>

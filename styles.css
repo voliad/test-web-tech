@@ -145,41 +145,76 @@ img {
     border-bottom-color: var(--yellow);
 }
 
-/* CHUNG: menu theo ban cua Phuong; chu chuyen trang, hover/focus mo muc con. */
-.nav-dropdown { position: relative; display: flex; align-items: center; gap: 3px; }
-.caret { display: inline-block; margin-left: 3px; color: var(--purple); transition: transform 0.2s ease; }
-.nav-dropdown:hover .caret,
-.nav-dropdown:focus-within .caret { transform: rotate(180deg); }
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    min-width: 190px;
-    padding: 8px;
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    box-shadow: 0 14px 32px rgba(31, 29, 94, 0.15);
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(-50%, 10px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-}
-.nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
-.dropdown-menu a {
-    display: block;
-    min-height: 44px;
-    padding: 10px 12px;
-    border-radius: 10px;
-    color: var(--purple);
-    text-decoration: none;
-    font-size: 0.8125rem;
-    transition: background-color 0.2s ease, padding-left 0.2s ease;
-}
-.dropdown-menu a:hover,
-.dropdown-menu a:focus-visible { padding-left: 17px; background: #f0efff; color: var(--purple-dark); }
-
+/* CHUNG: menu theo ban cua Phuong; chu chuyen trang, hover/focus mo muc con. */
+
+.nav-dropdown { position: relative; display: flex; align-items: center; gap: 3px; }
+
+.caret { display: inline-block; margin-left: 3px; color: var(--purple); transition: transform 0.2s ease; }
+
+.nav-dropdown:hover .caret,
+
+.nav-dropdown:focus-within .caret { transform: rotate(180deg); }
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 50%;
+
+    min-width: 190px;
+
+    padding: 8px;
+
+    background: var(--white);
+
+    border: 1px solid var(--line);
+
+    border-radius: 12px;
+
+    box-shadow: 0 14px 32px rgba(31, 29, 94, 0.15);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translate(-50%, 10px);
+
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+
+}
+
+.nav-dropdown:hover .dropdown-menu,
+
+.nav-dropdown:focus-within .dropdown-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+
+.dropdown-menu a {
+
+    display: block;
+
+    min-height: 44px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    color: var(--purple);
+
+    text-decoration: none;
+
+    font-size: 0.8125rem;
+
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+
+}
+
+.dropdown-menu a:hover,
+
+.dropdown-menu a:focus-visible { padding-left: 17px; background: #f0efff; color: var(--purple-dark); }
+
+
+
 .header-actions {
     display: flex;
     align-items: center;
@@ -3431,6 +3466,11 @@ summary:focus-visible,
 
 }
 
+/* APPLY accessibility: keep the live-region container in the accessibility
+   tree from load. Hide only its message until native :user-invalid matches.
+   Do not use display:none or aria-hidden on the container itself. */
+.apply-page .apply-error-region { display: flow-root; }
+
 .apply-page .apply-error {
     display: none;
     margin: 8px 0 0;
@@ -3448,10 +3488,10 @@ summary:focus-visible,
     box-shadow: 0 0 0 1px #b42318;
 }
 
-.apply-page .apply-field input:user-invalid ~ .apply-error,
-.apply-page .apply-field select:user-invalid ~ .apply-error,
-.apply-page .apply-field textarea:user-invalid ~ .apply-error,
-.apply-page .apply-choice-fieldset:has(input:user-invalid) > .apply-error {
+.apply-page .apply-field input:user-invalid ~ .apply-error-region .apply-error,
+.apply-page .apply-field select:user-invalid ~ .apply-error-region .apply-error,
+.apply-page .apply-field textarea:user-invalid ~ .apply-error-region .apply-error,
+.apply-page .apply-choice-fieldset:has(input:user-invalid) > .apply-error-region .apply-error {
     display: block;
 }
 

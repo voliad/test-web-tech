@@ -26,38 +26,63 @@
             <span class="brand-name">LUMINA<span>LEARN</span></span>
         </a>
         <!-- Shared navigation: direct page links with hover/keyboard submenus, following the supplied team design. -->
-        <nav class="main-nav" aria-label="Main navigation">
-            <div class="nav-dropdown">
-                <a class="nav-link" href="index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" role="group" aria-label="Home sections">
-                    <a href="index.html#our-impact">Our Impact</a>
-                    <a href="index.html#career">Career</a>
-                    <a href="index.html#why-join-us">Why Join Us?</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" role="group" aria-label="Jobs sections">
-                    <a href="jobs.html#frontend-developer">Web Developer</a>
-                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
-                <div class="dropdown-menu" role="group" aria-label="About Us sections">
-                    <a href="about.html#our-project">Our Project</a>
-                    <a href="about.html#group-info">Get to Know</a>
-                    <a href="about.html#team-members">Meet Our Team</a>
-                    <a href="about.html#site-footer">Contact Us</a>
-                </div>
-            </div>
+        <nav class="main-nav" aria-label="Main navigation">
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="Home sections">
+
+                    <a href="index.html#our-impact">Our Impact</a>
+
+                    <a href="index.html#career">Career</a>
+
+                    <a href="index.html#why-join-us">Why Join Us?</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="Jobs sections">
+
+                    <a href="jobs.html#frontend-developer">Web Developer</a>
+
+                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="About Us sections">
+
+                    <a href="about.html#our-project">Our Project</a>
+
+                    <a href="about.html#group-info">Get to Know</a>
+
+                    <a href="about.html#team-members">Meet Our Team</a>
+
+                    <a href="about.html#site-footer">Contact Us</a>
+
+                </div>
+
+            </div>
+
         </nav>
         <div class="header-actions">
             <a class="apply-button active" href="apply.html" aria-current="page">Apply</a>
         </div>
         <details class="mobile-menu">
-                <summary class="mobile-menu-toggle" aria-label="Navigation menu">
-                    <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label" aria-hidden="true"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
+                <summary class="mobile-menu-toggle">
+                    <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
                 </summary>
                 <nav class="mobile-menu-panel" aria-label="Mobile navigation"><details class="mobile-nav-group"><summary>Home</summary><a href="index.html#home">Home overview</a><a href="index.html#our-impact">Our mission</a><a href="index.html#career">Career paths</a><a href="index.html#why-join-us">Why join us?</a></details><details class="mobile-nav-group"><summary>Jobs</summary><a href="jobs.html">Jobs overview</a><a href="jobs.html#frontend-developer">Front-End Web Developer</a><a href="jobs.html#ux-ui-designer">UX/UI Designer</a></details><details class="mobile-nav-group"><summary>About Us</summary><a href="about.html">About Us overview</a><a href="about.html#our-project">Our project</a><a href="about.html#group-info">Get to know us</a><a href="about.html#team-members">Meet our team</a><a href="about.html#site-footer">Contact us</a></details><a href="apply.html" aria-current="page">Apply</a></nav>
         </details>
@@ -98,7 +123,9 @@
                      Use fictional details when testing; submissions leave this website. -->
                 <!-- Accessibility: aria-describedby references permanent guidance only.
                      Hidden error text must not become a permanent field description.
-                     Native HTML validation and CSS error states remain active. -->
+                     Each error has a persistent polite live region; only its message is hidden.
+                     Native HTML validation and CSS error states remain active.
+                     Polite announcements avoid asserting many urgent alerts on Submit. -->
                 <form class="apply-form" aria-labelledby="form-title" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" aria-describedby="form-instructions form-test-note">
                     <!-- APPLY FORM 01: Job reference — one of the two advertised roles. -->
                     <fieldset class="apply-fieldset">
@@ -110,7 +137,7 @@
                                 <option value="FE101" label="Front-End Web Developer"></option>
                                 <option value="UX102" label="UX/UI Designer"></option>
                             </datalist>
-                            <p class="apply-error" id="job-reference-error">Error: enter FE101 or UX102 using uppercase letters.</p>
+                            <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="job-reference-error">Error: enter FE101 or UX102 using uppercase letters.</p></div>
                             <p class="apply-hint" id="reference-help">FE101 — Front-End Web Developer · UX102 — UX/UI Designer. Choose a suggestion or type its uppercase code.</p>
                         </div>
                     </fieldset>
@@ -128,19 +155,19 @@
                             <div class="apply-field">
                                 <label for="first-name">First name</label>
                                 <input type="text" id="first-name" name="first_name" maxlength="20" pattern="\p{L}[\p{L}\p{M}]*(?: \p{L}[\p{L}\p{M}]*)*" title="Enter up to 20 characters using letters and single spaces between name parts. Accented letters are accepted." autocomplete="given-name" aria-describedby="first-name-help" required>
-                                <p class="apply-error" id="first-name-error">Error: use up to 20 characters with letters and single spaces between name parts; no numbers or punctuation.</p>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="first-name-error">Error: use up to 20 characters with letters and single spaces between name parts; no numbers or punctuation.</p></div>
                                 <p class="apply-hint" id="first-name-help">Up to 20 characters. Accented letters and spaces between name parts are accepted; no numbers or punctuation.</p>
                             </div>
                             <div class="apply-field">
                                 <label for="last-name">Last name</label>
                                 <input type="text" id="last-name" name="last_name" maxlength="20" pattern="\p{L}[\p{L}\p{M}]*(?: \p{L}[\p{L}\p{M}]*)*" title="Enter up to 20 characters using letters and single spaces between name parts. Accented letters are accepted." autocomplete="family-name" aria-describedby="last-name-help" required>
-                                <p class="apply-error" id="last-name-error">Error: use up to 20 characters with letters and single spaces between name parts; no numbers or punctuation.</p>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="last-name-error">Error: use up to 20 characters with letters and single spaces between name parts; no numbers or punctuation.</p></div>
                                 <p class="apply-hint" id="last-name-help">Up to 20 characters. Accented letters and spaces between name parts are accepted; no numbers or punctuation.</p>
                             </div>
                             <div class="apply-field apply-full-width">
                                 <label for="date-of-birth">Date of birth</label>
                                 <input type="text" id="date-of-birth" name="date_of_birth" minlength="10" maxlength="10" pattern="(?=(?:[0-9]{2}/[0-9]{2}/(?:19[0-9]{2}|20[01][0-9]|202[0-5])|[0-9]{2}/0[1-9]/2026|(?:0[1-9]|1[0-6])/10/2026)$)(?:(?:0[1-9]|1[0-9]|2[0-8])/(?:0[1-9]|1[0-2])/[0-9]{4}|(?:29|30)/(?:0[13-9]|1[0-2])/[0-9]{4}|31/(?:0[13578]|1[02])/[0-9]{4}|29/02/(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:[02468][048]|[13579][26])00))" placeholder="dd/mm/yyyy" title="Enter a valid date as dd/mm/yyyy, with year 1900 or later and no later than 16/10/2026." autocomplete="bday" aria-describedby="dob-help" required>
-                                <p class="apply-error" id="date-of-birth-error">Error: use a valid date as dd/mm/yyyy, with a year from 1900 and no later than 16/10/2026.</p>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="date-of-birth-error">Error: use a valid date as dd/mm/yyyy, with a year from 1900 and no later than 16/10/2026.</p></div>
                                 <p class="apply-hint" id="dob-help">Use dd/mm/yyyy, for example 21/08/2005. Accepted dates: 01/01/1900 to 16/10/2026.</p>
                             </div>
                         </div>
@@ -152,7 +179,7 @@
                                 <label class="apply-choice" for="gender-nonbinary"><input type="radio" id="gender-nonbinary" name="gender" value="Non-binary" required> <span>Non-binary</span></label>
                                 <label class="apply-choice" for="gender-undisclosed"><input type="radio" id="gender-undisclosed" name="gender" value="Prefer not to say" required> <span>Prefer not to say</span></label>
                             </div>
-                        <p class="apply-error" id="gender-error">Error: choose one gender option, including Prefer not to say if you prefer.</p>
+                        <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="gender-error">Error: choose one gender option, including Prefer not to say if you prefer.</p></div>
                         </fieldset>
                     </fieldset>
 
@@ -163,13 +190,13 @@
                             <div class="apply-field apply-full-width">
                                 <label for="street-address">Street address</label>
                                 <input type="text" id="street-address" name="street_address" maxlength="40" autocomplete="address-line1" aria-describedby="street-help" required>
-                                <p class="apply-error" id="street-address-error">Error: enter your street address, up to 40 characters.</p>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="street-address-error">Error: enter your street address, up to 40 characters.</p></div>
                                 <p class="apply-hint" id="street-help">Maximum 40 characters.</p>
                             </div>
                             <div class="apply-field apply-full-width">
                                 <label for="suburb">Suburb / Town</label>
                                 <input type="text" id="suburb" name="suburb_town" maxlength="40" autocomplete="address-level2" aria-describedby="suburb-help" required>
-                                <p class="apply-error" id="suburb-error">Error: enter your suburb or town, up to 40 characters.</p>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="suburb-error">Error: enter your suburb or town, up to 40 characters.</p></div>
                                 <p class="apply-hint" id="suburb-help">Maximum 40 characters.</p>
                             </div>
                             <div class="apply-field">
@@ -185,12 +212,12 @@
                                     <option value="TAS">TAS</option>
                                     <option value="ACT">ACT</option>
                                 </select>
-                                <p class="apply-error" id="state-error">Error: select a state or territory.</p>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="state-error">Error: select a state or territory.</p></div>
                             </div>
                             <div class="apply-field">
                                 <label for="postcode">Postcode</label>
                                 <input type="text" id="postcode" name="postcode" inputmode="numeric" minlength="4" maxlength="4" pattern="[0-9]{4}" title="Enter exactly four digits." autocomplete="postal-code" aria-describedby="postcode-help" required>
-                                <p class="apply-error" id="postcode-error">Error: enter exactly four digits, including any leading zero.</p>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="postcode-error">Error: enter exactly four digits, including any leading zero.</p></div>
                                 <p class="apply-hint" id="postcode-help">Exactly 4 digits, including any leading zero.</p>
                             </div>
                         </div>
@@ -203,13 +230,13 @@
                             <div class="apply-field">
                                 <label for="email">Email address</label>
                                 <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" required aria-describedby="email-hint">
-                                <p class="apply-error" id="email-error">Error: enter an email address in the format name@example.com.</p>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="email-error">Error: enter an email address in the format name@example.com.</p></div>
                                 <p class="apply-hint" id="email-hint">Use an email address such as name@example.com.</p>
                             </div>
                             <div class="apply-field">
                                 <label for="phone">Phone number</label>
                                 <input type="tel" id="phone" name="phone" inputmode="numeric" minlength="8" maxlength="12" pattern="[0-9]{8,12}" title="Enter 8 to 12 digits, without spaces, brackets or a plus sign." autocomplete="tel" aria-describedby="phone-help" required>
-                                <p class="apply-error" id="phone-error">Error: enter 8–12 digits, without spaces, brackets or a plus sign.</p>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="phone-error">Error: enter 8–12 digits, without spaces, brackets or a plus sign.</p></div>
                                 <p class="apply-hint" id="phone-help">8–12 digits, without spaces or symbols.</p>
                             </div>
                         </div>
@@ -229,7 +256,7 @@
                                 <label class="apply-choice" for="skill-problem-solving"><input type="checkbox" id="skill-problem-solving" name="skills[]" value="Problem solving" required> <span>Problem solving</span></label>
                                 <label class="apply-choice" for="skill-accessibility"><input type="checkbox" id="skill-accessibility" name="skills[]" value="Accessible and user-centred design" required> <span>Accessible, user-centred design</span></label>
                             </div>
-                        <p class="apply-error" id="skills-error">Error: confirm all three core skills before submitting.</p>
+                        <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="skills-error">Error: confirm all three core skills before submitting.</p></div>
                         </fieldset>
                         <div class="apply-field apply-other-skills">
                             <label for="other-skills">Other skills <span class="apply-optional">(optional)</span></label>
@@ -325,6 +352,7 @@
             <!-- Links to the group's actual repository and Jira board. -->
             <p>Jira Project: <a href="https://hyo2108.atlassian.net/jira/software/projects/SCRUM/boards/1" target="_blank" rel="noopener noreferrer">COS10026 Jira board</a></p>
             <p>GitHub Repository: <a href="https://github.com/NguyenHieu-P/PROJECT-WEB-COS10026" target="_blank" rel="noopener noreferrer">PROJECT-WEB-COS10026</a></p>
+            <p>Live website: <a href="https://voliad.github.io/test-web-tech/" target="_blank" rel="noopener noreferrer">View Lumina Learn</a></p>
             <p>Email: <a href="mailto:info@luminalearn.com">info@luminalearn.com</a></p>
         </div>
         <p class="copyright">© 2026 Lumina Learn. All rights reserved.</p>

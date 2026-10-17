@@ -8,3 +8,5 @@ Original authorship/licensing or image-generation attribution has not been suppl
 This is a record of supplied files, not a claim of authorship.
 
 hero-classroom.webp: converted from landing.png in the supplied team folder.
+
+Responsive slider variants: 480, 768 and 1200 pixels wide, resized from the existing learning1/2/3 WebP files. Original 1536px files retained for high-density screens.

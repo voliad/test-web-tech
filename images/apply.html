@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3933ad">
+    <meta name="description" content="Apply for a Front-End Web Developer or UX/UI Designer role at Lumina Learn.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lumina Learn">
+    <meta property="og:title" content="Lumina Learn | Apply for a Role">
+    <meta property="og:description" content="Apply for a Front-End Web Developer or UX/UI Designer role at Lumina Learn.">
+    <title>Lumina Learn | Apply for a Role</title>
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Small embedded CSS example required by the assignment. -->
+    <style>
+        .apply-page .apply-reference { font-family: "Courier New", monospace; }
+    </style>
+</head>
+<body class="apply-page">
+    <a class="skip-link" href="#apply-main">Skip to main content</a>
+    <header class="site-header">
+        <a class="brand" href="index.html#home" aria-label="Lumina Learn home">
+            <span class="brand-mark">L</span>
+            <span class="brand-name">LUMINA<span>LEARN</span></span>
+        </a>
+        <!-- Shared navigation: direct page links with hover/keyboard submenus, following the supplied team design. -->
+        <nav class="main-nav" aria-label="Main navigation">
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="index.html#home">Home</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="Home sections">
+
+                    <a href="index.html#our-impact">Our Impact</a>
+
+                    <a href="index.html#career">Career</a>
+
+                    <a href="index.html#why-join-us">Why Join Us?</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="Jobs sections">
+
+                    <a href="jobs.html#frontend-developer">Web Developer</a>
+
+                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="About Us sections">
+
+                    <a href="about.html#our-project">Our Project</a>
+
+                    <a href="about.html#group-info">Get to Know</a>
+
+                    <a href="about.html#team-members">Meet Our Team</a>
+
+                    <a href="about.html#site-footer">Contact Us</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+        <div class="header-actions">
+            <a class="apply-button active" href="apply.html" aria-current="page">Apply</a>
+        </div>
+        <details class="mobile-menu">
+                <summary class="mobile-menu-toggle">
+                    <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
+                </summary>
+                <nav class="mobile-menu-panel" aria-label="Mobile navigation"><details class="mobile-nav-group"><summary>Home</summary><a href="index.html#home">Home overview</a><a href="index.html#our-impact">Our mission</a><a href="index.html#career">Career paths</a><a href="index.html#why-join-us">Why join us?</a></details><details class="mobile-nav-group"><summary>Jobs</summary><a href="jobs.html">Jobs overview</a><a href="jobs.html#frontend-developer">Front-End Web Developer</a><a href="jobs.html#ux-ui-designer">UX/UI Designer</a></details><details class="mobile-nav-group"><summary>About Us</summary><a href="about.html">About Us overview</a><a href="about.html#our-project">Our project</a><a href="about.html#group-info">Get to know us</a><a href="about.html#team-members">Meet our team</a><a href="about.html#site-footer">Contact us</a></details><a href="apply.html" aria-current="page">Apply</a></nav>
+        </details>
+    </header>
+
+    <main id="apply-main" tabindex="-1">
+        <section class="apply-hero" aria-labelledby="apply-title">
+            <h1 id="apply-title">Bring your skills.<br><span>Make learning better.</span></h1>
+            <p>Apply to join Lumina Learn and help create accessible, inclusive digital learning experiences.</p>
+        </section>
+
+        <div class="apply-layout">
+            <aside class="apply-guide" aria-labelledby="apply-guide-title">
+                <h2 id="apply-guide-title">Find your reference</h2>
+                <p>Choose FE101 or UX102 in the form below.</p>
+                <!-- EDIT: keep these references consistent with jobs.html. -->
+                <a class="apply-role" href="jobs.html#frontend-developer">
+                    <span class="apply-reference">FE101</span>
+                    <strong>Front-End Web Developer</strong>
+                    <span>Engineering · Full-time</span>
+                </a>
+                <a class="apply-role" href="jobs.html#ux-ui-designer">
+                    <span class="apply-reference">UX102</span>
+                    <strong>UX/UI Designer</strong>
+                    <span>Design &amp; UX · Full-time</span>
+                </a>
+            </aside>
+
+            <section class="apply-form-panel">
+                <div class="apply-form-heading">
+                    <h2 id="form-title">Job application</h2>
+                    <!-- Minimal inline CSS example required by the assignment. -->
+                    <p id="form-instructions" style="font-weight: 700;">All fields are required except Other skills and CV / Resume.</p>
+                </div>
+
+                <!-- Assessment endpoint: POST to the exact URL in the supplied brief.
+                     This is a form test service, not a real recruitment backend.
+                     Use fictional details when testing; submissions leave this website. -->
+                <!-- Accessibility: aria-describedby references permanent guidance only.
+                     Hidden error text must not become a permanent field description.
+                     Each error has a persistent polite live region; only its message is hidden.
+                     Native HTML validation and CSS error states remain active.
+                     Polite announcements avoid asserting many urgent alerts on Submit. -->
+                <form class="apply-form" aria-labelledby="form-title" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" aria-describedby="form-instructions form-test-note">
+                    <!-- APPLY FORM 01: Job reference — one of the two advertised roles. -->
+                    <fieldset class="apply-fieldset">
+                        <legend><span class="apply-step">01</span> Your chosen role</legend>
+                        <div class="apply-field">
+                            <label for="job-reference">Job reference number</label>
+                            <input type="text" id="job-reference" name="job_reference" class="apply-reference" list="job-reference-options" minlength="5" maxlength="5" pattern="FE101|UX102" placeholder="Type or choose a job reference" title="Choose FE101 for Front-End Web Developer or UX102 for UX/UI Designer." aria-describedby="reference-help" required>
+                            <datalist id="job-reference-options">
+                                <option value="FE101" label="Front-End Web Developer"></option>
+                                <option value="UX102" label="UX/UI Designer"></option>
+                            </datalist>
+                            <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="job-reference-error">Error: enter FE101 or UX102 using uppercase letters.</p></div>
+                            <p class="apply-hint" id="reference-help">FE101 — Front-End Web Developer · UX102 — UX/UI Designer. Choose a suggestion or type its uppercase code.</p>
+                        </div>
+                    </fieldset>
+
+                    <!-- APPLY FORM 02: Personal details.
+                         Names accept up to 20 characters: Unicode letters and internal spaces; no digits.
+                         DOB uses dd/mm/yyyy as required for Part 1.
+                         The pattern checks month lengths and leap years, requires year 1900 or later,
+                         and caps dates at 16/10/2026 (Asia/Ho_Chi_Minh).
+                         STATIC PART 1 CUTOFF: update the pattern and messages when finalising
+                         a later submission. HTML/CSS cannot calculate today dynamically. -->
+                    <fieldset class="apply-fieldset">
+                        <legend><span class="apply-step">02</span> Personal details</legend>
+                        <div class="apply-form-grid">
+                            <div class="apply-field">
+                                <label for="first-name">First name</label>
+                                <input type="text" id="first-name" name="first_name" maxlength="20" pattern="\p{L}[\p{L}\p{M}]*(?: \p{L}[\p{L}\p{M}]*)*" title="Enter up to 20 characters using letters and single spaces between name parts. Accented letters are accepted." autocomplete="given-name" aria-describedby="first-name-help" required>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="first-name-error">Error: use up to 20 characters with letters and single spaces between name parts; no numbers or punctuation.</p></div>
+                                <p class="apply-hint" id="first-name-help">Up to 20 characters. Accented letters and spaces between name parts are accepted; no numbers or punctuation.</p>
+                            </div>
+                            <div class="apply-field">
+                                <label for="last-name">Last name</label>
+                                <input type="text" id="last-name" name="last_name" maxlength="20" pattern="\p{L}[\p{L}\p{M}]*(?: \p{L}[\p{L}\p{M}]*)*" title="Enter up to 20 characters using letters and single spaces between name parts. Accented letters are accepted." autocomplete="family-name" aria-describedby="last-name-help" required>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="last-name-error">Error: use up to 20 characters with letters and single spaces between name parts; no numbers or punctuation.</p></div>
+                                <p class="apply-hint" id="last-name-help">Up to 20 characters. Accented letters and spaces between name parts are accepted; no numbers or punctuation.</p>
+                            </div>
+                            <div class="apply-field apply-full-width">
+                                <label for="date-of-birth">Date of birth</label>
+                                <input type="text" id="date-of-birth" name="date_of_birth" minlength="10" maxlength="10" pattern="(?=(?:[0-9]{2}/[0-9]{2}/(?:19[0-9]{2}|20[01][0-9]|202[0-5])|[0-9]{2}/0[1-9]/2026|(?:0[1-9]|1[0-6])/10/2026)$)(?:(?:0[1-9]|1[0-9]|2[0-8])/(?:0[1-9]|1[0-2])/[0-9]{4}|(?:29|30)/(?:0[13-9]|1[0-2])/[0-9]{4}|31/(?:0[13578]|1[02])/[0-9]{4}|29/02/(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:[02468][048]|[13579][26])00))" placeholder="dd/mm/yyyy" title="Enter a valid date as dd/mm/yyyy, with year 1900 or later and no later than 16/10/2026." autocomplete="bday" aria-describedby="dob-help" required>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="date-of-birth-error">Error: use a valid date as dd/mm/yyyy, with a year from 1900 and no later than 16/10/2026.</p></div>
+                                <p class="apply-hint" id="dob-help">Use dd/mm/yyyy, for example 21/08/2005. Accepted dates: 01/01/1900 to 16/10/2026.</p>
+                            </div>
+                        </div>
+                        <fieldset class="apply-choice-fieldset">
+                            <legend>Gender</legend>
+                            <div class="apply-choice-list">
+                                <label class="apply-choice" for="gender-female"><input type="radio" id="gender-female" name="gender" value="Female" required> <span>Female</span></label>
+                                <label class="apply-choice" for="gender-male"><input type="radio" id="gender-male" name="gender" value="Male" required> <span>Male</span></label>
+                                <label class="apply-choice" for="gender-nonbinary"><input type="radio" id="gender-nonbinary" name="gender" value="Non-binary" required> <span>Non-binary</span></label>
+                                <label class="apply-choice" for="gender-undisclosed"><input type="radio" id="gender-undisclosed" name="gender" value="Prefer not to say" required> <span>Prefer not to say</span></label>
+                            </div>
+                        <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="gender-error">Error: choose one gender option, including Prefer not to say if you prefer.</p></div>
+                        </fieldset>
+                    </fieldset>
+
+                    <!-- APPLY FORM 03: Address — state choices match the brief exactly. -->
+                    <fieldset class="apply-fieldset">
+                        <legend><span class="apply-step">03</span> Address</legend>
+                        <div class="apply-form-grid">
+                            <div class="apply-field apply-full-width">
+                                <label for="street-address">Street address</label>
+                                <input type="text" id="street-address" name="street_address" maxlength="40" autocomplete="address-line1" aria-describedby="street-help" required>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="street-address-error">Error: enter your street address, up to 40 characters.</p></div>
+                                <p class="apply-hint" id="street-help">Maximum 40 characters.</p>
+                            </div>
+                            <div class="apply-field apply-full-width">
+                                <label for="suburb">Suburb / Town</label>
+                                <input type="text" id="suburb" name="suburb_town" maxlength="40" autocomplete="address-level2" aria-describedby="suburb-help" required>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="suburb-error">Error: enter your suburb or town, up to 40 characters.</p></div>
+                                <p class="apply-hint" id="suburb-help">Maximum 40 characters.</p>
+                            </div>
+                            <div class="apply-field">
+                                <label for="state">State / Territory</label>
+                                <select id="state" name="state" autocomplete="address-level1" required>
+                                    <option value="" selected disabled>Select a state or territory</option>
+                                    <option value="VIC">VIC</option>
+                                    <option value="NSW">NSW</option>
+                                    <option value="QLD">QLD</option>
+                                    <option value="NT">NT</option>
+                                    <option value="WA">WA</option>
+                                    <option value="SA">SA</option>
+                                    <option value="TAS">TAS</option>
+                                    <option value="ACT">ACT</option>
+                                </select>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="state-error">Error: select a state or territory.</p></div>
+                            </div>
+                            <div class="apply-field">
+                                <label for="postcode">Postcode</label>
+                                <input type="text" id="postcode" name="postcode" inputmode="numeric" minlength="4" maxlength="4" pattern="[0-9]{4}" title="Enter exactly four digits." autocomplete="postal-code" aria-describedby="postcode-help" required>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="postcode-error">Error: enter exactly four digits, including any leading zero.</p></div>
+                                <p class="apply-hint" id="postcode-help">Exactly 4 digits, including any leading zero.</p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- APPLY FORM 04: Email and phone. Phone allows only 8–12 digits. -->
+                    <fieldset class="apply-fieldset">
+                        <legend><span class="apply-step">04</span> Contact details</legend>
+                        <div class="apply-form-grid">
+                            <div class="apply-field">
+                                <label for="email">Email address</label>
+                                <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" required aria-describedby="email-hint">
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="email-error">Error: enter an email address in the format name@example.com.</p></div>
+                                <p class="apply-hint" id="email-hint">Use an email address such as name@example.com.</p>
+                            </div>
+                            <div class="apply-field">
+                                <label for="phone">Phone number</label>
+                                <input type="tel" id="phone" name="phone" inputmode="numeric" minlength="8" maxlength="12" pattern="[0-9]{8,12}" title="Enter 8 to 12 digits, without spaces, brackets or a plus sign." autocomplete="tel" aria-describedby="phone-help" required>
+                                <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="phone-error">Error: enter 8–12 digits, without spaces, brackets or a plus sign.</p></div>
+                                <p class="apply-hint" id="phone-help">8–12 digits, without spaces or symbols.</p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- APPLY FORM 05: Every checkbox is required, matching the brief.
+                         These are core skills shared by both jobs. Candidates must
+                         confirm each; role-specific extra skills belong in the textarea.
+                         HTML required on a checkbox applies to that individual box. -->
+                    <fieldset class="apply-fieldset">
+                        <legend><span class="apply-step">05</span> Skills</legend>
+                        <fieldset class="apply-choice-fieldset" aria-describedby="skills-help">
+                            <legend>Core skill checklist</legend>
+                            <p class="apply-hint" id="skills-help">Confirm all three core skills required for both roles.</p>
+                            <div class="apply-choice-list apply-checkbox-list">
+                                <label class="apply-choice" for="skill-teamwork"><input type="checkbox" id="skill-teamwork" name="skills[]" value="Communication and teamwork" required> <span>Communication and teamwork</span></label>
+                                <label class="apply-choice" for="skill-problem-solving"><input type="checkbox" id="skill-problem-solving" name="skills[]" value="Problem solving" required> <span>Problem solving</span></label>
+                                <label class="apply-choice" for="skill-accessibility"><input type="checkbox" id="skill-accessibility" name="skills[]" value="Accessible and user-centred design" required> <span>Accessible, user-centred design</span></label>
+                            </div>
+                        <div class="apply-error-region" aria-live="polite" aria-atomic="true"><p class="apply-error" id="skills-error">Error: confirm all three core skills before submitting.</p></div>
+                        </fieldset>
+                        <div class="apply-field apply-other-skills">
+                            <label for="other-skills">Other skills <span class="apply-optional">(optional)</span></label>
+                            <textarea id="other-skills" name="other_skills" rows="5" placeholder="For example: HTML, CSS, JavaScript, Figma, user research or educational technology." aria-describedby="other-skills-help"></textarea>
+                            <p class="apply-hint" id="other-skills-help">Describe any additional skills or relevant experience you would like to share.</p>
+                        </div>
+                    </fieldset>
+
+                    <!-- APPLY FORM 06: optional CV interface preview.
+                         Intentionally no name attribute: the selected file is not submitted
+                         to the university test endpoint. Add real upload handling in Part 2. -->
+                    <fieldset class="apply-fieldset">
+                        <legend><span class="apply-step">06</span> CV / Resume <span class="apply-optional">(optional)</span></legend>
+                        <div class="apply-field apply-cv-upload">
+                            <label for="cv-preview">Choose your CV</label>
+                            <input type="file" id="cv-preview" accept=".pdf,.doc,.docx" aria-describedby="cv-formats cv-preview-note">
+                            <p class="apply-hint" id="cv-formats">Suggested formats: PDF, DOC or DOCX. You can leave this field empty.</p>
+                            <p class="apply-test-note" id="cv-preview-note"><strong>CV upload preview:</strong> files are not uploaded or stored in this version. Selecting a file only displays its name on your device.</p>
+                        </div>
+                    </fieldset>
+
+                    <div class="apply-submit-area">
+                        <p class="apply-test-note" id="form-test-note"><strong>Student project:</strong> this form sends your entries to the university form test service. Use fictional details when testing; this is not a real job application.</p>
+                        <button class="button button-primary" type="submit">Submit application</button>
+                        <p class="apply-hint">If a field needs correction, it will have a red border and an error message. Correct the highlighted fields before submitting.</p>
+                    </div>
+                </form>
+            </section>
+            <aside class="apply-support" aria-labelledby="apply-checklist-title">
+                <section class="apply-guide-note" aria-labelledby="apply-checklist-title">
+                    <h3 id="apply-checklist-title">Application checklist</h3>
+                    <ol>
+                        <li>Read the job requirements.</li>
+                        <li>Complete your personal and contact details.</li>
+                        <li>Confirm your core skills and describe any additional skills.</li>
+                        <li>Review your details before submitting.</li>
+                    </ol>
+                </section>
+                <section class="apply-guide-note" aria-labelledby="apply-help-title">
+                    <h3 id="apply-help-title">Need an adjustment?</h3>
+                    <p>We welcome applications from Aboriginal and Torres Strait Islander peoples, people with disability and people from diverse backgrounds. Contact us to discuss an accessible application format.</p>
+                    <a href="mailto:info@luminalearn.com">info@luminalearn.com</a>
+                </section>
+            </aside>
+        </div>
+        <!-- APPLY: native disclosure controls work with mouse, touch and keyboard. -->
+        <section class="apply-faq section-anchor" id="application-faq" aria-labelledby="application-faq-title">
+            <h2 id="application-faq-title">A few helpful answers.</h2>
+            <p class="apply-faq-intro">Quick guidance for completing this student project application form.</p>
+            <details>
+                <summary>Which job reference should I use?</summary>
+                <p>Use <strong>FE101</strong> for Front-End Web Developer or <strong>UX102</strong> for UX/UI Designer. Type the reference or choose a suggestion in the Job reference number field. <a href="jobs.html#open-roles">Compare the two roles</a> before choosing.</p>
+            </details>
+            <details>
+                <summary>Can I apply for both roles?</summary>
+                <p>Yes. Submit a separate application for each job reference, so your information is associated with the correct role.</p>
+            </details>
+            <details>
+                <summary>Do I need to attach a CV?</summary>
+                <p>No. The CV / Resume field is optional. In this version it only lets you preview a file selection: your CV is not uploaded or stored, and leaving it empty does not block submission.</p>
+            </details>
+            <details>
+                <summary>What happens when I submit this form?</summary>
+                <p>This is a student project. Your form entries are sent to the university form test service, which displays the submitted name/value pairs. This is not a real job application. Use fictional details when testing; the selected CV is not included.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+        <div class="footer-brand">
+            <a class="brand brand-light" href="index.html#home">
+                <span class="brand-mark">L</span>
+                <span class="brand-name">LUMINA<span>LEARN</span></span>
+            </a>
+            <p>Building a Learning Platform for Everyone</p>
+            <p>Making digital education accessible, inclusive and meaningful.</p>
+            <!-- Social links currently use platform homepages; replace with team profile URLs when available. -->
+            <div class="footer-social">
+                <a class="footer-social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="images/social-facebook.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="images/social-instagram.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="images/social-linkedin.svg" alt="" width="22" height="22"></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h2>Quick Links</h2>
+            <a href="index.html#home">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="apply.html" aria-current="page">Apply</a>
+            <a href="about.html">About</a>
+        </div>
+        <div class="footer-resources">
+            <h2>Project Resources</h2>
+            <!-- Links to the group's actual repository and Jira board. -->
+            <p>Jira Project: <a href="https://hyo2108.atlassian.net/jira/software/projects/SCRUM/boards/1" target="_blank" rel="noopener noreferrer">COS10026 Jira board</a></p>
+            <p>GitHub Repository: <a href="https://github.com/NguyenHieu-P/PROJECT-WEB-COS10026" target="_blank" rel="noopener noreferrer">PROJECT-WEB-COS10026</a></p>
+            <p>Live website: <a href="https://voliad.github.io/test-web-tech/" target="_blank" rel="noopener noreferrer">View Lumina Learn</a></p>
+            <p>Email: <a href="mailto:info@luminalearn.com">info@luminalearn.com</a></p>
+        </div>
+        <p class="copyright">© 2026 Lumina Learn. All rights reserved.</p>
+    </footer>
+</body>
+</html>

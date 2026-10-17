@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3933ad">
+    <meta name="description" content="Join Lumina Learn and help make digital education accessible to everyone.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lumina Learn">
+    <meta property="og:title" content="Lumina Learn | Careers">
+    <meta property="og:description" content="Join Lumina Learn and help make digital education accessible to everyone.">
+    <title>Lumina Learn | Careers</title>
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preload" as="image" href="images/hero-classroom.webp" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Part 1 embedded CSS: one small, page-specific example.
+         Shared layout and component styles remain in the external stylesheet. -->
+    <style>
+        .home-role-intro h2 { letter-spacing: -1px; }
+    </style>
+</head>
+<body class="home-page">
+    <a class="skip-link" href="#home-main">Skip to main content</a>
+    <!-- Sticky navigation -->
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Lumina Learn home">
+            <span class="brand-mark">L</span>
+            <span class="brand-name">LUMINA<span>LEARN</span></span>
+        </a>
+
+        <!-- Shared navigation: direct page links with hover/keyboard submenus, following the supplied team design. -->
+        <nav class="main-nav" aria-label="Main navigation">
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link active" href="index.html#home" aria-current="page">Home</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="Home sections">
+
+                    <a href="index.html#our-impact">Our Impact</a>
+
+                    <a href="index.html#career">Career</a>
+
+                    <a href="index.html#why-join-us">Why Join Us?</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="jobs.html">Jobs</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="Jobs sections">
+
+                    <a href="jobs.html#frontend-developer">Web Developer</a>
+
+                    <a href="jobs.html#ux-ui-designer">UX/UI Designer</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-dropdown">
+
+                <a class="nav-link" href="about.html">About Us</a><span class="caret" aria-hidden="true">⌄</span>
+
+                <div class="dropdown-menu" role="group" aria-label="About Us sections">
+
+                    <a href="about.html#our-project">Our Project</a>
+
+                    <a href="about.html#group-info">Get to Know</a>
+
+                    <a href="about.html#team-members">Meet Our Team</a>
+
+                    <a href="about.html#site-footer">Contact Us</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="header-actions">
+            <a class="apply-button" href="apply.html">Apply</a>
+        </div>
+        <details class="mobile-menu">
+                <summary class="mobile-menu-toggle">
+                    <span class="mobile-menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="mobile-menu-label"><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></span>
+                </summary>
+                <nav class="mobile-menu-panel" aria-label="Mobile navigation"><details class="mobile-nav-group"><summary>Home</summary><a href="index.html#home" aria-current="page">Home overview</a><a href="index.html#our-impact">Our mission</a><a href="index.html#career">Career paths</a><a href="index.html#why-join-us">Why join us?</a></details><details class="mobile-nav-group"><summary>Jobs</summary><a href="jobs.html">Jobs overview</a><a href="jobs.html#frontend-developer">Front-End Web Developer</a><a href="jobs.html#ux-ui-designer">UX/UI Designer</a></details><details class="mobile-nav-group"><summary>About Us</summary><a href="about.html">About Us overview</a><a href="about.html#our-project">Our project</a><a href="about.html#group-info">Get to know us</a><a href="about.html#team-members">Meet our team</a><a href="about.html#site-footer">Contact us</a></details><a href="apply.html">Apply</a></nav>
+        </details>
+    </header>
+
+    <main id="home-main" tabindex="-1">
+        <!-- Home / hero -->
+        <section class="hero section-anchor" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">Building a Learning Platform for Everyone</p>
+                <h1>WE ARE <span>HIRING!</span></h1>
+                <p class="hero-description">
+                    At Lumina Learn, we develop accessible and inclusive digital
+                    education tools. Join our team and help transform online
+                    learning into an equitable experience for all.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="jobs.html">Explore Jobs</a>
+                    <a class="button button-secondary" href="about.html">About Us</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Impact: image slider left, text right -->
+        <section class="impact-section section-anchor" id="our-impact" aria-labelledby="impact-title">
+            <div class="image-slider" role="group" aria-label="Learning at Lumina Learn">
+                <!-- CSS-only slider: choose an image using the dots -->
+                <input type="radio" name="learning-slide" id="learning-slide-1" aria-label="Show image 1 of 3" checked>
+                <input type="radio" name="learning-slide" id="learning-slide-2" aria-label="Show image 2 of 3">
+                <input type="radio" name="learning-slide" id="learning-slide-3" aria-label="Show image 3 of 3">
+
+                <div class="slider-window">
+                    <div class="slider-track">
+                        <!-- Illustrations supplied in the team folder; WebP versions preserve the full composition. -->
+                        <img src="images/learning1.webp" srcset="images/learning1-480.webp 480w, images/learning1-768.webp 768w, images/learning1-1200.webp 1200w, images/learning1.webp 1536w" sizes="(max-width: 700px) 90vw, (max-width: 950px) 47vw, 50vw" alt="Two children using an online learning platform together on a laptop." width="1536" height="1024" decoding="async">
+                        <img src="images/learning2.webp" srcset="images/learning2-480.webp 480w, images/learning2-768.webp 768w, images/learning2-1200.webp 1200w, images/learning2.webp 1536w" sizes="(max-width: 700px) 90vw, (max-width: 950px) 47vw, 50vw" loading="lazy" alt="A child learning online, with illustrated features for courses, personalised learning and progress tracking." width="1536" height="1024" decoding="async">
+                        <img src="images/learning3.webp" srcset="images/learning3-480.webp 480w, images/learning3-768.webp 768w, images/learning3-1200.webp 1200w, images/learning3.webp 1536w" sizes="(max-width: 700px) 90vw, (max-width: 950px) 47vw, 50vw" loading="lazy" alt="A child celebrating a completed maths exercise, with illustrated learning progress charts." width="1536" height="1024" decoding="async">
+                    </div>
+                    <div class="slider-arrow arrow-one" aria-hidden="true">
+                        <label for="learning-slide-3" title="Previous image">‹</label>
+                        <label for="learning-slide-2" title="Next image">›</label>
+                    </div>
+                    <div class="slider-arrow arrow-two" aria-hidden="true">
+                        <label for="learning-slide-1" title="Previous image">‹</label>
+                        <label for="learning-slide-3" title="Next image">›</label>
+                    </div>
+                    <div class="slider-arrow arrow-three" aria-hidden="true">
+                        <label for="learning-slide-2" title="Previous image">‹</label>
+                        <label for="learning-slide-1" title="Next image">›</label>
+                    </div>
+                </div>
+
+                <div class="slider-dots" role="group" aria-label="Choose slide">
+                    <label for="learning-slide-1" title="Show image 1"></label>
+                    <label for="learning-slide-2" title="Show image 2"></label>
+                    <label for="learning-slide-3" title="Show image 3"></label>
+                </div>
+            </div>
+
+            <div class="impact-copy">
+                <h2 id="impact-title">Making Learning Accessible to Everyone</h2>
+                <p>
+                    Education opens doors to new opportunities, but not everyone
+                    has equal access to the tools and resources they need.
+                </p>
+                <p>
+                    At Lumina Learn, we use technology and thoughtful design to
+                    make online education more accessible, inclusive and engaging.
+                    We believe digital learning should adapt to people, not the
+                    other way around.
+                </p>
+                <p>
+                    Our goal is to help learners overcome barriers, empower
+                    educators and create better learning experiences for everyone.
+                </p>
+            </div>
+        </section>
+
+        <!-- Part 1 search interface: GET sends keywords to Jobs; filtering requires a later implementation. -->
+        <section id="find-role" class="home-role-browser" aria-labelledby="job-search-title">
+            <div class="home-role-intro">
+                <h2 id="job-search-title">Find your next role.</h2>
+                <p>Bring your skills to a team making learning more accessible.</p>
+            </div>
+            <form class="home-search-form" role="search" action="jobs.html#open-roles" method="get" aria-describedby="job-search-note">
+                <label for="job-keyword">Job title or keyword</label>
+                <div class="home-search-controls">
+                    <input type="search" id="job-keyword" name="keywords" placeholder="e.g. front-end, design" maxlength="80">
+                    <button class="button button-dark" type="submit">Search jobs <span aria-hidden="true">→</span></button>
+                </div>
+                <p id="job-search-note">This form opens all current vacancies. Keyword filtering is not available yet.</p>
+            </form>
+            <div class="home-role-links">
+                <span>Explore our roles</span>
+                <a href="jobs.html#frontend-developer">Front-End Web Developer <span aria-hidden="true">↗</span></a>
+                <a href="jobs.html#ux-ui-designer">UX/UI Designer <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <!-- Career table with cell merging -->
+        <section class="career-section section-anchor" id="career">
+            <div class="section-heading">
+                <h2>Explore Your Career Path</h2>
+                <p>
+                    Different skills. One shared purpose. Discover how your
+                    strengths can help make learning more inclusive.
+                </p>
+            </div>
+
+            <div class="table-wrap">
+                <table class="career-table">
+                    <caption class="table-title">Career Opportunities at Lumina Learn</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Department</th>
+                            <th scope="col">Career Focus</th>
+                            <th scope="col">Skills &amp; Interests</th>
+                        </tr>
+                    </thead>
+                    <!-- Design & UX is the header for this two-row group. -->
+                    <tbody>
+                        <tr>
+                            <th scope="rowgroup" rowspan="2" class="department-cell">Design &amp; UX</th>
+                            <td>Accessible interfaces</td>
+                            <td>UI/UX design, prototyping</td>
+                        </tr>
+                        <tr>
+                            <td>User research</td>
+                            <td>Research, analysis</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="department-cell">Engineering</th>
+                            <td colspan="2">Responsive learning platforms — HTML, CSS and programming</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="department-cell">Education &amp; Content</th>
+                            <td>Digital learning resources</td>
+                            <td>Writing, content design</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Part 1 inline CSS: emphasise the distinction between career areas and vacancies. -->
+            <p class="table-note" style="font-weight: 600;">These are our career areas. <a href="jobs.html#open-roles">Visit Jobs to see current openings.</a></p>
+        </section>
+
+        <!-- Why join us -->
+        <section class="why-section section-anchor" id="why-join-us">
+            <div class="section-heading">
+                <h2>WHY JOIN US?</h2>
+            </div>
+
+            <div class="benefit-grid">
+                <article class="benefit-card">
+                    <span class="benefit-number" aria-hidden="true">01</span>
+                    <h3>Inclusive by Design</h3>
+                    <p>Help create digital experiences that welcome learners of all abilities and backgrounds.</p>
+                </article>
+                <article class="benefit-card">
+                    <span class="benefit-number" aria-hidden="true">02</span>
+                    <h3>Keep Growing</h3>
+                    <p>Explore new ideas, develop your skills and learn through meaningful challenges.</p>
+                </article>
+                <article class="benefit-card">
+                    <span class="benefit-number" aria-hidden="true">03</span>
+                    <h3>Create Real Impact</h3>
+                    <p>Turn innovative ideas into practical solutions that improve digital education.</p>
+                </article>
+                <article class="benefit-card">
+                    <span class="benefit-number" aria-hidden="true">04</span>
+                    <h3>Grow Together</h3>
+                    <p>Collaborate with people who value different perspectives and shared success.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- About section on the same homepage -->
+        <section class="about-strip section-anchor" id="about-us">
+            <div>
+                <h2>Technology with a human purpose.</h2>
+            </div>
+            <p>
+                We bring education, thoughtful design and digital technology
+                together to create learning experiences that are more accessible
+                and useful for diverse learners.
+            </p>
+            <a class="text-link" href="#our-impact">Discover our impact <span>↗</span></a>
+        </section>
+
+        <!-- Call to action -->
+        <section class="cta-section section-anchor" id="call-to-action">
+            <h2>Your Next Chapter Starts Here!</h2>
+            <p>
+                Bring your curiosity, creativity and passion for education to
+                Lumina Learn. Together, we can help make learning more accessible
+                for everyone.
+            </p>
+            <a class="button button-dark" href="jobs.html">View Job Descriptions Now!</a>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+        <div class="footer-brand">
+            <a class="brand brand-light" href="#home">
+                <span class="brand-mark">L</span>
+                <span class="brand-name">LUMINA<span>LEARN</span></span>
+            </a>
+            <p>Building a Learning Platform for Everyone</p>
+            <p>Making digital education accessible, inclusive and meaningful.</p>
+            <!-- Social links currently use platform homepages; replace with team profile URLs when available. -->
+            <div class="footer-social">
+                <a class="footer-social-icon" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="images/social-facebook.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="images/social-instagram.svg" alt="" width="22" height="22"></a>
+                <a class="footer-social-icon" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="images/social-linkedin.svg" alt="" width="22" height="22"></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h2>Quick Links</h2>
+            <a href="#home">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="apply.html">Apply</a>
+            <a href="about.html">About</a>
+        </div>
+        <div class="footer-resources">
+            <h2>Project Resources</h2>
+            <p>Jira Project: <a href="https://hyo2108.atlassian.net/jira/software/projects/SCRUM/boards/1" target="_blank" rel="noopener noreferrer">COS10026 Jira board</a></p>
+            <p>GitHub Repository: <a href="https://github.com/NguyenHieu-P/PROJECT-WEB-COS10026" target="_blank" rel="noopener noreferrer">PROJECT-WEB-COS10026</a></p>
+            <p>Live website: <a href="https://voliad.github.io/test-web-tech/" target="_blank" rel="noopener noreferrer">View Lumina Learn</a></p>
+            <p>Email: <a href="mailto:info@luminalearn.com">info@luminalearn.com</a></p>
+        </div>
+        <p class="copyright">© 2026 Lumina Learn. All rights reserved.</p>
+    </footer>
+
+    <!-- Optional floating Zalo contact button: replace URL and icon file -->
+    <a class="zalo-float" href="https://zalo.me/" target="_blank" rel="noopener noreferrer" aria-label="Visit Zalo (platform homepage)">
+        <img src="images/zalo-icon.webp" alt="">
+    </a>
+</body>
+</html>
