@@ -38,11 +38,18 @@ jobs.html
 apply.html
 about.html
 styles.css
+404.html
 images/
 README.md
 ```
 
 Images with `-480`, `-768` and `-1200` suffixes are responsive variants referenced by `srcset`. They are intentional assets, not duplicate files to delete without updating the HTML.
+
+## Missing pages (404)
+
+GitHub Pages serves `404.html` when a requested page does not exist. It uses the same navigation, colours and footer as the main website, with direct links to Home and Jobs. Assets and recovery links use `/test-web-tech/` paths so nested missing URLs work on this project deployment. If the repository or deployment base path changes, update those paths in `404.html`.
+
+A plain local static server normally shows its own default error response. To preview this page with its assets locally, serve the project under `/test-web-tech/`; checking only `404.html` does not confirm the host returns HTTP 404. On GitHub Pages, test a deliberately missing nested URL after deployment.
 
 ## Part 1 scope and limitations
 
