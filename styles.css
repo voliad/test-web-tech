@@ -3,6 +3,7 @@
     --purple: #3933ad;
     --purple-dark: #29247f;
     --yellow: #ffbf24;
+    --brand-gold: #9c6500;
     --ink: #17172b;
     --muted: #55566b;
     --white: #ffffff;
@@ -65,7 +66,7 @@ img {
 }
 
 .brand-name span {
-    color: var(--yellow);
+    color: var(--brand-gold);
 }
 
 .nav-link {
