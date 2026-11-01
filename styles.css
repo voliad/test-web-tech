@@ -576,6 +576,7 @@ summary:focus-visible,
     display: block;
     border: 8px solid var(--lavender);
     border-radius: 50%;
+    color: var(--white);
     background: var(--purple);
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
