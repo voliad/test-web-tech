@@ -237,10 +237,6 @@ img {
     white-space: nowrap;
 }
 
-.text-link span {
-    color: #d99b00;
-}
-
 .button-dark {
     color: white;
     background: var(--purple);
@@ -465,6 +461,20 @@ summary:focus-visible,
 .image-slider {
     position: relative;
     min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.image-slider legend,
+.slider-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
 .image-slider input {
@@ -514,22 +524,15 @@ summary:focus-visible,
 
 .slider-arrow {
     position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 12px;
-    pointer-events: none;
-}
-
-.slider-arrow label {
+    top: calc((100% - 43px) / 2);
+    transform: translateY(-50%);
     display: none;
     width: 42px;
     height: 54px;
     align-items: center;
     justify-content: center;
     color: white;
-    background: rgba(30, 30, 50, 0.25);
+    background: rgba(30, 30, 50, 0.65);
     border-radius: 25px;
     font-size: 2.375rem;
     line-height: 1;
@@ -539,13 +542,24 @@ summary:focus-visible,
     transition: background-color 0.2s ease;
 }
 
-.slider-arrow label:hover {
+.slider-arrow:hover {
     background: rgba(57, 51, 173, 0.8);
 }
 
-#learning-slide-1:checked ~ .slider-window .arrow-one label,
-#learning-slide-2:checked ~ .slider-window .arrow-two label,
-#learning-slide-3:checked ~ .slider-window .arrow-three label {
+.slider-prev {
+    left: 12px;
+}
+
+.slider-next {
+    right: 12px;
+}
+
+#learning-slide-1:checked ~ .slider-dots label[for="learning-slide-3"] .slider-prev,
+#learning-slide-1:checked ~ .slider-dots label[for="learning-slide-2"] .slider-next,
+#learning-slide-2:checked ~ .slider-dots label[for="learning-slide-1"] .slider-prev,
+#learning-slide-2:checked ~ .slider-dots label[for="learning-slide-3"] .slider-next,
+#learning-slide-3:checked ~ .slider-dots label[for="learning-slide-2"] .slider-prev,
+#learning-slide-3:checked ~ .slider-dots label[for="learning-slide-1"] .slider-next {
     display: flex;
 }
 
@@ -567,14 +581,11 @@ summary:focus-visible,
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.slider-dots label:hover {
-    transform: scale(1.15);
-}
-
 #learning-slide-1:checked ~ .slider-dots label[for="learning-slide-1"],
 #learning-slide-2:checked ~ .slider-dots label[for="learning-slide-2"],
 #learning-slide-3:checked ~ .slider-dots label[for="learning-slide-3"] {
     background: var(--yellow);
+    box-shadow: inset 0 0 0 2px var(--purple);
 }
 
 .impact-copy h2 {
