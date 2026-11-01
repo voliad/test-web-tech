@@ -16,12 +16,14 @@
     box-sizing: border-box;
 }
 
+/*box text*/
 html {
     font-size: 100%;
     scroll-behavior: smooth;
     scroll-padding-top: max(92px, 6rem);
 }
 
+/*cho phép trình duyệt tự ngắt một từ ở bất kỳ vị trí nào nếu từ đó quá dài và không vừa với chiều rộng của phần tử.*/
 body {
     margin: 0;
     color: var(--ink);
@@ -39,6 +41,7 @@ img {
     max-width: 100%;
 }
 
+/*apply for whole icon and letter*/
 .brand {
     min-width: 0;
     max-width: 100%;
@@ -49,6 +52,7 @@ img {
     flex-shrink: 0;
 }
 
+/* apply to logo only*/
 .brand-mark {
     min-width: 1.5em;
     min-height: 1.5em;
@@ -64,6 +68,7 @@ img {
     font-size: 1.3125rem;
 }
 
+/* word learn*/
 .brand-name span {
     color: var(--yellow);
 }
@@ -80,6 +85,7 @@ img {
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
+/*when page is currently live*/
 .nav-link:hover,
 .nav-link:focus-visible,
 .nav-link.active {
@@ -101,11 +107,13 @@ img {
     transition: transform 0.2s ease;
 }
 
+/*vẫn xoay khi trang đó đc chọn*/
 .nav-dropdown:hover .caret,
 .nav-dropdown:focus-within .caret {
     transform: rotate(180deg);
 }
 
+/* Dropdown menu */
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -140,6 +148,7 @@ img {
     transition: background-color 0.2s ease, padding-left 0.2s ease;
 }
 
+/*text in nav dropdown when hover*/
 .dropdown-menu a:hover,
 .dropdown-menu a:active,
 .dropdown-menu a:focus-visible {
@@ -275,6 +284,7 @@ img {
     margin-bottom: 0;
 }
 
+/* Footer */
 .site-footer {
     display: grid;
     grid-template-columns: 1.2fr 0.7fr 1fr;
@@ -383,6 +393,9 @@ summary:focus-visible,
     box-shadow: 0 0 0 6px var(--purple-dark);
 }
 
+/*row 29 - sticky nav */
+/*cho phép xuống dòng khi k đủ chỗ*/
+/* Sticky header */
 .site-header {
     background: var(--white);
     position: sticky;
@@ -405,6 +418,7 @@ summary:focus-visible,
     gap: 14px;
 }
 
+/* apply to wordmark only*/
 .brand-name {
     min-width: 0;
     color: var(--purple);
@@ -478,6 +492,7 @@ summary:focus-visible,
     margin-top: 34px;
 }
 
+/* Impact section: image slider left + text right */
 .impact-section {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
@@ -539,6 +554,7 @@ summary:focus-visible,
     object-fit: cover;
 }
 
+/* CSS-only slide navigation */
 #learning-slide-1:checked ~ .slider-window .slider-track {
     transform: translateX(0);
 }
@@ -632,6 +648,7 @@ summary:focus-visible,
     line-height: 1.55;
 }
 
+/* Career table */
 .career-section {
     padding: 78px 8%;
     background: white;
@@ -703,6 +720,7 @@ summary:focus-visible,
     font-weight: 700;
 }
 
+/* Why join us */
 .why-section {
     padding: 75px 8% 85px;
     background: var(--lavender);
@@ -756,6 +774,7 @@ summary:focus-visible,
     font-size: 1rem;
 }
 
+/* About strip */
 .about-strip {
     display: grid;
     grid-template-columns: 1fr 1.2fr auto;
@@ -777,6 +796,7 @@ summary:focus-visible,
     color: var(--muted);
 }
 
+/* CTA */
 .cta-section {
     margin: 0 5% 45px;
     padding: 35px clamp(25px, 4vw, 45px);
@@ -826,6 +846,7 @@ summary:focus-visible,
     object-fit: contain;
 }
 
+/*  SEARCH SECTION */
 .home-role-browser {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -840,6 +861,7 @@ summary:focus-visible,
     box-shadow: 0 8px 30px #29247f08;
 }
 
+/* INTRO */
 .home-role-intro {
     grid-column: 1 / -1;
 }
@@ -857,6 +879,7 @@ summary:focus-visible,
     font-size: 1rem;
 }
 
+/* ROLE LINKS */
 .home-role-links {
     display: flex;
     align-items: center;
@@ -898,6 +921,7 @@ summary:focus-visible,
     font-weight: 700;
 }
 
+/* INPUT + BUTTON */
 .home-search-controls {
     display: flex;
     gap: 12px;
@@ -927,6 +951,7 @@ summary:focus-visible,
     white-space: nowrap;
 }
 
+/* SEARCH NOTE */
 #job-search-note {
     margin: 8px 0 0;
     color: var(--muted);
@@ -1040,6 +1065,7 @@ summary:focus-visible,
 }
 
 /* page intro and layout */
+/* Hero: same lavender, purple and yellow palette as Home. */
 .jobs-page .jobs-hero {
     display: block;
     text-align: center;
@@ -1083,6 +1109,7 @@ summary:focus-visible,
 }
 
 /* content */
+/* The aside uses a real float, matching the assignment's desktop requirement. */
 .jobs-page .jobs-content {
     padding: 55px 6% 65px;
     background: var(--surface-soft);
@@ -1426,6 +1453,7 @@ summary:focus-visible,
 }
 
 /* data : salary,location,... */
+/* Definition list holds each job's salary, manager and working arrangements. */
 .jobs-page .job-meta {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2287,10 +2315,12 @@ summary:focus-visible,
     gap: 22px;
 }
 
+/* Các trường chiếm trọn 2 cột (Full width) */
 .apply-page .apply-full-width {
     grid-column: 1 / -1;
 }
 
+/* Cụm nhãn + ô nhập */
 .apply-page .apply-field {
     min-width: 0;
 }
@@ -2317,6 +2347,7 @@ summary:focus-visible,
     font-size: 1rem;
 }
 
+/* Textarea ô kỹ năng khác */
 .apply-page .apply-field textarea {
     display: block;
     width: 100%;
@@ -2355,6 +2386,7 @@ summary:focus-visible,
     font-weight: 400;
 }
 
+/* Fieldset dành cho Giới tính và Danh sách Kỹ năng */
 .apply-page .apply-choice-fieldset {
     min-width: 0;
     margin: 22px 0 0;
@@ -2370,6 +2402,7 @@ summary:focus-visible,
     font-weight: 700;
 }
 
+/* Bố cục dàn ngang / lưới bên trong Fieldset */
 .apply-page .apply-choice-list {
     display: flex;
     flex-wrap: wrap;
