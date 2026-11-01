@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="#3933ad" name="theme-color">
-  <meta content="website" property="og:type">
-  <meta content="Lumina Learn" property="og:site_name">
-  <meta content="Lumina Learn | Careers" property="og:title">
-  <meta content="Join Lumina Learn and help make digital education accessible to everyone." property="og:description">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#3933ad" name="theme-color"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Lumina Learn" property="og:site_name"/>
+  <meta content="Lumina Learn | Careers" property="og:title"/>
+  <meta content="Join Lumina Learn and help make digital education accessible to everyone." property="og:description"/>
   <title>
    Lumina Learn | Careers
   </title>
-  <link href="images/favicon.ico" rel="icon" sizes="any">
-  <link href="images/favicon.svg" rel="icon" type="image/svg+xml">
-  <link as="image" href="images/hero-classroom.webp" rel="preload">
-  <link href="styles.css" rel="stylesheet">
+  <link href="images/favicon.ico" rel="icon" sizes="any"/>
+  <link href="images/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link as="image" href="images/hero-classroom.webp" rel="preload"/>
+  <!--LINK TO style.css-->
+  <link href="styles.css" rel="stylesheet"/>
   <style>
    .home-page #job-keyword { caret-color: var(--purple); }
   </style>
@@ -23,6 +24,8 @@
   <a class="skip-link" href="#home-main">
    Skip to main content
   </a>
+  <!-- STICKY NAVIGATION-->
+  <!-- LOGO -->
   <header class="site-header">
    <a aria-label="Lumina Learn home" class="brand" href="index.html#home">
     <span class="brand-mark">
@@ -35,6 +38,7 @@
      </span>
     </span>
    </a>
+   <!-- HOME -->
    <nav aria-label="Main navigation" class="main-nav">
     <div class="nav-dropdown">
      <a aria-current="page" class="nav-link active" href="index.html#home">
@@ -55,6 +59,7 @@
       </a>
      </div>
     </div>
+    <!-- JOBS -->
     <div class="nav-dropdown">
      <a class="nav-link" href="jobs.html">
       Jobs
@@ -71,6 +76,7 @@
       </a>
      </div>
     </div>
+    <!-- ABOUT US -->
     <div class="nav-dropdown">
      <a class="nav-link" href="about.html">
       About Us
@@ -94,89 +100,15 @@
      </div>
     </div>
    </nav>
+   <!-- HEADER ACTIONS -->
    <div class="header-actions">
     <a class="apply-button" href="apply.html">
      Apply
     </a>
    </div>
-   <details class="mobile-menu">
-    <summary class="mobile-menu-toggle">
-     <span aria-hidden="true" class="mobile-menu-bars">
-      <span>
-      </span>
-      <span>
-      </span>
-      <span>
-      </span>
-     </span>
-     <span class="mobile-menu-label">
-      <span class="menu-label-open">
-       Menu
-      </span>
-      <span class="menu-label-close">
-       Close
-      </span>
-     </span>
-    </summary>
-    <nav aria-label="Mobile navigation" class="mobile-menu-panel">
-     <details class="mobile-nav-group">
-      <summary>
-       Home
-      </summary>
-      <a class="" href="index.html#home">
-       Home overview
-      </a>
-      <a class="" href="index.html#our-impact">
-       Our mission
-      </a>
-      <a class="" href="index.html#career">
-       Career paths
-      </a>
-      <a class="" href="index.html#why-join-us">
-       Why join us?
-      </a>
-     </details>
-     <details class="mobile-nav-group">
-      <summary>
-       Jobs
-      </summary>
-      <a class="" href="jobs.html">
-       Jobs overview
-      </a>
-      <a class="" href="jobs.html#frontend-developer">
-       Front-End Web Developer
-      </a>
-      <a class="" href="jobs.html#ux-ui-designer">
-       UX/UI Designer
-      </a>
-     </details>
-     <details class="mobile-nav-group">
-      <summary>
-       About Us
-      </summary>
-      <a class="" href="about.html">
-       About Us overview
-      </a>
-      <a class="" href="about.html#our-project">
-       Our project
-      </a>
-      <a class="" href="about.html#group-info">
-       Get to know us
-      </a>
-      <a class="" href="about.html#team-members">
-       Meet our team
-      </a>
-      <a class="" href="about.html#site-footer">
-       Contact us
-      </a>
-     </details>
-     <a class="" href="apply.html">
-      Apply
-     </a>
-    </nav>
-   </details>
   </header>
   <main id="home-main" tabindex="-1">
+   <!-- HOME -->
    <section class="hero" id="home">
     <div class="hero-copy">
      <p class="eyebrow">
@@ -203,34 +135,58 @@
      </div>
     </div>
    </section>
+   <!-- SLIDER, use AI for method suggestion, youtube: https://www.youtube.com/watch?v=3erWBgEOrmE -->
    <section class="impact-section" id="our-impact">
     <fieldset class="image-slider">
-     <legend>Learning at Lumina Learn</legend>
-     <input checked="" id="learning-slide-1" name="learning-slide" type="radio">
-     <input id="learning-slide-2" name="learning-slide" type="radio">
-     <input id="learning-slide-3" name="learning-slide" type="radio">
+     <legend>
+      Learning at Lumina Learn
+     </legend>
+     <input checked="" id="learning-slide-1" name="learning-slide" type="radio"/>
+     <input id="learning-slide-2" name="learning-slide" type="radio"/>
+     <input id="learning-slide-3" name="learning-slide" type="radio"/>
      <div class="slider-window">
       <div class="slider-track">
-       <img alt="Two children using an online learning platform together on a laptop." decoding="async" height="1024" loading="lazy" sizes="(max-width: 700px) 90vw, 50vw" src="images/learning1.webp" srcset="images/learning1-480.webp 480w, images/learning1-768.webp 768w, images/learning1-1200.webp 1200w" width="1536">
-       <img alt="A child exploring online courses and tracking learning progress." decoding="async" height="1024" loading="lazy" sizes="(max-width: 700px) 90vw, 50vw" src="images/learning2.webp" srcset="images/learning2-480.webp 480w, images/learning2-768.webp 768w, images/learning2-1200.webp 1200w" width="1536">
-       <img alt="A child celebrating a completed maths exercise, with illustrated learning progress charts." decoding="async" height="1024" loading="lazy" sizes="(max-width: 700px) 90vw, 50vw" src="images/learning3.webp" srcset="images/learning3-480.webp 480w, images/learning3-768.webp 768w, images/learning3-1200.webp 1200w" width="1536">
+       <img alt="Two children using an online learning platform together on a laptop." decoding="async" height="1024" loading="lazy" sizes="(max-width: 700px) 90vw, 50vw" src="images/learning1.webp" srcset="images/learning1-480.webp 480w, images/learning1-768.webp 768w, images/learning1-1200.webp 1200w" width="1536"/>
+       <img alt="A child exploring online courses and tracking learning progress." decoding="async" height="1024" loading="lazy" sizes="(max-width: 700px) 90vw, 50vw" src="images/learning2.webp" srcset="images/learning2-480.webp 480w, images/learning2-768.webp 768w, images/learning2-1200.webp 1200w" width="1536"/>
+       <img alt="A child celebrating a completed maths exercise, with illustrated learning progress charts." decoding="async" height="1024" loading="lazy" sizes="(max-width: 700px) 90vw, 50vw" src="images/learning3.webp" srcset="images/learning3-480.webp 480w, images/learning3-768.webp 768w, images/learning3-1200.webp 1200w" width="1536"/>
       </div>
      </div>
      <div class="slider-dots">
+      <!-- SLIDE 1 -->
       <label for="learning-slide-1">
-       <span class="slider-label">Show image 1 of 3</span>
-       <span aria-hidden="true" class="slider-arrow slider-prev" title="Previous image">‹</span>
-       <span aria-hidden="true" class="slider-arrow slider-next" title="Next image">›</span>
+       <span class="slider-label">
+        Show image 1 of 3
+       </span>
+       <span aria-hidden="true" class="slider-arrow slider-prev" title="Previous image">
+        ‹
+       </span>
+       <span aria-hidden="true" class="slider-arrow slider-next" title="Next image">
+        ›
+       </span>
       </label>
+      <!-- SLIDE 2 -->
       <label for="learning-slide-2">
-       <span class="slider-label">Show image 2 of 3</span>
-       <span aria-hidden="true" class="slider-arrow slider-prev" title="Previous image">‹</span>
-       <span aria-hidden="true" class="slider-arrow slider-next" title="Next image">›</span>
+       <span class="slider-label">
+        Show image 2 of 3
+       </span>
+       <span aria-hidden="true" class="slider-arrow slider-prev" title="Previous image">
+        ‹
+       </span>
+       <span aria-hidden="true" class="slider-arrow slider-next" title="Next image">
+        ›
+       </span>
       </label>
+      <!-- SLIDE 3 -->
       <label for="learning-slide-3">
-       <span class="slider-label">Show image 3 of 3</span>
-       <span aria-hidden="true" class="slider-arrow slider-prev" title="Previous image">‹</span>
-       <span aria-hidden="true" class="slider-arrow slider-next" title="Next image">›</span>
+       <span class="slider-label">
+        Show image 3 of 3
+       </span>
+       <span aria-hidden="true" class="slider-arrow slider-prev" title="Previous image">
+        ‹
+       </span>
+       <span aria-hidden="true" class="slider-arrow slider-next" title="Next image">
+        ›
+       </span>
       </label>
      </div>
     </fieldset>
@@ -254,7 +210,9 @@
      </p>
     </div>
    </section>
+   <!-- SEARCH BAR -->
    <section class="home-role-browser" id="find-role">
+    <!-- INTRO -->
     <div class="home-role-intro">
      <h2 id="job-search-title">
       Find your next role.
@@ -263,12 +221,13 @@
       Bring your skills to a team making learning more accessible.
      </p>
     </div>
+    <!-- FORM -->
     <form action="jobs.html#open-roles" aria-describedby="job-search-note" class="home-search-form" method="get" role="search">
      <label for="job-keyword">
       Job title or keyword
      </label>
      <div class="home-search-controls">
-      <input id="job-keyword" maxlength="80" name="keywords" placeholder="e.g. front-end, design" type="search">
+      <input id="job-keyword" maxlength="80" name="keywords" placeholder="e.g. front-end, design" type="search"/>
       <button class="button button-dark" type="submit">
        Search jobs
        <span aria-hidden="true">
@@ -280,6 +239,7 @@
       Browse all open roles. Keyword filtering will be available in a later version.
      </p>
     </form>
+    <!-- LINKS -->
     <div class="home-role-links">
      <span>
       Explore our roles
@@ -298,6 +258,7 @@
      </a>
     </div>
    </section>
+   <!--CARREER PATH-->
    <section class="career-section" id="career">
     <div class="section-heading">
      <h2>
@@ -377,6 +338,7 @@
      </a>
     </p>
    </section>
+   <!---WHY JOIN US-->
    <section class="why-section" id="why-join-us">
     <div class="section-heading">
      <h2>
@@ -443,6 +405,17 @@
      View Job Descriptions Now!
     </a>
    </section>
+   <section aria-labelledby="country-title" class="country-acknowledgement">
+    <h2 id="country-title">
+     Acknowledgement of Country
+    </h2>
+    <p>
+     We acknowledge the Traditional Custodians of the lands on which we work and learn. We pay our respects to Elders past and present and recognise the continuing connection of Aboriginal and Torres Strait Islander peoples to land, waters and community.
+    </p>
+    <p>
+     In our educational design, we aim to respect diverse cultures and perspectives and avoid using Indigenous knowledge or stories without permission and appropriate attribution.
+    </p>
+   </section>
   </main>
   <footer class="site-footer" id="site-footer">
    <div class="footer-brand">
@@ -465,10 +438,10 @@
     </p>
     <div class="footer-social">
      <a aria-label="Facebook (opens in a new tab)" class="footer-social-icon" href="https://www.facebook.com/profile.php?id=61596296752214" rel="noopener noreferrer" target="_blank">
-      <img alt="" height="22" src="images/social-facebook.svg" width="22">
+      <img alt="" height="22" src="images/social-facebook.svg" width="22"/>
      </a>
      <a aria-label="Instagram (opens in a new tab)" class="footer-social-icon" href="https://www.instagram.com/luminalearn.project/" rel="noopener noreferrer" target="_blank">
-      <img alt="" height="22" src="images/social-instagram.svg" width="22">
+      <img alt="" height="22" src="images/social-instagram.svg" width="22"/>
      </a>
     </div>
    </div>
@@ -522,7 +495,7 @@
     © 2026 Lumina Learn. All rights reserved.
    </p>
    <a aria-label="Message Lumina Learn on Messenger (opens in a new tab)" class="messenger-float" href="https://m.me/61596296752214" rel="noopener noreferrer" target="_blank">
-    <img alt="" height="52" src="images/messenger-icon.svg" width="52">
+    <img alt="" height="52" src="images/messenger-icon.svg" width="52"/>
    </a>
   </footer>
  </body>
