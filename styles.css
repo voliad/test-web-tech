@@ -585,6 +585,7 @@ summary:focus-visible,
 #learning-slide-1:checked ~ .slider-dots label[for="learning-slide-1"],
 #learning-slide-2:checked ~ .slider-dots label[for="learning-slide-2"],
 #learning-slide-3:checked ~ .slider-dots label[for="learning-slide-3"] {
+    color: var(--purple-dark);
     background: var(--yellow);
     box-shadow: inset 0 0 0 2px var(--purple);
 }
