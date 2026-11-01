@@ -1025,16 +1025,19 @@ summary:focus-visible,
 }
 
 .jobs-page .jobs-hero h1 span {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
     color: var(--purple-dark);
 }
 
-.jobs-page .jobs-hero h1::after {
+.jobs-page .jobs-hero h1 span::after {
     content: "";
-    display: block;
-    width: 72px;
+    position: absolute;
+    right: 0;
+    bottom: -7px;
+    left: 0;
     height: 5px;
-    margin: 18px auto 0;
-    border-radius: 3px;
     background: var(--yellow);
 }
 
