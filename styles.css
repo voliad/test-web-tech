@@ -1556,505 +1556,146 @@ summary:focus-visible,
 
 /* ABOUT - about.html - Bùi Đào Việt Anh */
 
-.about-page .about-hero > * {
-    min-width: 0;
-}
 
-.about-page .about-hero .about-hero-note .about-note-team {
-    margin: 0;
-    padding-top: 15px;
-    border-top: 1px solid #b38a2d;
-    font-size: 0.8125rem;
-    font-weight: 700;
-}
 
-.about-page .about-section-tinted {
-    background: var(--lavender);
-}
 
-.about-page .about-group-layout p {
-    color: var(--muted);
-}
 
-.about-page .about-info-list > li {
-    margin-bottom: 20px;
-}
 
-.about-page .about-info-list > li:last-child {
-    margin-bottom: 0;
-}
 
-.about-page .about-info-list strong {
-    color: var(--purple);
-}
 
-.about-page .about-info-list ul {
-    margin-top: 8px;
-    padding-left: 20px;
-}
 
-.about-page .about-info-list ul li {
-    margin-top: 6px;
-}
 
-.about-page code {
-    padding: 2px 5px;
-    border-radius: 4px;
-    background: var(--lavender);
-    color: var(--purple);
-    font-size: 0.9em;
-    overflow-wrap: anywhere;
-}
 
-.about-page .about-member .about-quote {
-    position: relative;
-    margin: 8px 0 0;
-    padding: 22px 22px 20px 52px;
-    border-left: 4px solid var(--yellow);
-    border-radius: 0 14px 14px 0;
-    background: #f3f2ff;
-}
 
-.about-page .about-quote .about-quote-mark {
-    position: absolute;
-    top: 7px;
-    left: 12px;
-    color: var(--purple);
-    font-family: Georgia, serif;
-    font-size: 3.25rem;
-    line-height: 1;
-}
 
-.about-page .about-quote blockquote {
-    margin: 0;
-    padding: 0;
-    color: var(--purple-dark);
-    font-size: 1.0625rem;
-    font-weight: 700;
-    line-height: 1.65;
-}
 
-.about-page .about-quote .about-quote-translation {
-    display: block;
-    margin-top: 12px;
-    padding-top: 10px;
-    border-top: 1px solid #dcdaf2;
-    color: var(--muted);
-    font-size: 0.75rem;
-    line-height: 1.7;
-}
 
-.about-page .about-group-photo img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 14px;
-}
 
-.about-page .about-group-photo figcaption {
-    margin-top: 14px;
-    color: var(--muted);
-    text-align: center;
-    font-size: 0.8125rem;
-}
 
-.about-page .about-table-wrap {
-    max-width: 1120px;
-}
 
-.about-page .about-facts th,
-.about-page .about-facts td {
-    padding: 17px 20px;
-    border: 1px solid var(--line);
-}
 
-.about-page .about-facts thead th {
-    color: var(--white);
-    background: var(--purple);
-    font-size: 0.875rem;
-}
 
-.about-page .about-facts tbody th {
-    color: var(--purple);
-    font-size: 0.9375rem;
-}
 
-.about-page .about-facts tbody tr:hover th,
-.about-page .about-facts tbody tr:hover td {
-    background: var(--lavender);
-}
 
-.about-page .about-facts tfoot td {
-    color: var(--muted);
-    background: var(--surface-soft);
-    text-align: center;
-    font-size: 0.8125rem;
-}
 
-.about-page .about-project-credit {
-    grid-column: 1 / -1;
-    margin: 0;
-    font-size: 0.75rem;
-}
 
-.about-page {
-    background: var(--lavender);
-}
 
-.about-page .site-header {
-    background: var(--white);
-}
 
-.about-page h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    letter-spacing: -.8px;
-}
 
-.about-page .about-hero h1 {
-    margin: 0 0 24px;
-    color: var(--purple);
-    letter-spacing: -2px;
-    font-size: clamp(3rem, 5.2vw, 4.75rem);
-    line-height: 1.03;
-}
 
-.about-page .about-hero h1 span {
-    color: var(--purple-dark);
-    text-decoration: underline;
-    text-decoration-color: var(--yellow);
-    text-decoration-thickness: 6px;
-    text-underline-offset: 9px;
-}
 
-.about-page .about-hero > div:not(.about-hero-note) > p:not(.section-kicker) {
-    margin: 0 0 28px;
-    color: var(--muted);
-    max-width: 590px;
-    font-size: 1.0625rem;
-    line-height: 1.8;
-}
 
-.about-page .button {
-    border-radius: 999px;
-}
 
-.about-page .about-hero .about-hero-note {
-    background: var(--yellow);
-    align-self: center;
-    padding: 32px;
-    border-radius: 26px;
-    border: 2px solid var(--purple-dark);
-    transform: rotate(4deg);
-    box-shadow: 12px 12px 0 var(--purple-dark);
-}
 
-.about-page .about-note-number {
-    display: block;
-    color: var(--purple-dark);
-    line-height: 1;
-    letter-spacing: -4px;
-    font-family: Impact, "Arial Narrow", Arial, sans-serif;
-    font-weight: 400;
-    font-size: 5.5rem;
-}
 
-.about-page .about-hero-note h2 {
-    margin: 20px 0 12px;
-    color: var(--purple-dark);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    font-size: 2.375rem;
-}
 
-.about-page .about-hero .about-hero-note p {
-    margin: 0 0 18px;
-    font-size: 0.9375rem;
-    color: #28234f;
-}
 
-.about-page .about-section {
-    max-width: none;
-    padding: 64px 6%;
-    background: var(--lavender);
-}
 
-.about-page .section-heading {
-    margin: 0 auto 42px;
-    max-width: 800px;
-    text-align: center;
-}
 
-.about-page .section-heading h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    letter-spacing: -.8px;
-    color: var(--purple-dark);
-    font-size: clamp(2.375rem, 4vw, 3.375rem);
-    line-height: 1.12;
-}
 
-.about-page .section-heading p:not(.section-kicker) {
-    color: var(--muted);
-}
 
-.about-page .about-values {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin: 0 auto;
-    gap: 22px;
-    max-width: 1120px;
-}
 
-.about-page .about-values article {
-    padding: 28px;
-    border: 0;
-    background: var(--white);
-    border-radius: 18px;
-    box-shadow: 0 4px 0 #e0e4fa;
-}
 
-.about-page .about-value-number {
-    color: var(--purple);
-    font-size: 1.875rem;
-    font-family: Impact, "Arial Narrow", Arial, sans-serif;
-    font-weight: 400;
-}
 
-.about-page .about-values h3 {
-    margin: 12px 0;
-    color: var(--purple);
-    font-size: 1.1875rem;
-}
 
-.about-page .about-values p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.875rem;
-    line-height: 1.75;
-}
 
-.about-page .about-group-layout {
-    display: grid;
-    max-width: 1120px;
-    margin: 0 auto;
-    grid-template-columns: .8fr 1.2fr;
-    gap: 70px;
-    align-items: center;
-}
 
-.about-page .about-group-layout h2 {
-    margin: 0 0 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    letter-spacing: -.8px;
-    color: var(--purple-dark);
-    font-size: 4rem;
-    line-height: .98;
-    text-transform: uppercase;
-}
 
-.about-page .about-info-list {
-    margin: 0;
-    background: #e3e7f6;
-    border-left: 0;
-    border-radius: 22px;
-    padding: 30px 30px 30px 50px;
-}
 
-.about-page .about-team {
-    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: 1fr;
-    gap: 70px;
-    max-width: 1040px;
-    padding-top: 20px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Team member cards: Figma-to-code conversion with AI assistance for the tilted portrait, information and quote layout. */
-.about-page .about-member {
-    border-top: 4px solid var(--purple);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: grid;
-    grid-template-columns: 230px minmax(0, 1fr);
-    column-gap: 42px;
-    padding: 32px 40px 32px 26px;
-    margin-left: 24px;
-    background: var(--white);
-    border: 0;
-    border-radius: 20px;
-    box-shadow: none;
-}
 
-.about-page .about-member dt {
-    margin-bottom: 14px;
-    font-weight: 700;
-    grid-column: 2;
-    margin: 0 0 10px;
-    font-size: 1.5625rem;
-    color: var(--purple-dark);
-}
 
-.about-page .about-member dt span {
-    display: block;
-    color: var(--muted);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 7px;
-    font-size: 0.8125rem;
-}
 
-.about-page .about-member dd {
-    color: #3e3e58;
-    grid-column: 2;
-    margin: 0 0 14px;
-    font-size: 0.875rem;
-    line-height: 1.65;
-}
 
-.about-page .about-member .about-student-id {
-    display: inline-block;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    color: var(--purple-dark);
-    background: var(--lavender);
-    font-weight: 700;
-    justify-self: start;
-    font-size: 0.75rem;
-    padding: 4px 10px;
-}
 
-.about-page .about-member .about-portrait {
-    grid-column: 1;
-    grid-row: 1 / span 4;
-    margin: -55px 0 -15px -28px;
-    align-self: center;
-}
 
-.about-page .member-photo {
-    position: relative;
-    width: 230px;
-    margin: 0;
-    transform: rotate(-8deg);
-    padding: 9px 9px 0;
-    background: var(--white);
-    box-shadow: -14px 14px 0 #dce3ff, 0 10px 24px #29247f1a;
-}
 
-.about-page .member-photo figcaption {
-    color: var(--purple-dark);
-    font-size: 0.8125rem;
-    font-weight: 700;
-    padding: 10px 3px;
-    text-transform: uppercase;
-    letter-spacing: .9px;
-}
 
-.about-page .about-member:nth-child(even) {
-    grid-template-columns: minmax(0, 1fr) 230px;
-    margin-left: 0;
-    margin-right: 24px;
-    padding: 32px 26px 32px 40px;
-}
 
-.about-page .about-member:nth-child(even) dt,
-.about-page .about-member:nth-child(even) dd {
-    grid-column: 1;
-}
 
-.about-page .about-member:nth-child(even) .about-portrait {
-    grid-column: 2;
-    margin: -55px -28px -15px 0;
-}
 
-.about-page .about-member:nth-child(even) .member-photo {
-    transform: rotate(8deg);
-    box-shadow: 14px 14px 0 #dce3ff, 0 10px 24px #29247f1a;
-}
 
-.about-page .about-member:hover {
-    transform: none;
-    box-shadow: 0 10px 28px #29247f0a;
-}
 
-.about-page .about-group-photo {
-    margin: 0 auto;
-    background: var(--white);
-    max-width: 1040px;
-    border: 1px solid var(--line);
-    border-radius: 25px;
-    padding: 14px;
-}
 
-.about-page .about-facts {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--white);
-    text-align: left;
-    border-radius: 14px;
-    overflow: hidden;
-}
 
-.about-page .about-facts caption {
-    color: var(--purple-dark);
-    font-size: 1.125rem;
-    font-weight: 700;
-    background: #ffdf88;
-    padding: 20px;
-}
 
-.about-page .cta-section {
-    max-width: 1120px;
-    margin: 0 auto 64px;
-    padding: 36px 40px;
-    border-radius: 24px;
-    background: var(--yellow);
-}
 
-.about-page .cta-section h2 {
-    max-width: 850px;
-    color: var(--purple-dark);
-    font-size: clamp(1.75rem, 3vw, 2.125rem);
-    line-height: 1.2;
-}
 
-.about-page .cta-section p:not(.section-kicker) {
-    max-width: 800px;
-    font-size: 1rem;
-    line-height: 1.7;
-}
 
-.about-page .site-footer {
-    background: var(--purple-dark);
-}
 
-.about-page .about-hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.7fr);
-    align-items: center;
-    max-width: none;
-    padding: 82px max(6%, calc((100vw - 1160px) / 2));
-    gap: 64px;
-    padding-bottom: 54px;
-}
 
-.about-page .about-project-direction {
-    position: relative;
-    padding-top: 44px;
-}
 
-.about-page .about-project-direction::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(1120px, 88%);
-    height: 1px;
-    background: #c9c8e7;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* APPLY - apply.html - Trần Gia Cát Anh */
 
@@ -2557,15 +2198,471 @@ html {
     }
 }
 
-.about-page .member-portrait-image {
+
+
+
+
+
+
+.about-page .about-hero > div {
+    max-width: 1000px;
+    margin: 0 auto;
+    min-width: 0;
+}.about-page .about-section-tinted {
+    background: var(--lavender);
+}.about-page .about-group-layout p {
+    color: var(--muted);
+}.about-page .about-info-list > li {
+    margin-bottom: 20px;
+}.about-page .about-info-list > li:last-child {
+    margin-bottom: 0;
+}.about-page .about-info-list strong {
+    color: var(--purple);
+}.about-page .about-info-list ul {
+    margin-top: 8px;
+    padding-left: 20px;
+}.about-page .about-info-list ul li {
+    margin-top: 6px;
+}.about-page code {
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: var(--lavender);
+    color: var(--purple);
+    font-size: 0.9em;
+    overflow-wrap: anywhere;
+}.about-page .about-member .about-quote {
+    position: relative;
+    margin: 8px 0 0;
+    padding: 22px 22px 20px 52px;
+    border-left: 4px solid var(--yellow);
+    border-radius: 0 14px 14px 0;
+    background: #f3f2ff;
+}.about-page .about-quote .about-quote-mark {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    color: var(--purple);
+    font-family: Georgia, serif;
+    font-size: 3.25rem;
+    line-height: 1;
+}.about-page .about-quote blockquote {
+    margin: 0;
+    padding: 0;
+    color: var(--purple-dark);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.65;
+}.about-page .about-quote .about-quote-translation {
+    display: block;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #dcdaf2;
+    color: var(--muted);
+    font-size: 0.75rem;
+    line-height: 1.7;
+}.about-page .about-group-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+}.about-page .about-group-photo figcaption {
+    margin-top: 14px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.8125rem;
+}.about-page .about-table-wrap {
+    max-width: 1120px;
+}.about-page .about-facts th,
+.about-page .about-facts td {
+    padding: 17px 20px;
+    border: 1px solid var(--line);
+}.about-page .about-facts thead th {
+    color: var(--white);
+    background: var(--purple);
+    font-size: 0.875rem;
+}.about-page .about-facts tbody th {
+    color: var(--purple);
+    font-size: 0.9375rem;
+}.about-page .about-facts tbody tr:hover th,
+.about-page .about-facts tbody tr:hover td {
+    background: var(--lavender);
+}.about-page .about-facts tfoot td {
+    color: var(--muted);
+    background: var(--surface-soft);
+    text-align: center;
+    font-size: 0.8125rem;
+}.about-page .about-project-credit {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 0.75rem;
+}.about-page {
+    background: var(--lavender);
+}.about-page .site-header {
+    background: var(--white);
+}.about-page .about-hero h1 {
+    margin: 0 0 26px;
+    color: var(--purple);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    letter-spacing: -2px;
+    font-size: clamp(3rem, 5.2vw, 4.75rem);
+    line-height: 1.1;
+}.about-page .about-hero h1 span {
+    display: inline-block;
+    max-width: 100%;
+    padding-bottom: 7px;
+    border-bottom: 6px solid var(--yellow);
+    color: var(--purple-dark);
+}.about-page .about-hero > div > p {
+    margin: 0 auto 30px;
+    color: var(--muted);
+    max-width: 800px;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+}.about-page .button {
+    border-radius: 999px;
+}.about-page .about-section {
+    max-width: none;
+    padding: 64px 6%;
+    background: var(--lavender);
+}.about-page .section-heading {
+    margin: 0 auto 42px;
+    max-width: 800px;
+    text-align: center;
+}.about-page .section-heading h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    letter-spacing: -.8px;
+    color: var(--purple-dark);
+    font-size: clamp(2.375rem, 4vw, 3.375rem);
+    line-height: 1.12;
+}.about-page .section-heading p:not(.section-kicker) {
+    color: var(--muted);
+}.about-page .about-values {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0 auto;
+    gap: 22px;
+    max-width: 1120px;
+}.about-page .about-values article {
+    padding: 28px;
+    border: 0;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 4px 0 #e0e4fa;
+}.about-page .about-value-number {
+    color: var(--purple);
+    font-size: 1.875rem;
+    font-family: Impact, "Arial Narrow", Arial, sans-serif;
+    font-weight: 400;
+}.about-page .about-values h3 {
+    margin: 12px 0;
+    color: var(--purple);
+    font-size: 1.1875rem;
+}.about-page .about-values p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.875rem;
+    line-height: 1.75;
+}.about-page .about-group-layout {
+    display: grid;
+    max-width: 1120px;
+    margin: 0 auto;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}.about-page .about-group-layout h2 {
+    margin: 0 0 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    letter-spacing: -.8px;
+    color: var(--purple-dark);
+    font-size: 4rem;
+    line-height: .98;
+    text-transform: uppercase;
+}.about-page .about-info-list {
+    margin: 0;
+    background: #e3e7f6;
+    border-left: 0;
+    border-radius: 22px;
+    padding: 30px 30px 30px 50px;
+}.about-page .about-team {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 70px;
+    max-width: 1040px;
+    padding-top: 20px;
+}.about-page .about-member {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr);
+    column-gap: 42px;
+    padding: 32px 40px 32px 26px;
+    margin-left: 24px;
+    background: var(--white);
+    border: 0;
+    border-radius: 20px;
+    box-shadow: none;
+}.about-page .about-member dt {
+    font-weight: 700;
+    grid-column: 2;
+    margin: 0 0 10px;
+    font-size: 1.5625rem;
+    color: var(--purple-dark);
+}.about-page .about-member dt span {
+    display: block;
+    color: var(--muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 7px;
+    font-size: 0.8125rem;
+}.about-page .about-member dd {
+    color: #3e3e58;
+    grid-column: 2;
+    margin: 0 0 14px;
+    font-size: 0.875rem;
+    line-height: 1.65;
+}.about-page .about-member .about-student-id {
+    display: inline-block;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--purple-dark);
+    background: var(--lavender);
+    font-weight: 700;
+    justify-self: start;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+}.about-page .about-member .about-portrait {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    margin: -55px 0 -15px -28px;
+    align-self: center;
+}.about-page .member-photo {
+    position: relative;
+    width: 230px;
+    margin: 0;
+    transform: rotate(-8deg);
+    padding: 9px 9px 0;
+    background: var(--white);
+    box-shadow: -14px 14px 0 #dce3ff, 0 10px 24px #29247f1a;
+}.about-page .member-photo figcaption {
+    color: var(--purple-dark);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    padding: 10px 3px;
+    text-transform: uppercase;
+    letter-spacing: .9px;
+}.about-page .about-member:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr) 230px;
+    margin-left: 0;
+    margin-right: 24px;
+    padding: 32px 26px 32px 40px;
+}.about-page .about-member:nth-child(even) dt,
+.about-page .about-member:nth-child(even) dd {
+    grid-column: 1;
+}.about-page .about-member:nth-child(even) .about-portrait {
+    grid-column: 2;
+    margin: -55px -28px -15px 0;
+}.about-page .about-member:nth-child(even) .member-photo {
+    transform: rotate(8deg);
+    box-shadow: 14px 14px 0 #dce3ff, 0 10px 24px #29247f1a;
+}.about-page .about-member:hover {
+    transform: none;
+    box-shadow: 0 10px 28px #29247f0a;
+}.about-page .about-group-photo {
+    margin: 0 auto;
+    background: var(--white);
+    max-width: 1040px;
+    border: 1px solid var(--line);
+    border-radius: 25px;
+    padding: 14px;
+}.about-page .about-facts {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    text-align: left;
+    border-radius: 14px;
+    overflow: hidden;
+}.about-page .about-facts caption {
+    color: var(--purple-dark);
+    font-size: 1.125rem;
+    font-weight: 700;
+    background: #ffdf88;
+    padding: 20px;
+}.about-page .cta-section {
+    max-width: 1120px;
+    margin: 0 auto 64px;
+    padding: 36px 40px;
+    border-radius: 24px;
+    background: var(--yellow);
+}.about-page .cta-section h2 {
+    max-width: 850px;
+    color: var(--purple-dark);
+    font-size: clamp(1.75rem, 3vw, 2.125rem);
+    line-height: 1.2;
+}.about-page .cta-section p:not(.section-kicker) {
+    max-width: 800px;
+    font-size: 1rem;
+    line-height: 1.7;
+}.about-page .site-footer {
+    background: var(--purple);
+}.about-page .about-hero {
+    max-width: none;
+    padding: 68px 6% 64px;
+    text-align: center;
+}.about-page .about-project-direction {
+    position: relative;
+    padding-top: 44px;
+}.about-page .about-project-direction::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1120px, 88%);
+    height: 1px;
+    background: #c9c8e7;
+}@media (max-width: 800px) {
+    .about-page .site-header {
+        position: static;
+        padding: 16px 6%;
+        gap: 12px;
+    }
+
+    .about-page .main-nav {
+        order: 1;
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .about-page .dropdown-menu,
+    .about-page .caret {
+        display: none;
+    }
+
+    .about-page .about-hero {
+        padding: 44px 6%;
+    }
+
+    .about-page .about-hero h1 {
+        font-size: clamp(2rem, 7vw, 3rem);
+        letter-spacing: -1px;
+        line-height: 1.16;
+    }
+
+    .about-page .about-hero h1 span {
+        border-bottom-width: 4px;
+    }
+
+    .about-page .about-section {
+        padding: 44px 6%;
+    }
+
+    .about-page .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .about-page .section-heading h2 {
+        font-size: clamp(1.875rem, 6vw, 2.75rem);
+    }
+
+    .about-page .about-values,
+    .about-page .about-group-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .about-page .about-group-layout h2 {
+        font-size: clamp(2.25rem, 8vw, 3rem);
+    }
+
+    .about-page .about-info-list {
+        padding: 24px 24px 24px 40px;
+    }
+
+    .about-page .about-team {
+        gap: 36px;
+        padding-top: 0;
+    }
+
+    .about-page .about-member,
+    .about-page .about-member:nth-child(even) {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        margin: 0;
+        padding: 28px 24px;
+    }
+
+    .about-page .about-member dt,
+    .about-page .about-member dd,
+    .about-page .about-member:nth-child(even) dt,
+    .about-page .about-member:nth-child(even) dd {
+        grid-column: 1;
+        min-width: 0;
+    }
+
+    .about-page .about-member dt {
+        grid-row: 2;
+        font-size: 1.375rem;
+    }
+
+    .about-page .about-member .about-portrait,
+    .about-page .about-member:nth-child(even) .about-portrait {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+        margin: 0 0 28px;
+    }
+
+    .about-page .member-photo {
+        width: min(230px, 100%);
+        transform: rotate(-3deg);
+    }
+
+    .about-page .about-member:nth-child(even) .member-photo {
+        transform: rotate(3deg);
+    }
+
+    .about-page .about-member .about-quote {
+        padding: 20px 18px 20px 40px;
+    }
+
+    .about-page .about-group-photo {
+        padding: 10px;
+    }
+
+    .about-page .about-facts {
+        min-width: 36rem;
+    }
+
+    .about-page .cta-section {
+        margin: 0 6% 44px;
+        padding: 28px 24px;
+    }
+
+    .about-page .country-acknowledgement {
+        padding: 36px 6%;
+    }
+
+    .about-page .site-footer {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding: 36px 6% 24px;
+    }
+
+    .about-page .site-footer > * {
+        min-width: 0;
+    }
+}.about-page .member-portrait-image {
     display: block;
     width: 100%;
     height: 265px;
     object-fit: cover;
     object-position: center 35%;
-}
-
-.about-page .member-photo-1 .member-portrait-image {
+}.about-page .member-photo-1 .member-portrait-image {
     object-position: 40% center;
 }
-
