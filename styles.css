@@ -1026,7 +1026,7 @@ summary:focus-visible,
     line-height: 1.75;
 }
 
-/* JOBS - jobs.html - Nguyễn Minh Hiếu */
+/* JOBS - jobs.html - Nguyễn Trung Hiếu */
 
 /* hidden text */
 .jobs-page .jobs-visually-hidden {
@@ -1843,6 +1843,7 @@ summary:focus-visible,
     padding-top: 20px;
 }
 
+/* Team member cards: Figma-to-code conversion with AI assistance for the tilted portrait, information and quote layout. */
 .about-page .about-member {
     border-top: 4px solid var(--purple);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
