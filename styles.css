@@ -1026,10 +1026,16 @@ summary:focus-visible,
 
 .jobs-page .jobs-hero h1 span {
     color: var(--purple-dark);
-    text-decoration: underline;
-    text-decoration-color: var(--yellow);
-    text-decoration-thickness: 5px;
-    text-underline-offset: 7px;
+}
+
+.jobs-page .jobs-hero h1::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 5px;
+    margin: 18px auto 0;
+    border-radius: 3px;
+    background: var(--yellow);
 }
 
 .jobs-page .jobs-hero-copy > p:not(.section-kicker) {
