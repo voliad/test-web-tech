@@ -1835,6 +1835,7 @@ summary:focus-visible,
 }
 
 .about-page .about-team {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
     display: grid;
     margin: 0 auto;
     grid-template-columns: 1fr;
@@ -1860,7 +1861,7 @@ summary:focus-visible,
 
 .about-page .about-member dt {
     margin-bottom: 14px;
-    font-weight: 800;
+    font-weight: 700;
     grid-column: 2;
     margin: 0 0 10px;
     font-size: 1.5625rem;
